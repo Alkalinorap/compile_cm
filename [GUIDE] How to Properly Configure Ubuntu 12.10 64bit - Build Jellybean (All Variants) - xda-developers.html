@@ -1,0 +1,3661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+        
+            <title>[GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants) - xda-developers</title>
+        
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="generator" content="vBulletin 3.8.7" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<meta name="keywords" content="android, build, compile, jellybean, ubuntu,  [GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants), XDA,MDA,Vario,HTC,Qtek,wallaby,wizard,tytn,hermes,alpine,prophet,i-mate,jam,dopod,tornado,typhoon,programming,coding,modding,wiki,forum,news,xdatools,xdaunlock,romkitchen,rom,development,lobster,unlock,imei" />
+<meta name="description" content=" [GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants) Android" />
+
+
+<meta property="fb:admins" content="9336956" />
+
+<!-- CSS Stylesheet -->
+<link type='text/css' rel='stylesheet' href="http://cdn.media.xda-developers.com/css/2013.min.css" />
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="http://cdn.media.xda-developers.com/css/2013/ie.css" />
+<![endif]-->
+<!-- / CSS Stylesheet -->
+
+<!-- JS -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+<script type="text/javascript" src="http://cdn.media.xda-developers.com/clientscript/2013.min.js"></script>
+
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "http://img.media.xda-developers.com/images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+var isguest = true;
+var this_page = 'showthread';
+var forumtitle = 'Android';
+var is_mobile = 0;
+// -->
+</script>
+
+
+<script type="text/javascript" src="http://m.servebom.com/xda-developers.com/tn_xdadev.js"></script>
+
+
+<!-- / JS -->
+
+<!-- RSS -->
+
+	<link rel="alternate" type="application/rss+xml" title="xda-developers RSS Feed" href="external.php?type=RSS2" />
+	
+	<link rel="alternate" type="application/rss+xml" title="xda-developers - Android - RSS Feed" href="external.php?type=RSS2&amp;forumids=613" />
+	
+
+<!-- /RSS -->
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12268453-1']);
+  _gaq.push(['_setDomainName', 'forum.xda-developers.com']);
+  _gaq.push(['_setCustomVar',2,'Logged In','No',3]);
+  _gaq.push(['_setCustomVar',3,'Style ID','18',3]);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- /GOOGLE ANALYTICS -->
+
+    <script type='text/javascript'>
+        (function() {
+        var useSSL = 'https:' == document.location.protocol;
+        var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+        document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+    </script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+
+googletag.defineSlot('/8456/IDG.XDA_ROS/IDG.XDA_Forum', [728, 90], 'div-gpt-ad-2864076999006-0').setTargeting('pos','ATF').addService(googletag.pubads());
+
+
+googletag.defineSlot('/8456/IDG.XDA_ROS/IDG.XDA_Forum', [[300,600],[300, 250]], 'div-gpt-ad-2864076999006-1').setTargeting('pos','ATF').addService(googletag.pubads());
+googletag.defineSlot('/8456/IDG.XDA_ROS/IDG.XDA_Forum', [300, 250], 'div-gpt-ad-2864076999006-7').setTargeting('pos','ITF').addService(googletag.pubads());
+
+
+googletag.defineSlot('/8456/IDG.XDA_ROS/IDG.XDA_Forum', [160, 600], 'div-gpt-ad-3828890441033-1').setTargeting('pos','BTF').setTargeting("URL", encodeURIComponent(window.location)).addService(googletag.pubads());
+
+
+
+
+
+googletag.defineSlot('/8456/IDG.XDA_ROS/IDG.XDA_Forum', [300, 250], 'div-gpt-ad-2864076999006-4').setTargeting('pos','BTF').addService(googletag.pubads());
+
+
+googletag.defineSlot('/8456/IDG.XDA_ROS/IDG.XDA_Forum', [728, 90], 'div-gpt-ad-2864076999006-3').setTargeting('pos','BTF').addService(googletag.pubads());
+
+
+
+//googletag.defineOutOfPageSlot('/8456/IDG.XDA_ROS', 'div-gpt-ad-1363287890054-0-oop').addService(googletag.pubads());
+
+//googletag.pubads().enableSyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+<!-- Postcount:  -->
+		<script type='text/javascript'>
+			Event.observe(window, 'load', function(event) {
+				var elements_withTips = $$('.postThanksButton');
+
+				elements_withTips.each(function(targetElement) {
+					var newToolTip = new ToolTip('If a member has posted something that you really appreciate, press this Thanks button. Each member can Thank a limited number of times per day...so only press the button if you really feel appreciative.');
+					newToolTip.bindToElement(targetElement);
+				});
+			});
+		</script>
+	<script type="text/javascript" src="http://scripts.media.xda-developers.com/clientscript/post_thanks.js"></script>
+	<script type="text/javascript">
+              _gaq.push(['_setCustomVar',4,'ForumID','613',3]);
+        </script>
+</head>
+<body onload="">
+
+<!-- header -->
+<div id="xda_global_wrapper">
+
+<a name="top"></a>
+
+
+
+<!-- IDG.XDA_ROS out-of-page -->
+        <div id='div-gpt-ad-1363287890054-0-oop'>
+        <script type='text/javascript'>
+             googletag.cmd.push(function() { googletag.display('div-gpt-ad-1363287890054-0-oop'); });
+        </script>
+        </div>
+
+
+
+<table id='xda_header' border="0" cellpadding="0" cellspacing="0">
+<tr id="xda_header_latest">
+	<td style="padding: 5px 15px;">		
+<span id='xda_header_announce_title' style="top: 3px;position: relative;"><img src="http://img4.media.xda-developers.com/images/XDA2013/forum/announcements.png" style="margin-right:10px" /><a href="/forumdisplay.php?f=2188" style="top: -3px; position: relative;"><u>App development forums launched. Developers can discuss coding, tools, marketing, and more.</u></a></span>
+
+                
+                
+	</td>
+</tr>
+<tr id="xda_titleHeader">
+	<td id="xda_header_left">
+		<a href="index.php" style="float: left; position: relative; margin: 13px 10px 0 10px;"><img src="http://img.media.xda-developers.com/images/XDA2013/header/xdaLogo.png" border="0" alt="XDA Developers Android and Mobile Development Forum" /></a>
+
+		<!-- Not logged in -->
+		<div id="xda_header_register" style="float: right;">
+			<a id="header_register_button" href="/register.php" title="Register for an Account"><span>Register</span></a>
+		</div>
+		<div id="xda_header_login" style="float: right;">
+		<!-- login form -->
+		<form action="/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		
+			<input type="text" name="vb_login_username" id="navbar_username" accesskey="u" tabindex="101" value="User Name" onfocus="if (this.value == 'User Name') this.value = '';" />
+			<input type="password" name="vb_login_password" id="navbar_password" tabindex="102" />
+<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" checked="checked" />Remember Me?</label>
+<a id="forgotPass_navbar" href="/login.php?do=lostpw">Forgot your password?</a>
+			<input type="submit" class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="login" />
+			<input type="hidden" name="vb_login_md5password" />
+			<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+		</div>
+
+ 
+
+		<div id="xda_header_social" style="float: right;">
+		<ul>
+			<li class="social_twitter"><a title="Twitter" href="http://www.twitter.com/xdadevelopers"><span>Twitter</span></a></li>
+			<li class="social_facebook"><a title="facebook" href="http://www.facebook.com/xda.developers"><span>Facebook</span></a></li>
+			<li class="social_Gplus"><a title="Google Plus" href="https://plus.google.com/b/117899181878309641668/"><span>Google plus</span></a></li>
+			<li class="social_youtube"><a title="Youtube" href="http://www.youtube.com/xdadevelopers"><span>Youtube</span></a></li>
+			<li class="social_rss"><a title="RSS Feed" href="/external.php?type=RSS2"><span>RSS</span></a></li>
+		</ul>
+		</div>
+
+	</td>
+</tr>
+</table>
+
+<!-- Need to do something with this, but there isn't room in the UI
+		
+-->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+
+
+
+<!-- /header -->
+<table id="xda_navbar" cellspacing="0" width="100%">
+	<tr>
+		<td id="navtab_portal"><a href="http://www.xda-developers.com/">Portal</a></td>
+		<td id="navtab_forum"><a href="/">Forum</a></td>
+		<td id="navtab_wiki"><a href="/wiki/">Wiki</a></td>
+                <td id="navtab_xdatv"><a href="http://www.xda-developers.com/xda-tv/">XDA TV</a></td>
+		<td id="navtab_links">
+			<a id="quicklinks" href="#quicklinks">Quick Links <span></span></a>
+
+			<script type="text/javascript">
+				vbmenu_register("quicklinks", true, null, true);
+			</script>
+
+			<div id="quicklinks_menu" style="display: none; opacity: .9">
+				<ul>
+				
+					<li><a href="search.php?do=getdaily">Today's Posts</a></li>
+				
+				<li><a href="forumdisplay.php?do=markread&amp;markreadhash=guest">Mark Forum Read</a></li>
+				<li><a href="#" onclick="window.open('misc.php?do=buddylist&amp;focus=1','buddylist','statusbar=no,menubar=no,toolbar=no,scrollbars=yes,resizable=yes,width=250,height=300'); return false;">Open Contact Popups</a>			
+				</li>
+				
+
+				<li id="quicklinks_networking" class='header'>Networking</li>
+				<li><a href="profile.php?do=buddylist">
+					Contacts</a>
+				</li>
+				
+				
+				
+
+				<li id="quicklinks_usercp" class='header'>
+					<a href="usercp.php">User Control Panel</a>
+				</li>
+				
+				<li><a href="profile.php?do=editprofile">Edit Your Details</a></li>
+				<li><a href="profile.php?do=editoptions">Edit Options</a></li>
+				
+
+				<li id="quicklinks_misc" class='header'>Miscellaneous</li>
+				
+				<li><a href="subscription.php" rel="nofollow">Subscribed Threads</a></li>
+				<li><a href="member.php?u=0">Your Profile</a></li>
+<!--
+				
+-->
+				</ul>
+			</div>
+		</td>
+ 
+		<td id="navtab_spacer">&nbsp;</td>
+		<td id="navtab_findDevice">
+			<form action="#">
+			<input id="s" name="query" type="text" value="Type To Find Your Device..." onfocus="javascript:if(this.value=='Type To Find Your Device...') {this.value='';}" onblur="javascript:if(this.value=='') {this.value='Type To Find Your Device...'}; clearSuggest();" onkeyup="suggest(this.value,event);" onkeydown="return tabfix(this.value,event);" autocomplete="off" style="font-weight: bold;"/>
+			<div id="icon"></div>
+			</form>
+                        <p style="display: none"><input class="nodisplayd" type="text" id="keyIndex" /></p>
+			<div id="results" style="font-size:12px"></div>
+		</td>
+		<td id="navtab_searchForums">
+
+    <script src="//www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1');
+
+      function inputFocus() {
+        document.getElementById('query-input').style['background'] = '';
+      }
+
+      function inputBlur() {
+        var queryInput = document.getElementById('gsc-input');
+      }
+
+      function init() {
+        google.search.CustomSearchControl.attachAutoCompletion(
+            'partner-pub-2900107662879704:4763122713',
+            document.getElementById('gsc-input'),
+            'two-page-form');
+        inputBlur();
+      }
+
+      function submitQuery() {
+        if (document.getElementById('gsc-input').value != 'Search All Forums')
+          window.location = '/sitesearch.php?q='
+            + encodeURIComponent(
+                document.getElementById('gsc-input').value);
+        else
+           document.getElementById('gsc-input').focus();
+        return false;
+      }
+
+      google.setOnLoadCallback(init);
+    </script>
+
+
+
+			<form onsubmit="return submitQuery()" id="cse-search-box">
+			<input type="text" value="Search All Forums" onblur="if (this.value == '') this.value = 'Search All Forums';" onfocus="if (this.value == 'Search All Forums') this.value = '';" name="q" id="gsc-input" />
+			<input type="submit" name="sa" id="gsc-submit" value="Search" />
+			<a id="advancedsearch" href="search.php"><img src="http://img.media.xda-developers.com/images/invisible.png" alt="Advanced Search" width="33" height="28" /></a>
+			</form>
+		</td>
+	</tr>
+</table>
+
+<!-- breadcrumb -->
+<table id="pageContainer" cellspacing="0" cellpadding="0">
+<tr>
+
+	<td id="page_leftPane">
+		
+                <div id="breadcrumb">
+                
+			<a id="bread_home" href="index.php" accesskey="1"><img src="http://img.media.xda-developers.com/images/invisible.png" alt="XDA Developers" width="21" height="18" /></a> 
+			
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=611">Chef Central</a></span>
+
+
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=613">Android</a></span>
+
+
+			&gt; <span>
+	 [GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants)
+
+</span>
+                </div>
+                
+<!-- / breadcrumb -->
+
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option">
+				<form action="search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process" />
+					<input type="hidden" name="quicksearch" value="1" />
+					<input type="hidden" name="childforums" value="1" />
+					<input type="hidden" name="exactname" value="1" />
+					<input type="hidden" name="s" value="" />
+					<input type="hidden" name="securitytoken" value="guest" />
+					<div><input type="text" class="bginput" name="query" size="25" tabindex="1001" /><input type="submit" class="button" value="Go" tabindex="1004" /></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Show Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Show Posts</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="tags.php" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="search.php" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		<tr>
+	<td class="vbmenu_option"><a href="post_thanks.php?do=findallthanks">Find All Thanked Posts</a></td>
+</tr>
+		</table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4" />
+				<input type="button" class="button" id="pagenav_ibtn" value="Go" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+
+
+<!-- Start Leaderboard Ad Container --> 
+<div id="topcontainbox"> 
+
+<div class="ad-leaderboard">
+<center>
+
+<div id="ad-one">
+<!-- 728x90 ATF -->
+                <div id='div-gpt-ad-2864076999006-0'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-2864076999006-0'); });
+                </script>
+                </div>
+            <!-- End 728x90 ATF -->
+</div>
+
+</center>
+
+</div> 
+</div>
+
+
+
+<!-- End Leaderboard Ad Container --> 
+
+
+<a name="poststop" id="poststop"></a>
+
+
+
+
+<div id="threadtools">
+<!-- thread tools menu -->
+
+	<table id="threadToolsTable" cellpadding="4" cellspacing="1" border="0">
+
+	<tr>
+		<td class="vbmenu_option"><a href="printthread.php?t=2043285" accesskey="3" rel="nofollow" ><img src="http://img4.media.xda-developers.com/images/XDA2013/thread/print.png" alt="Print" />Print</a></td>
+	
+		<td class="vbmenu_option"><a href="sendmessage.php?do=sendtofriend&amp;t=2043285" rel="nofollow"><img src="http://img4.media.xda-developers.com/images/XDA2013/thread/email.png" alt="Email"/>Email</a></td>
+	
+	
+
+       
+
+	
+
+
+
+</tr>
+	</table>
+
+<!-- / thread tools menu -->
+</div>
+
+
+
+
+
+<table class="threadlistControls_right">
+<td align="right">
+
+<div style="float:right"><div class="pagenav" align="right">
+<table class="pagenavControls">
+<tr>
+        <td style="border:none; background:none;"><span><small>Page <strong>1</strong> of <strong>5 &nbsp;&nbsp;</strong></small></span></td>
+        
+
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 48"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=2043285&amp;page=2" title="Show results 11 to 20 of 48">2</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=2043285&amp;page=3" title="Show results 21 to 30 of 48">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=2043285&amp;page=2" title="Next &raquo; - Results 11 to 20 of 48"><strong>&gt;</strong></a></td>
+
+        <td class="alt1"><a rel="last" class="smallfont" href="showthread.php?t=2043285&amp;page=5" title="Last Page - Results 41 to 48 of 48" class="pagination-forward"><strong>&gt;&gt;</strong></a></td>
+<td class="vbmenu_control goto_nav" title="showthread.php?t=2043285"><a name="PageNav"></a></td>
+
+</tr>
+</table>
+</div></div>
+
+<!-- sidebar-less thread search -->
+<div id="sidepanel_less-threadSearch">
+
+	<table cellpadding="4" cellspacing="1" border="0" width="302px">
+
+	<tbody><tr>
+		<td class="vbmenu_option">
+<div class="header-boxes2" id="sidebar_less-search2">
+			<form action="search.php?do=process&amp;searchthreadid=2043285" method="post">
+				<input type="text" id="sidepanel_less-searchInput" value="Search this thread" onfocus="javascript:if(this.value=='Search this thread') {this.value='';}" onblur="javascript:if(this.value=='') {this.value='Search this thread'}" name="query" />
+
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="process" />
+			<input type="hidden" name="searchthreadid" value="2043285" />
+                                <button id="sidebar_less-search-go" title="Search Thread"></button>
+
+		</form>
+		<!-- </div> removed to fix ie7 bug -->
+<a id="sidebar_less-search-advancedSearch" href="search.php?searchthreadid=2043285" title="Advanced Thread Search"></a>
+	</div>
+    
+	</td>
+	</tr>
+	</tbody></table>
+	
+</div>
+<!-- end sidebar-less thread search -->
+</td>
+</tr>
+</table>
+
+
+
+
+<!-- controls above postbits -->
+<table class="threadlistControls" style="padding-left:8px;">
+<tr valign="bottom">
+	
+		<td class="smallfont" width="145">
+			
+				
+					<a href="newreply.php?do=newreply&amp;noquote=1&amp;p=35338419" rel="nofollow" class="replyButton btn-yellow"><div><div class="speechIcon">&nbsp;</div>Post Reply<span class="addReplyIcon">+</span></div></a>
+				
+		</td>
+	
+
+
+
+
+</tr>
+</table>
+<!-- end controls above postbits -->
+
+<div style="clear"></div>
+
+
+
+
+
+
+<!-- end content table -->
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="posts">
+	<table class="postHeader" cellspacing="0">
+		<tr>
+			<td class="postTitle">
+				<div id="threadTitle"><h1 style="font-size: 1.1em;color: #353535;text-shadow: 1px 1px #DDD;margin: 0px;"><a href="http://forum.xda-developers.com/showthread.php?t=2043285">[GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants)</a></h1></div>
+				<div class="share">
+
+<link rel="stylesheet" type="text/css" href="http://forum.xda-developers.com/clientscript/socialcount.css" />
+				<script async type="text/javascript" src="http://forum.xda-developers.com/clientscript/socialcount.js"></script>
+
+<!-- data-counts="true"  -->
+				 <ul class="socialcount" data-url="http://forum.xda-developers.com/showthread.php?t=2043285" data-share-text="[GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants)">
+					<li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=http://forum.xda-developers.com/showthread.php?t=2043285" title="Share on Facebook"><span class="social-icon icon-facebook"></span><span class="count">Like</span></a></li>
+					<li class="twitter"><a href="https://twitter.com/intent/tweet?text=http://forum.xda-developers.com/showthread.php?t=2043285" title="Share on Twitter"><span class="social-icon icon-twitter"></span><span class="count">Tweet</span></a></li>
+					<li class="googleplus"><a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showthread.php?t=2043285" title="Share on Google Plus"><span class="social-icon icon-googleplus"></span><span class="count">+1</span></a></li>
+				</ul>
+
+
+<!-- <span>Share Thread:</span> 
+                                     <a href="#" class="headerFacebook" id="fbs_thread">&nbsp;</a><a href="/retweet.php?t=2043285" target="_blank" class="headerTwitter">&nbsp;</a>
+                                     <a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showthread.php?t=2043285" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_orange.png" border="0" /></a> -->
+                                </div>
+			</td>
+			<td class="submitAsTip"><a href="votenews.php?topic=2043285"><small>Tip us?</small></a></td>
+		</tr>
+	</table>
+	
+	<!-- post #35338419 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35338419" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35338419" cellspacing="0">
+<tr>
+	<td id="postmenu_35338419" class="posterInfoHead">
+		<div title="sylentprofet is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=2645562">sylentprofet</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35338419", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				12th December 2012, 07:32 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		<!-- edit note -->
+			<div class="lastEdited">
+				<em>
+					
+						(Last edited by sylentprofet; 13th January 2013 at <span class="time">05:58 AM</span>.)
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35338419" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35338419&amp;postcount=1" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35338419" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35338419&amp;postcount=1" target="new" rel="nofollow" id="postcount35338419" name="1" class="postCount"><strong>#1</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Member</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>171</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/3.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>45</strong></div>
+			<div>Join Date: <strong>Jun 2010</strong></div>
+                        
+                        
+
+
+
+
+<br/>
+<a href="/donatetome.php?u=2645562" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35338419">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35338419">
+
+
+
+			
+
+
+<div style="margin: 0 0 15px 15px; float: right">
+
+
+<!-- 300x250 ITF -->
+<div id='div-gpt-ad-2864076999006-7' style='width:300px; height:250px;'>
+
+<script type='text/javascript'>
+  var sidebar_cookie = jQuery.cookie('xda_sidebar_visible');
+  //console.log('Window Width: '+ jQuery(window).width());
+  //if (jQuery(window).width() < 1247 || sidebar_cookie == 'false') {
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-2864076999006-7'); });
+  //}
+</script>
+</div>
+<!-- End 300x250 ITF -->
+</div>
+
+
+
+
+
+
+
+
+
+			<div class="smallfont">
+				<img class="inlineimg" src="http://media.xda-developers.com/images/icons/icon1.gif" alt="Default" border="0" width="24px" style="vertical-align: bottom" />
+				<strong>[GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants)</strong>
+			</div>
+			<hr size="1" style="color:#fff; background-color:#fff" />
+
+			Initializing a fresh Android Build Environment in Ubuntu 12.10 64-bit sucks, right? The instructions at the aosp page are outdated at best, wrong at worst. Near as I can tell, they try to have you install 2 JDKs, the first one not even being the correct link for Quantal Quetzal, and the second being OpenJDK. Which _might_ work. But iiiiiiii dunno about all that, I'd rather have Oracle's official stamp when it comes to building for Android.<br />
+<br />
+Currently most of the guides are up to 12.04 LTS, which is fine and dandy, but being on the cutting edge is nice too. Plus, I don't think I've seen anyone aggregate the directions in this order, for the correct official JDK and everything just right for building happiness.<br />
+<br />
+This guide applies to <b>Ubuntu 12.10 Quantal Quetzal 64 bit.</b> It might work for 12.04 too, but *shrug*. Also, PAY CLOSE ATTENTION when to use &quot;sudo&quot; and when to not. It can make things funky if you do something as root that you shouldn't.<br />
+<br />
+Much thanks goes out to Google, ProTekk, Canonical, and everyone else that I read a random paragraph here and snippet there.<br />
+<br />
+First, let's set up the correct JDK.<br />
+<br />
+Most of you, if not all, probably have some kind of wrong Java installed. Sad panda.<br />
+<br />
+Let's get rid of that. Copy and paste this into a Terminal window:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo apt-get purge openjdk-\* icedtea-\* icedtea6-\*</pre>
+</div>Banish the OpenJDK! If you must keep it, it's possible. But I'm not going to tell you how to do it. I don't want any chance of confusion or mistake.<br />
+<br />
+Back to the Terminal. Copypasta the following:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo add-apt-repository ppa:webupd8team/java</pre>
+</div>This will add the correct PPA to your system for updated builds of Java 6 JDK that are compatible with 12.10. No more unrecognized Java version errors! Yay! And it's self updating, so you don't have to redownload binaries everytime they release a new version.<br />
+<br />
+Next, we actually need to install the package. More copypasta:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo apt-get update &amp;&amp; sudo apt-get install oracle-java6-installer</pre>
+</div>Follow the onscreen instructions. You have to Accept the Licensing Agreement or whatever. Hopefully no human centipede clauses. Once that is completed successfully, you will have to restart any open browsers with Java content for it to display correctly.<br />
+<br />
+To make sure the correct version of Java is activated, run the following at the Terminal prompt:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">java -version</pre>
+</div>You should see something like the following:<br />
+<br />
+java version &quot;1.6.0_37&quot;<br />
+Java(TM) SE Runtime Environment (build 1.6.0_37-b06)<br />
+Java HotSpot(TM) 64-Bit Server VM (build 20.12-b01, mixed mode)<br />
+<br />
+Ok, back to a fresh Terminal prompt. Time for installing the guts to build stuff in Ubuntu:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev zlib1g-dev:i386 libc6-dev lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 lib32z-dev libgl1-mesa-glx:i386 libgl1-mesa-dev g++-multilib mingw32 tofrodos python-markdown libxml2-utils xsltproc readline-common libreadline6-dev libreadline6 lib32readline-gplv2-dev libncurses5-dev lib32readline5 lib32readline6 libreadline-dev libreadline6-dev:i386 libreadline6:i386 bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev lib32bz2-dev libsdl1.2-dev libesd0-dev squashfs-tools pngcrush schedtool libwxgtk2.8-dev python</pre>
+</div>And we wait. Don't worry, this isn't the crazy downloading part just yet.<br />
+<br />
+When that is done, do this:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so</pre>
+</div>That's probably it on the package side of things. Probably.<br />
+<br />
+You guessed it, time for more Terminal. This really is the easiest way, seriously. And it's totally worth it when you're basking in the glory of a bunch of people on XDA.<br />
+<br />
+The binary for repo will let you talk to git servers and download all that precious source code. That second part after the &amp;&amp; allows it to be executable:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">mkdir ~/bin &amp;&amp; curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; ~/bin/repo &amp;&amp; chmod a+x ~/bin/repo</pre>
+</div>Use your favorite text editor to open ~/.bashrc<br />
+<br />
+I like nano:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo nano ~/.bashrc</pre>
+</div>At the very bottom, add the following line:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">export PATH=~/bin:$PATH</pre>
+</div>Save it. In nano that would be Ctrl-O and then Enter. Then Ctrl-X to exit back to a prompt. Restart bash:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">source ~/.bashrc</pre>
+</div>Navigate to where you would like to store the Android source code. The directions below will make it in your home folder, but if you have limited space, you may want to create it somewhere else. Faster is better, ie SSD would be best, USB external is unusable. Here we go:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">mkdir ~/android</pre>
+</div><div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">cd ~/android</pre>
+</div>Now you're going to initialize the repo. Here's where you decide the flavor of Android you want to build for, ie AOKP, CyanogenMod, AOSP etc. The following, for the purposes of this tutorial, will initialize for AOKP:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">repo init -u git://github.com/AOKP/platform_manifest.git -b jb</pre>
+</div>Almost there. Last step, but it's a doozy.  You're going to get the source. Prepare yourself, mere mortal. 10+ GB of downloading await you. Don't worry, it's automated. Go to sleep. Eat something. Perhaps you have heard of this new thing the kids are doing called &quot;going outside&quot;? Yeah, I didn't think so. Me neither. Hey everyone, it's a terminal:<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">repo sync</pre>
+</div>Check back periodically every hour or so. It really all depends on how fast your internet connection is.<br />
+<br />
+That should be everything. Now you're ready to build Android the right way. Luck! If this guide helped you, please say Thanks.<br />
+<br />
+(copied with permission from <a href="http://soupdawg.wordpress.com" target="_blank" rel="nofollow" >http://soupdawg.wordpress.com</a>)
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35338419" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35338419"><div>
+	<table id="thanksTable" class="tborder"  cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following 50 Users Say Thank You to sylentprofet For This Useful Post: [ <a href="#" onclick="return toggle_collapse('Thanks_35338419')">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="#" style="float:right" onclick="return toggle_collapse('Thanks_35338419')"><img id="collapseimg_Thanks_35338419" src="http://img4.media.xda-developers.com/images/XDA2013/thread/post/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_35338419" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="member.php?u=2548902" rel="nofollow">akash3656</a>&nbsp;(6th March 2013), <a href="member.php?u=4680228" rel="nofollow">apu314</a>&nbsp;(13th February 2013), <a href="member.php?u=4498729" rel="nofollow">brenuga</a>&nbsp;(6th April 2013), <a href="member.php?u=4608636" rel="nofollow">bsmitty83</a>&nbsp;(18th January 2013), <a href="member.php?u=3123348" rel="nofollow">calvinbui</a>&nbsp;(16th February 2013), <a href="member.php?u=4295256" rel="nofollow">caustictoast</a>&nbsp;(20th December 2012), <a href="member.php?u=3136793" rel="nofollow">chrisrotolo</a>&nbsp;(16th February 2013), <a href="member.php?u=4454196" rel="nofollow">clodfelterac</a>&nbsp;(3rd April 2013), <a href="member.php?u=4610254" rel="nofollow">CMNein</a>&nbsp;(9th February 2013), <a href="member.php?u=3432552" rel="nofollow">csrabear</a>&nbsp;(27th February 2013), <a href="member.php?u=2391566" rel="nofollow">danielgek</a>&nbsp;(21st December 2012), <a href="member.php?u=3751341" rel="nofollow">deanz93</a>&nbsp;(25th March 2013), <a href="member.php?u=4442122" rel="nofollow">Deliberate</a>&nbsp;(17th February 2013), <a href="member.php?u=2060836" rel="nofollow">djn541</a>&nbsp;(10th March 2013), <a href="member.php?u=4016770" rel="nofollow">DNRDustin</a>&nbsp;(23rd December 2012), <a href="member.php?u=357552" rel="nofollow">dude6595</a>&nbsp;(12th January 2013), <a href="member.php?u=3665680" rel="nofollow">dukedusty</a>&nbsp;(3rd February 2013), <a href="member.php?u=4257843" rel="nofollow">Epix4G</a>&nbsp;(12th December 2012), <a href="member.php?u=4412069" rel="nofollow">estabien</a>&nbsp;(17th March 2013), <a href="member.php?u=3956268" rel="nofollow">G00fY2</a>&nbsp;(2nd February 2013), <a href="member.php?u=4699427" rel="nofollow">iurnait</a>&nbsp;(21st December 2012), <a href="member.php?u=3611149" rel="nofollow">karanrajpal14</a>&nbsp;(13th January 2013), <a href="member.php?u=4663337" rel="nofollow"><span style="color: green; font-style: italic;">kartiknnn</span></a>&nbsp;(1st March 2013), <a href="member.php?u=4862164" rel="nofollow">Langes</a>&nbsp;(8th April 2013), <a href="member.php?u=3718498" rel="nofollow">luxifr</a>&nbsp;(11th February 2013), <a href="member.php?u=2822284" rel="nofollow"><span style="color: green; font-style: italic;">matt95</span></a>&nbsp;(14th January 2013), <a href="member.php?u=4487405" rel="nofollow">Maverick.Marq</a>&nbsp;(15th January 2013), <a href="member.php?u=1257613" rel="nofollow">mercado79</a>&nbsp;(23rd February 2013), <a href="member.php?u=4214610" rel="nofollow">MJHawaii</a>&nbsp;(22nd January 2013), <a href="member.php?u=4676995" rel="nofollow">Mlopik</a>&nbsp;(5th January 2013), <a href="member.php?u=4176339" rel="nofollow">onlychevys</a>&nbsp;(12th December 2012), <a href="member.php?u=4913184" rel="nofollow">percy_g2</a>&nbsp;(21st December 2012), <a href="member.php?u=4414170" rel="nofollow"><span style="color: green; font-style: italic;">Peteragent5</span></a>&nbsp;(21st December 2012), <a href="member.php?u=5074282" rel="nofollow">ramesh.polasa3001</a>&nbsp;(18th January 2013), <a href="member.php?u=4554891" rel="nofollow">ranjitkhera</a>&nbsp;(5th January 2013), <a href="member.php?u=990676" rel="nofollow">redy2006</a>&nbsp;(6th March 2013), <a href="member.php?u=3690052" rel="nofollow">scidon37</a>&nbsp;(12th February 2013), <a href="member.php?u=4606737" rel="nofollow">seanci</a>&nbsp;(25th February 2013), <a href="member.php?u=3677880" rel="nofollow">Serious_Beans</a>&nbsp;(16th January 2013), <a href="member.php?u=3976443" rel="nofollow">shmizan</a>&nbsp;(17th February 2013), <a href="member.php?u=5197803" rel="nofollow">Shylesh107</a>&nbsp;(6th April 2013), <a href="member.php?u=4390246" rel="nofollow">smileydr0id</a>&nbsp;(20th March 2013), <a href="member.php?u=3145421" rel="nofollow">Stroid01</a>&nbsp;(25th February 2013), <a href="member.php?u=2532364" rel="nofollow">Tatonka</a>&nbsp;(21st March 2013), <a href="member.php?u=4348308" rel="nofollow">THEindian</a>&nbsp;(20th March 2013), <a href="member.php?u=4792974" rel="nofollow">TingTingin</a>&nbsp;(6th January 2013), <a href="member.php?u=2541035" rel="nofollow">TMaYaD</a>&nbsp;(21st December 2012), <a href="member.php?u=4443733" rel="nofollow">total_noob_1</a>&nbsp;(15th February 2013), <a href="member.php?u=2811713" rel="nofollow">ttibbetts83</a>&nbsp;(26th December 2012), <a href="member.php?u=4871716" rel="nofollow">Wambo_Bomb</a>&nbsp;(16th February 2013)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 35338419 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35338419_menu" style="display:none;">
+	
+		<a href="member.php?u=2645562"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=2645562" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35338419 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35338419 -->
+
+
+
+  <script type="text/javascript">
+  //<![CDATA[
+  if(typeof tn_ad_insert != "undefined") {
+    tn_ad_insert.tn_place_ad_top();
+  }
+  //]]>
+  </script>
+
+
+
+<!-- post #35673240 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35673240" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35673240" cellspacing="0">
+<tr>
+	<td id="postmenu_35673240" class="posterInfoHead">
+		<div title="caustictoast is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=4295256">caustictoast</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35673240", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				20th December 2012, 06:53 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35673240" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35673240&amp;postcount=2" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35673240" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35673240&amp;postcount=2" target="new" rel="nofollow" id="postcount35673240" name="2" class="postCount"><strong>#2</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="member.php?u=4295256"><img src="http://media.xda-developers.com/customavatars/avatar4295256_1.gif" width="80" height="80" alt="caustictoast's Avatar" border="0" style="margin-top:6px"/></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Junior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>14</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/0.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>25</strong></div>
+			<div>Join Date: <strong>Oct 2011</strong></div>
+                        
+                        
+
+
+      <div id="moreinfo_35673240"><a href="#" class="moreInfoButton btn-silver" onclick="document.getElementById('moreinfo_35673240').style.display = 'none'; return toggle_collapse('more_35673240');">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">></span></a></div>
+		</div>
+		<div id="collapseobj_more_35673240" class="moreUserInfo" style="display:none">
+                        <img src="http://img2.media.xda-developers.com/images/flags/United States.gif" title="United States" class="flag" alt="Flag"/><br /><br />
+			<img src="http://img2.media.xda-developers.com/images/providers/U.S.A. - AT&amp;T.gif" title="U.S.A. - AT&amp;T" class="carrier" alt="Carrier" /><br /><br />
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35673240">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35673240">
+
+
+
+
+
+
+
+			<div class="smallfont">
+				<img class="inlineimg" src="http://media.xda-developers.com/images/icons/icon1.gif" alt="Default" border="0" width="24px" style="vertical-align: bottom" />
+				<strong>Problem</strong>
+			</div>
+			<hr size="1" style="color:#fff; background-color:#fff" />
+
+			When I do the command <br />
+<br />
+$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev zlib1g-dev:i386 libc6-dev lib32ncurses5-dev ia32-libs x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 lib32z-dev libgl1-mesa-glx:i386 libgl1-mesa-dev g++-multilib mingw32 tofrodos python-markdown libxml2-utils xsltproc readline-common libreadline6-dev libreadline6 lib32readline-gplv2-dev libncurses5-dev lib32readline5 lib32readline6 libreadline-dev libreadline6-dev:i386 libreadline6:i386 bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev lib32bz2-dev libsdl1.2-dev libesd0-dev squashfs-tools pngcrush schedtool libwxgtk2.6-dev python<br />
+<br />
+My prompt returns <br />
+<br />
+Reading package lists... Done<br />
+Building dependency tree       <br />
+Reading state information... Done<br />
+Note, selecting 'lib32z1-dev' instead of 'lib32z-dev'<br />
+E: Unable to locate package zlib1g-dev<br />
+E: Unable to locate package libx11-dev<br />
+E: Unable to locate package libreadline6-dev<br />
+E: Unable to locate package libgl1-mesa-glx<br />
+E: Unable to locate package libreadline6-dev<br />
+E: Unable to locate package libreadline6<br />
+E: Unable to locate package libwxgtk2.6-dev<br />
+E: Couldn't find any package by regex 'libwxgtk2.6-dev'<br />
+<br />
+All I did was copy and paste and it won't work. Any suggestions?
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig">
+				Current:<br />
+<font color="Navy"><font size="4">LG Nexus 4 </font></font><br />
+Backup:<br />
+<font color="Red"><font size="3">AT&amp;T HTC ONE X</font></font><br />
+Past:<br />
+<font size="2">AT&amp;T Samsung Galaxy S3<br />
+AT&amp;T HTC Vivid<br />
+AT&amp;T iPhone 4<br />
+AT&amp;T HTC Tilt 2<br />
+Verizon Motorola Q</font>
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35673240" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35673240"></div>
+
+ 
+<!-- post 35673240 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35673240_menu" style="display:none;">
+	
+		<a href="member.php?u=4295256"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=4295256" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35673240 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35673240 --><!-- post #35706476 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35706476" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35706476" cellspacing="0">
+<tr>
+	<td id="postmenu_35706476" class="posterInfoHead">
+		<div title="Peteragent5 is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=4414170"><span style="color: green; font-style: italic;">Peteragent5</span></a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35706476", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				21st December 2012, 12:44 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35706476" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35706476&amp;postcount=3" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35706476" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35706476&amp;postcount=3" target="new" rel="nofollow" id="postcount35706476" name="3" class="postCount"><strong>#3</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="member.php?u=4414170"><img src="http://media.xda-developers.com/customavatars/avatar4414170_6.gif" width="80" height="75" alt="Peteragent5's Avatar" border="0" style="margin-top:6px"/></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Recognized Contributor</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>1649</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/6.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>1,226</strong></div>
+			<div>Join Date: <strong>Jan 2012</strong></div>
+                        <div>Location: <strong>Richmond</strong></div>
+                        
+
+
+      <div id="moreinfo_35706476"><a href="#" class="moreInfoButton btn-silver" onclick="document.getElementById('moreinfo_35706476').style.display = 'none'; return toggle_collapse('more_35706476');">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">></span></a></div>
+		</div>
+		<div id="collapseobj_more_35706476" class="moreUserInfo" style="display:none">
+                        <img src="http://img2.media.xda-developers.com/images/flags/Indonesia.gif" title="Indonesia" class="flag" alt="Flag"/><br /><br />
+			<img src="http://img2.media.xda-developers.com/images/providers/Canada - Fido.gif" title="Canada - Fido" class="carrier" alt="Carrier" /><br /><br />
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    <a href="#" onclick="imwindow('skype', '4414170', 400, 285); return false;"><img src="http://mystatus.skype.com/smallicon/Peteragent5" alt="Send a message via Skype&trade; to Peteragent5" border="0" /></a></div>
+		</div>
+
+
+
+<br/>
+<a href="/donatetome.php?u=4414170" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35706476">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35706476">
+
+
+
+
+
+
+
+			One of the straightforward guides I've ever seen. It's quick, easy and problem-free <img src="images/smilies/smile.gif" border="0" alt="" title="Smile" class="inlineimg" /><br />
+<br />
+Also how about your device config?<br />
+<br />
+And with make use: make -j`grep 'processor' /proc/cpuinfo | wc -l`
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig">
+				<div align="center"><font face="Century Gothic"><img src="http://dl.dropbox.com/u/71965109/XDA/sign.png" border="0" alt="" /><br />
+<font color="DimGray">Samsung Galaxy Gio GT-S5660M | BlackBerry PlayBook</font><br />
+<a href="https://github.com/Peteragent5" target="_blank" rel="nofollow" ><font color="DimGray"><b>GitHub</b></font></a><br />
+<a href="http://www.teamcooper.net/" target="_blank" rel="nofollow" ><img src="http://dl.dropbox.com/u/71965109/XDA/tcultimate.png" border="0" alt="" /></a></font></div>
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35706476" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35706476"><div>
+	<table id="thanksTable" class="tborder"  cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following User Says Thank You to Peteragent5 For This Useful Post: [ <a href="#" onclick="return toggle_collapse('Thanks_35706476')">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="#" style="float:right" onclick="return toggle_collapse('Thanks_35706476')"><img id="collapseimg_Thanks_35706476" src="http://img4.media.xda-developers.com/images/XDA2013/thread/post/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_35706476" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="member.php?u=5099660" rel="nofollow">mobiusheron</a>&nbsp;(19th February 2013)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 35706476 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35706476_menu" style="display:none;">
+	
+		<a href="member.php?u=4414170"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=4414170" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+ 
+         <a href="http://www.github.com/Peteragent5"><img src="http://img3.media.xda-developers.com/images/XDA2013/usercp/github.png" /> View GitHub profile</a> 
+
+
+	
+</div>
+<!-- / post 35706476 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35706476 --><!-- post #35740899 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35740899" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35740899" cellspacing="0">
+<tr>
+	<td id="postmenu_35740899" class="posterInfoHead">
+		<div title="tommyjt24 is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=4859295">tommyjt24</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35740899", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				21st December 2012, 09:41 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35740899" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35740899&amp;postcount=4" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35740899" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35740899&amp;postcount=4" target="new" rel="nofollow" id="postcount35740899" name="4" class="postCount"><strong>#4</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="member.php?u=4859295"><img src="http://media.xda-developers.com/customavatars/avatar4859295_1.gif" width="80" height="60" alt="tommyjt24's Avatar" border="0" style="margin-top:6px"/></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Junior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>0</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/0.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>21</strong></div>
+			<div>Join Date: <strong>Sep 2012</strong></div>
+                        
+                        
+
+
+
+
+
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35740899">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35740899">
+
+
+
+
+
+
+
+			<div class="smallfont">
+				<img class="inlineimg" src="http://media.xda-developers.com/images/icons/icon1.gif" alt="Default" border="0" width="24px" style="vertical-align: bottom" />
+				<strong>64-bits</strong>
+			</div>
+			<hr size="1" style="color:#fff; background-color:#fff" />
+
+			Well to anyone else going through this make sure you get the 64-bit ISO, not the default 32 bit one off the desktop page.
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35740899" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35740899"></div>
+
+ 
+<!-- post 35740899 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35740899_menu" style="display:none;">
+	
+		<a href="member.php?u=4859295"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=4859295" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35740899 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35740899 --><!-- post #35785651 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35785651" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35785651" cellspacing="0">
+<tr>
+	<td id="postmenu_35785651" class="posterInfoHead">
+		<div title="tnpapadakos is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=2228542">tnpapadakos</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35785651", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				23rd December 2012, 04:01 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		<!-- edit note -->
+			<div class="lastEdited">
+				<em>
+					
+						(Last edited by tnpapadakos; 23rd December 2012 at <span class="time">04:06 AM</span>.)
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35785651" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35785651&amp;postcount=5" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35785651" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35785651&amp;postcount=5" target="new" rel="nofollow" id="postcount35785651" name="5" class="postCount"><strong>#5</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="member.php?u=2228542"><img src="http://media.xda-developers.com/customavatars/avatar2228542_4.gif" width="80" height="80" alt="tnpapadakos's Avatar" border="0" style="margin-top:6px"/></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Senior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>838</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/4.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>2,773</strong></div>
+			<div>Join Date: <strong>Dec 2009</strong></div>
+                        <div>Location: <strong>Tampa</strong></div>
+                        
+
+
+      <div id="moreinfo_35785651"><a href="#" class="moreInfoButton btn-silver" onclick="document.getElementById('moreinfo_35785651').style.display = 'none'; return toggle_collapse('more_35785651');">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">></span></a></div>
+		</div>
+		<div id="collapseobj_more_35785651" class="moreUserInfo" style="display:none">
+                        <img src="http://img2.media.xda-developers.com/images/flags/United States.gif" title="United States" class="flag" alt="Flag"/><br /><br />
+			<img src="http://img2.media.xda-developers.com/images/providers/U.S.A. - T-Mobile.gif" title="U.S.A. - T-Mobile" class="carrier" alt="Carrier" /><br /><br />
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br/>
+<a href="/donatetome.php?u=2228542" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35785651">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35785651">
+
+
+
+
+
+
+
+			so i am trying to do this<br />
+problem is right after installing java when i go to install all the stuff needed to build stuff...alot of the packages are not available...starting with ia32-libs and alot of the other libs<br />
+<br />
+on ubuntu 12.10 32bit on a vm
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig">
+				<img src="http://i.imgur.com/XVIRp.gif" border="0" alt="" /><br />
+<br />
+#1: HTC One S/Hboot 1.06/<a href="http://www.thenow1.com/ones/cm-10.1-20130410-UNOFFICIAL-ville.zip" target="_blank" rel="nofollow" >cm-10.1-20130410-UNOFFICIAL-ville</a>/2000mAh battery<br />
+#2: Mt3g CM 6.1.0-tnp/AmonRA 1.7.0/Radio 2.22.28.25 <font color="Red">Still in active service!</font><br />
+#3. NookColor CM9<br />
+#4. Samsung Galaxy S II<br />
+<br />
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=tnpapadakos%40gmail%2ecom&amp;lc=US&amp;item_name=thenow1%2ecom&amp;item_number=the%20now&amp;no_note=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest" target="_blank" rel="nofollow" >I need a pack of smokes</a>
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35785651" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35785651"></div>
+
+ 
+<!-- post 35785651 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35785651_menu" style="display:none;">
+	
+		<a href="member.php?u=2228542"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=2228542" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35785651 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35785651 --><!-- post #35789089 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35789089" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35789089" cellspacing="0">
+<tr>
+	<td id="postmenu_35789089" class="posterInfoHead">
+		<div title="DNRDustin is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=4016770">DNRDustin</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35789089", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				23rd December 2012, 06:38 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35789089" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35789089&amp;postcount=6" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35789089" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35789089&amp;postcount=6" target="new" rel="nofollow" id="postcount35789089" name="6" class="postCount"><strong>#6</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Junior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>3</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/0.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>24</strong></div>
+			<div>Join Date: <strong>Apr 2011</strong></div>
+                        
+                        
+
+
+
+
+
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35789089">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35789089">
+
+
+
+
+
+
+
+			<div style="margin:0px 0px 10px 0px ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" >
+	<tr>
+		<td class="alt2" style="border:1px solid #B4B4B4;border-radius: 3px;background-color: #E9E9E9;padding: 10px;">
+			
+				<div>
+					Originally Posted by <strong>tnpapadakos</strong>
+					<a href="showthread.php?p=35785651#post35785651" rel="nofollow"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/viewpost.png" border="0" alt="View Post" /></a>
+				</div>
+				<div style="font-style:italic">so i am trying to do this<br />
+problem is right after installing java when i go to install all the stuff needed to build stuff...alot of the packages are not available...starting with ia32-libs and alot of the other libs<br />
+<br />
+on ubuntu 12.10 32bit on a vm</div>
+			
+		</td>
+	</tr>
+	</table>
+</div>Those libs are so 64bit can run 32bit tools. From what I'm getting, a 64bit system is required to compile JB. I'm not entirely convinced yet, more like hoping though <img src="images/smilies/wink.gif" border="0" alt="" title="Wink" class="inlineimg" />
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35789089" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35789089"></div>
+
+ 
+<!-- post 35789089 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35789089_menu" style="display:none;">
+	
+		<a href="member.php?u=4016770"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=4016770" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35789089 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35789089 --><!-- post #35799503 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35799503" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35799503" cellspacing="0">
+<tr>
+	<td id="postmenu_35799503" class="posterInfoHead">
+		<div title="tnpapadakos is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=2228542">tnpapadakos</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35799503", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				23rd December 2012, 02:35 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35799503" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35799503&amp;postcount=7" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35799503" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35799503&amp;postcount=7" target="new" rel="nofollow" id="postcount35799503" name="7" class="postCount"><strong>#7</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="member.php?u=2228542"><img src="http://media.xda-developers.com/customavatars/avatar2228542_4.gif" width="80" height="80" alt="tnpapadakos's Avatar" border="0" style="margin-top:6px"/></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Senior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>838</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/4.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>2,773</strong></div>
+			<div>Join Date: <strong>Dec 2009</strong></div>
+                        <div>Location: <strong>Tampa</strong></div>
+                        
+
+
+      <div id="moreinfo_35799503"><a href="#" class="moreInfoButton btn-silver" onclick="document.getElementById('moreinfo_35799503').style.display = 'none'; return toggle_collapse('more_35799503');">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">></span></a></div>
+		</div>
+		<div id="collapseobj_more_35799503" class="moreUserInfo" style="display:none">
+                        <img src="http://img2.media.xda-developers.com/images/flags/United States.gif" title="United States" class="flag" alt="Flag"/><br /><br />
+			<img src="http://img2.media.xda-developers.com/images/providers/U.S.A. - T-Mobile.gif" title="U.S.A. - T-Mobile" class="carrier" alt="Carrier" /><br /><br />
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br/>
+<a href="/donatetome.php?u=2228542" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35799503">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35799503">
+
+
+
+
+
+
+
+			<div style="margin:0px 0px 10px 0px ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" >
+	<tr>
+		<td class="alt2" style="border:1px solid #B4B4B4;border-radius: 3px;background-color: #E9E9E9;padding: 10px;">
+			
+				<div>
+					Originally Posted by <strong>DNRDustin</strong>
+					<a href="showthread.php?p=35789089#post35789089" rel="nofollow"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/viewpost.png" border="0" alt="View Post" /></a>
+				</div>
+				<div style="font-style:italic">Those libs are so 64bit can run 32bit tools. From what I'm getting, a 64bit system is required to compile JB. I'm not entirely convinced yet, more like hoping though <img src="images/smilies/wink.gif" border="0" alt="" title="Wink" class="inlineimg" /></div>
+			
+		</td>
+	</tr>
+	</table>
+</div>and with 64 bit im running into other issues...i follow the directions and then stuff like file does not exist happens...stupid stuff...this should not be that hard or mysterious...got me to thinking a slip-streamed ubuntu install disk with everything one needs to set up the environment built right in would be awesome
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig">
+				<img src="http://i.imgur.com/XVIRp.gif" border="0" alt="" /><br />
+<br />
+#1: HTC One S/Hboot 1.06/<a href="http://www.thenow1.com/ones/cm-10.1-20130410-UNOFFICIAL-ville.zip" target="_blank" rel="nofollow" >cm-10.1-20130410-UNOFFICIAL-ville</a>/2000mAh battery<br />
+#2: Mt3g CM 6.1.0-tnp/AmonRA 1.7.0/Radio 2.22.28.25 <font color="Red">Still in active service!</font><br />
+#3. NookColor CM9<br />
+#4. Samsung Galaxy S II<br />
+<br />
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=tnpapadakos%40gmail%2ecom&amp;lc=US&amp;item_name=thenow1%2ecom&amp;item_number=the%20now&amp;no_note=0&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest" target="_blank" rel="nofollow" >I need a pack of smokes</a>
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35799503" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35799503"></div>
+
+ 
+<!-- post 35799503 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35799503_menu" style="display:none;">
+	
+		<a href="member.php?u=2228542"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=2228542" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35799503 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35799503 --><!-- post #35867582 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35867582" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35867582" cellspacing="0">
+<tr>
+	<td id="postmenu_35867582" class="posterInfoHead">
+		<div title="sylentprofet is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=2645562">sylentprofet</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35867582", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				25th December 2012, 10:11 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35867582" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35867582&amp;postcount=8" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35867582" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35867582&amp;postcount=8" target="new" rel="nofollow" id="postcount35867582" name="8" class="postCount"><strong>#8</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Member</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>171</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/3.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>45</strong></div>
+			<div>Join Date: <strong>Jun 2010</strong></div>
+                        
+                        
+
+
+
+
+<br/>
+<a href="/donatetome.php?u=2645562" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35867582">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35867582">
+
+
+
+
+
+
+
+			<div style="margin:0px 0px 10px 0px ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" >
+	<tr>
+		<td class="alt2" style="border:1px solid #B4B4B4;border-radius: 3px;background-color: #E9E9E9;padding: 10px;">
+			
+				<div>
+					Originally Posted by <strong>tnpapadakos</strong>
+					<a href="showthread.php?p=35799503#post35799503" rel="nofollow"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/viewpost.png" border="0" alt="View Post" /></a>
+				</div>
+				<div style="font-style:italic">and with 64 bit im running into other issues...i follow the directions and then stuff like file does not exist happens...stupid stuff...this should not be that hard or mysterious...got me to thinking a slip-streamed ubuntu install disk with everything one needs to set up the environment built right in would be awesome</div>
+			
+		</td>
+	</tr>
+	</table>
+</div>dell is working on a github project for something similar to this. users will *supposedly* be able to easily replicate build environments according to a profile-type system.<br />
+<br />
+anyway, if you want to PM me i can try to help you out. i understand the frustration, it's why i wrote the guide &amp;&amp;<br />
+<br />
+good luck everyone!
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35867582" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35867582"></div>
+
+ 
+<!-- post 35867582 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35867582_menu" style="display:none;">
+	
+		<a href="member.php?u=2645562"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=2645562" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35867582 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35867582 --><!-- post #35868228 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit35868228" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post35868228" cellspacing="0">
+<tr>
+	<td id="postmenu_35868228" class="posterInfoHead">
+		<div title="sylentprofet is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=2645562">sylentprofet</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_35868228", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				25th December 2012, 10:44 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=35868228" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=35868228&amp;postcount=9" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=35868228" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=35868228&amp;postcount=9" target="new" rel="nofollow" id="postcount35868228" name="9" class="postCount"><strong>#9</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Member</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>171</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/3.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>45</strong></div>
+			<div>Join Date: <strong>Jun 2010</strong></div>
+                        
+                        
+
+
+
+
+<br/>
+<a href="/donatetome.php?u=2645562" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_35868228">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_35868228">
+
+
+
+
+
+
+
+			<div style="margin:0px 0px 10px 0px ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0" >
+	<tr>
+		<td class="alt2" style="border:1px solid #B4B4B4;border-radius: 3px;background-color: #E9E9E9;padding: 10px;">
+			
+				<div>
+					Originally Posted by <strong>Peteragent5</strong>
+					<a href="showthread.php?p=35706476#post35706476" rel="nofollow"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/viewpost.png" border="0" alt="View Post" /></a>
+				</div>
+				<div style="font-style:italic">One of the straightforward guides I've ever seen. It's quick, easy and problem-free <img src="images/smilies/smile.gif" border="0" alt="" title="Smile" class="inlineimg" /><br />
+<br />
+Also how about your device config?<br />
+<br />
+And with make use: make -j`grep 'processor' /proc/cpuinfo | wc -l`</div>
+			
+		</td>
+	</tr>
+	</table>
+</div>Don't use make! Use mka! I forgot to add this part as I mentioned it in another post somewhere on xda &amp;&amp;<br />
+<br />
+Ok so, the reasoning is, mka is a streamlined version of make that will utilize a job handler automatically to speed up your build process.<br />
+<br />
+So, your build string becomes<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">source build/ensetup.sh &amp;&amp; lunch yourdevicenamehere &amp;&amp; mka yourdevicenamehere</pre>
+</div>Furthermore, if you're building for Cyanogenmod or a cm-based ROM, use brunch. It does optimizations after the build process with a tool called &quot;squisher&quot; that is not normally called for with lunch/mka. Thusly,<br />
+<br />
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">source build/ensetup.sh &amp;&amp; brunch yourdevicehere</pre>
+</div>If you want to read about why, I recommend checking out <a href="http://blog.cameronpickett.com/2011/09/16/breakfast-brunch-and-lunch/" target="_blank" rel="nofollow" >this dude over here</a><br />
+<br />
+thanks for reminding me!
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=35868228" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+
+ <div id="post_thanks_box_35868228"><div>
+	<table id="thanksTable" class="tborder"  cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following 2 Users Say Thank You to sylentprofet For This Useful Post: [ <a href="#" onclick="return toggle_collapse('Thanks_35868228')">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="#" style="float:right" onclick="return toggle_collapse('Thanks_35868228')"><img id="collapseimg_Thanks_35868228" src="http://img4.media.xda-developers.com/images/XDA2013/thread/post/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_35868228" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="member.php?u=5099660" rel="nofollow">mobiusheron</a>&nbsp;(19th February 2013), <a href="member.php?u=2467727" rel="nofollow">rasroygbiv</a>&nbsp;(12th January 2013)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 35868228 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_35868228_menu" style="display:none;">
+	
+		<a href="member.php?u=2645562"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="search.php?do=finduser&amp;u=2645562" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 35868228 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #35868228 --><!-- post #36184159 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit36184159" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table class="tborder" id="post36184159" cellspacing="0">
+<tr>
+	<td id="postmenu_36184159" class="posterInfoHead">
+		<div title="etoD is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="member.php?u=2171276">etoD</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_36184159", true); </script>
+		
+	</td>
+	<td class="postContentHead" >
+		<img class="inlineimg" src="http://img1.media.xda-developers.com/images/statusicon/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" /><div class="postDate">
+			<!-- status icon and date -->
+			
+				2nd January 2013, 04:36 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="retweet_forums.php?p=36184159" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/twitter.png" /></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=36184159&amp;postcount=10" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="http://img2.media.xda-developers.com/images/XDA2013/thread/post/facebook.png" /></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=36184159" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="http://cdn.media.xda-developers.com/images/XDA2013/thread/post/gplus_grey.png" style="margin-top: 1px;" border="0" /></a>
+
+
+			<a href="showpost.php?p=36184159&amp;postcount=10" target="new" rel="nofollow" id="postcount36184159" name="10" class="postCount"><strong>#10</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Junior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>0</b><br />
+			<img src="http://img2.media.xda-developers.com/images/thanks/0.jpg" alt="" />
+		</div>
+                 
+			<div>Posts: <strong>11</strong></div>
+			<div>Join Date: <strong>Nov 2009</strong></div>
+                        
+                        
+
+
+
+
+
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_36184159">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_36184159">
+
+
+
+
+
+
+
+			E: Unable to locate package libwxgtk2.6-dev<br />
+E: Couldn't find any package by regex 'libwxgtk2.6-dev'<br />
+<br />
+Got this but it turned out not to matter. Also needed to install sharutils. Thanks for this though, it really helped!
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig">
+				<a href="http://innyouty.tumblr.com/post/574963951" target="_blank" rel="nofollow" >Debian with X11/lxde on Hero with Android 2.1</a> (or perhaps, on 2.1 in general... i haven't checked :P)
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+</ul>	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="newreply.php?do=newreply&amp;p=36184159" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</table>
+
+
+<br />
+			<script type="text/javascript">
+//<![CDATA[
+tn_ad_insert.tn_place_ad_bottom();
+//]]>
+</script>
+
+
+ <div id="post_thanks_box_36184159"></div>
+
+ 
+<!-- post 36184159 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_36184159_menu" style="display:none;">
+	
+		<a href="member.php?u=2171276"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/profile.png" /> View Profile</a>
+	
+	
+	
+	
+		<a href="http://innyouty.tumblr.com/"><img src="http://img2.media.xda-developers.com/images/XDA2013/user/goView.png" /> Visit Homepage</a>
+	
+	
+		<a href="search.php?do=finduser&amp;u=2171276" rel="nofollow"><img src="http://img3.media.xda-developers.com/images/XDA2013/user/viewPosts.png" /> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+
+	
+</div>
+<!-- / post 36184159 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #36184159 -->
+	
+	<div id="lastpost"></div>
+</div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table class="threadlistControls">
+<tr valign="top">
+	
+		<td class="smallfont" width="135">
+			
+				
+					<a href="newreply.php?do=newreply&amp;noquote=1&amp;p=36184159" rel="nofollow" class="btn-yellow replyButton"><div><div class="speechIcon">&nbsp;</div>Post Reply<span class="addReplyIcon">+</span></div></a>
+				
+		</td>
+	
+</tr>
+</table>
+
+<table class="threadlistControls_right">
+<tr valign="top">
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="pagenavControls">
+<tr>
+        <td style="border:none; background:none;"><span><small>Page <strong>1</strong> of <strong>5 &nbsp;&nbsp;</strong></small></span></td>
+        
+
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 48"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="showthread.php?t=2043285&amp;page=2" title="Show results 11 to 20 of 48">2</a></td><td class="alt1"><a class="smallfont" href="showthread.php?t=2043285&amp;page=3" title="Show results 21 to 30 of 48">3</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="showthread.php?t=2043285&amp;page=2" title="Next &raquo; - Results 11 to 20 of 48"><strong>&gt;</strong></a></td>
+
+        <td class="alt1"><a rel="last" class="smallfont" href="showthread.php?t=2043285&amp;page=5" title="Last Page - Results 41 to 48 of 48" class="pagination-forward"><strong>&gt;&gt;</strong></a></td>
+<td class="vbmenu_control goto_nav" title="showthread.php?t=2043285"><a name="PageNav"></a></td>
+
+</tr>
+</table>
+</div>
+		
+		</td>
+	
+</tr>
+</table>
+
+
+
+
+<!-- / controls below postbits -->
+
+
+
+
+
+
+<!-- thread tags -->
+	<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="clear: both;">
+	<tr>
+		<td class="thead">
+			
+			<a name="taglist"></a>
+			<a href="tags.php">Tags</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="alt1 smallfont" id="tag_list_cell"><a href="tags.php?tag=android">android</a>, <a href="tags.php?tag=build">build</a>, <a href="tags.php?tag=compile">compile</a>, <a href="tags.php?tag=jellybean">jellybean</a>, <a href="tags.php?tag=ubuntu">ubuntu</a> <img src="http://img.media.xda-developers.com/images/misc/11x11progress.gif" id="tag_form_progress" class="inlineimg" style="display:none" alt="" /></td>
+	</tr>
+	</table>
+
+	<script type="text/javascript" src="http://scripts.media.xda-developers.com/clientscript/vbulletin_ajax_taglist.js?v=387"></script>
+		<script type="text/javascript" src="http://scripts.media.xda-developers.com/clientscript/vbulletin_ajax_tagsugg.js?v=387"></script>
+<!-- / thread tags -->
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="http://scripts.media.xda-developers.com/clientscript/vbulletin_lightbox.js?v=387"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<div align="center" style="margin: 10px 0;">
+		<strong>&laquo;</strong>
+			<a href="showthread.php?t=2043285&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+			|
+			<a href="showthread.php?t=2043285&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+		<strong>&raquo;</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+		
+                <div id="breadcrumb">
+                
+			<a id="bread_home" href="index.php" accesskey="1"><img src="http://img.media.xda-developers.com/images/invisible.png" alt="XDA Developers" width="21" height="18" /></a> 
+			
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=611">Chef Central</a></span>
+
+
+	<span class="navbar">&gt; <a href="forumdisplay.php?f=613">Android</a></span>
+
+
+			&gt; <span>
+	 [GUIDE] How to Properly Configure Ubuntu 12.10 64bit - Build Jellybean (All Variants)
+
+</span>
+                </div>
+                
+
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="postings.php?t=2043285&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/printer.gif" alt="Show Printable Version" /> <a href="printthread.php?t=2043285" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/sendtofriend.gif" alt="Email this Page" /> <a href="sendmessage.php?do=sendtofriend&amp;t=2043285" rel="nofollow">Email this Page</a></td>
+	</tr>
+	
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/mode_linear.gif" alt="Linear Mode" /> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/mode_hybrid.gif" alt="Hybrid Mode" /> <a href="showthread.php?mode=hybrid&amp;t=2043285">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="http://buttons.media.xda-developers.com/images/XDA2012/buttons/mode_threaded.gif" alt="Threaded Mode" /> <a href="showthread.php?p=35338419&amp;mode=threaded#post35338419">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+<!-- thread search menu -->
+<div class="vbmenu_popup" id="threadsearch_menu" style="display:none">
+<form action="search.php?do=process&amp;searchthreadid=2043285" method="post">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Search this Thread<a name="goto_threadsearch"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option" title="nohilite">
+			<input type="hidden" name="s" value="" />
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="process" />
+			<input type="hidden" name="searchthreadid" value="2043285" />
+			<input type="text" class="bginput" name="query" size="25" /><input type="submit" class="button" value="Go"  /><br />
+		</td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a href="search.php?searchthreadid=2043285">Advanced Search</a></td>
+	</tr>
+	</table>
+</form>
+</div>
+<!-- / thread search menu -->
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table id="stats">
+<tr valign="bottom">
+        
+	<td id="ad-billboard-bottom">	
+			
+<!-- 300x250 BTF -->
+                <div id='div-gpt-ad-2864076999006-4'>
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-2864076999006-4'); });
+                </script>
+                </div>
+            <!-- End 300x250 BTF -->
+
+</td>
+
+	
+	<td valign="top">
+		<table class="tborder" cellspacing="0">
+<thead>
+<tr>
+	<td class="tcat">
+		<div class="postingRulesIcon"></div>
+		<strong>Posting Rules</strong>
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules">
+<tr>
+	<td class="alt1">
+		
+			
+				<div id="postingRulesRight">
+					<div>You may not post new threads</div>
+					<div>You may not post replies</div>
+					<div>You may not post attachments</div>
+					<div>You may not edit your posts</div>
+				</div>
+			
+			<div id="postingRulesLeft">
+				<div>BB code is <a href="misc.php?do=bbcode"><strong>On</strong></a></div>
+				<div>Smilies are <a href="misc.php?do=showsmilies"><strong>On</strong></a></div>
+				<div>[IMG] code is <a href="misc.php?do=bbcode#imgcode"><strong>On</strong></a></div>
+				<div>HTML code is <strong>Off</strong></div>
+			</div>
+		
+	</td>
+</tr>
+</tbody>
+</table>
+                <br/>
+                <span style="margin-left:5px"><a href="#poststop">Go to top of page...</a></span>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+
+<br />
+
+<!-- begin sidebar -->
+
+
+<!-- End the pageContainer table that was started in navbar -->
+</td>
+
+
+
+<td id='page_rightPane' style="width: 305px;display:none;">
+
+<!-- sidebarcookie: false -->
+
+
+
+<script type="text/javascript">
+  var sidebarContentLoaded = 'false';
+  _gaq.push(['_setCustomVar',1,'Sidebar Showing','No',3]);
+</script>
+
+
+
+
+<!-- end sidebar -->
+
+
+
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+
+		</td>
+	</tr>
+</table>
+
+
+
+<table id="xda_footer" cellspacing="0">
+	<tr>
+		<td id="footer_xdaLogo">
+			<a href="http://forum.xda-developers.com"><img src="http://img1.media.xda-developers.com/images/XDA2013/header/xdaLogo_small.png" alt="XDA Developers Android Forum" /></a>
+			<p>XDA Developers was founded by developers, for developers. It is now a valuable resource for people who want to make the most of their mobile devices, from customizing the look and feel to adding new functionality. <a href="http://www.xda-developers.com/recognized-developer-program/">Are you a developer?</a></p>
+
+			
+			<select name="styleid" onchange="switch_id(this, 'style')">
+				<optgroup label="Quick Style Chooser">
+					<option value="15" class="" >-- XDA Classic</option>
+<option value="16" class="" >-- XDA 2010</option>
+<option value="18" class="" selected="selected">-- XDA 2013 Beta</option>
+<option value="19" class="" >---- XDA 2013 Beta - 1024</option>
+
+				</optgroup>
+			</select>
+			
+		</td>
+		<td id="footer_download">
+			<h2>Download the XDA Android App</h2>
+			<p>Get the XDA forums on your Android Device.</p>
+			<a href="https://play.google.com/store/apps/developer?id=xda-developers"><img src="http://cdn.media.xda-developers.com/images/google-play-logo.png" alt="XDA Google Play" /></a>
+		</td>
+		<td id="footer_moreinfo">
+			<h2>More Info</h2>
+			<a href="http://www.xda-developers.com/contact/">Contact Us</a>
+			<a href="http://www.xda-developers.com/suggest-content/">Suggest Content</a>
+			<a href="http://www.xda-developers.com/index.php/xda-developers-privacy-policy/">Privacy Policy</a>
+			<a href="/external.php?type=RSS2">RSS</a> | <a href="http://www.xda-developers.com/changelog/">Changelog</a>
+		</td>
+		<td id="footer_social">
+		<h2>Be Social</h2>
+		<ul>
+			<li class="social_twitter"><a title="Twitter" href="http://www.twitter.com/xdadevelopers"><span>Twitter</span></a></li>
+			<li class="social_facebook"><a title="facebook" href="http://www.facebook.com/xda.developers"><span>Facebook</span></a></li>
+			<li class="social_Gplus"><a title="Google Plus" href="https://plus.google.com/b/117899181878309641668/"><span>Google plus</span></a></li>
+			<li class="social_youtube"><a title="Youtube" href="http://www.youtube.com/xdadevelopers"><span>Youtube</span></a></li>
+			<li class="social_rss"><a title="RSS Feed" href="/external.php?type=RSS2"><span>RSS</span></a></li>
+		</ul>
+<br />
+<small>Copyright&copy; xda-developers. &nbsp;<br />
+Powered by <a href="http://www.axivo.com/searchlight/">Searchlight</a> &copy; 2013 Axivo Inc.</small>
+<small> 
+                
+				</small>
+		</td>
+	</tr>
+
+
+<tr>
+<td colspan="4" style="border:none">
+<!-- call this function to enable ads -->
+
+<center>
+<!-- 728x90 BTF -->
+                <div id='div-gpt-ad-2864076999006-3' style="width:768px; height: 90px;">
+                <script type='text/javascript'>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-2864076999006-3'); });
+                </script>
+                </div>
+            <!-- End 728x90 BTF -->
+</center>
+
+</td>
+</tr>
+</table>
+
+<!-- /xda_global_wrapper -->
+</div>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!-- modal QR -->
+<script type="text/javascript">
+//if a QR link is clicked, prevent the default action and open the modal window
+jQuery('a.qrLink').each(function(QRLink) {
+	jQuery(this).on('click', function() {
+          var attachmentID = jQuery(this).attr('id');
+          openQR(attachmentID);
+        });
+});
+function openQR(attachmentID) {
+	jQuery('#qrCode').load('/qrcode.php?attachmentid='+attachmentID);
+	jQuery('#qrModal').show();
+	jQuery('#qrOverlay').show();
+}
+function closeQR() {
+	jQuery('#qrModal').hide();
+	jQuery('#qrOverlay').hide();
+}
+</script>
+<!-- end modal QR -->
+<!-- QR modal -->
+<div id="qrOverlay" style="display:none;background:rgba(0,0,0,0.7);width:100%;height:100%;position:fixed;top:0;left:0;z-index:90;">
+	<a href="javascript:closeQR();" style="display:block;width:100%;height:100%;z-index:91;position:absolute;top:0;left:0;"></a>
+	<div id="qrModal" style="display:none;width:250px;height:250px;z-index:99;position:relative;margin-top:-125px;margin-left:-125px;top:50%;left:50%;opacity:1;">
+		<a href="javascript:closeQR();" style="position:absolute;margin-top:0.5em;margin-left:235px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAdCAYAAABfeMd1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA8xJREFUeNqclktIVFEYx+fO+GjUGqw0S/IRGtTKENtkqJTkooUwC0EQNNpEEiJYoISbKAhcCYogagvBlbRQW/kAIdAkbRGIi3RiNIfJR+qk4zxO/2/4zu3cOw+tA7+5c8/j+5/vfN8592hCCMspSy4o4acXLIHVU40kkQTkglfgm4hd3KAb3PxfESf4KU5XAuBRPA0tznINgCa1Yn193bK0tBR5ZmVlWUpKSiyFhYXmcfPgiaZpn0/yZEKd4vLysqioqKCZRAEhMTc3Z/bqy0nL9Uzt3dXVJex2e0wBic1mEx0dHcLv96tDX8cTyVN7tbW1JTRupr6+3uzR7Vgib2Tr5ORklJHa2lrDe0FBgVhcXDTUDw8PqyIfY4m4ZGt5ebnB4OrqaqS+srJSj8XOzk6kbnBwUO9XVFQkgsGgKmTTRQ4PD/NlrcvlivKis7Mz0kZiJBRLQDI7O/s3rwOBu7oI1B/KhrGxsaiBtDTSsCyxBIj+/n69D+w+Jg0r/YTD4Wy5fF6vNyoD19bWLENDQ4b3pqammBtPHQ+diF0rNo4GxT3Z4HA4ogbSxmtsbNTf4ZnhXS1Ief1/KBQ6og0f2fXIkuJ4MVGDLBOACtVRW6KYuN3ue7oISIc3btmoDp6enjYYbWlp0Y3Qf1UAx40hu0pLSx0yJPRz1uPxvJONo6OjhswiAZm+BBlX3yU9PT26gM/no/PrHLDpIr29vQ/U7GloaDBk10k7vrq62uDF+Pg4ZYbDIAKuzc/PD8hOdBbRUXGaI6Wmpkbs7+/rAltbW19RX2wWSQd54A6WzaV6REcFjvSYxikGtESqBwcHB7vt7e30bSngyVtl4M+AHHCrubn5+cbGxqb5tFtYWBB9fX2iu7s78pyZmYn6ciF2e62trS9hpwxcAWlqdqWA8+A6uA+ejoyMfBL/UFZWVjbr6ureYmwNuAEugtSIff4y0rpl8CWhFDjBC6fT+R4BdB8dHYXiGZ+amvJgY35A/3ZQB+iIv8pLlaR/frHpad2S2b1McJk75vPzUlVVVV5ZWdmF5ORkGw6+EL6YvyYmJlyIxyba3eA7swG2gQ8E6NSSIhoHKIWTgISyWSyH/2fyJMjrMPgNdvl6REI/gAfsgANwTCcLJYh+kWAhGwulcfplcqwyeWPZuQ8NpnNpn41uM3vsAQkEOQuNtxWTUCp7lcHPNK6zsifH7I2PZ+5j4QBPIhz3SqQsXRLHKZVFU/hd4xkGWcjPT7k8IelBwnsXC0kxK3tn4/9SJKwYDTPCLJDocmcWlPtJUy86isGERv4IMACaz3RmXeGcqwAAAABJRU5ErkJggg%3D%3D" /></a><br />
+		<div id="qrCode"></div>
+	</div>
+</div>
+<!-- end QR modal -->
+
+
+<script type="text/javascript">
+  var vglnk = { api_url: '//api.viglink.com/api',
+                key: 'f0a7f91912ae2b52e0700f73990eb321' };
+
+  (function(d, t) {
+    var s = d.createElement(t); s.type = 'text/javascript'; s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+             '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
+  }(document, 'script'));
+</script>
+
+
+
+
+<!--
+<script async type="text/javascript"> 
+(function() {
+    var nstrack = document.createElement("script"), el_nstrack = document.getElementsByTagName("script")[0]; nstrack.async = true;
+    nstrack.src = "http://track.netshelter.net/async/js/sites/xda-developers.com-async.js";
+    el_nstrack.parentNode.insertBefore(nstrack, el_nstrack);
+  })();
+</script>
+-->
+
+<script type="text/javascript">
+  _gaq.push(['_trackPageview']);
+</script>
+
+<!-- Begin BlueKai Tag -->
+<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+<script type="text/javascript" src="//tags.bkrtx.com/js/bk-coretag.js"></script>
+<script type="text/javascript">
+
+bk_doJSTag(13019, 10);
+
+</script>
+<!-- End BlueKai Tag --><div class="smallfont"><!--VBOCR--></div>
+
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+<script type="text/javascript">
+xda_showthread.init();
+xda_sidebar.init();
+</script>
+</body>
+</html>
+<!-- Page generated on 10 April 2013 19:53:04 in 0.27314 / 0.016421  seconds with 10 queries by sensation -->
