@@ -1,0 +1,4013 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0056)http://forum.xda-developers.com/showthread.php?t=1505006 -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	
+<meta name="generator" content="vBulletin 3.8.7">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<meta name="keywords" content="cm9, guide, ics, pyramid, sensation,  [GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit), XDA,MDA,Vario,HTC,Qtek,wallaby,wizard,tytn,hermes,alpine,prophet,i-mate,jam,dopod,tornado,typhoon,programming,coding,modding,wiki,forum,news,xdatools,xdaunlock,romkitchen,rom,development,lobster,unlock,imei">
+<meta name="description" content=" [GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) Sensation Android Development">
+
+
+<!-- CSS Stylesheet -->
+<link type="text/css" rel="stylesheet" href="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/2013.min.css">
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="http://cdn.media.xda-developers.com/css/2013/ie.css" />
+<![endif]-->
+<!-- / CSS Stylesheet -->
+
+<!-- JS -->
+<script async="" src="http://track.netshelter.net/async/js/sites/xda-developers.com-async.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/jquery.min.js"></script>
+<script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/prototype.js"></script>
+<script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/2013.min.js"></script><style type="text/css"></style>
+
+<script async="" type="text/javascript" src="http://rt.liftdna.com/XD.js"></script>
+<script async="" type="text/javascript" src="http://rt.liftdna.com/liftrtb_4.js"></script>
+
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "http://img.media.xda-developers.com/images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+var isguest = true;
+var this_page = 'showthread';
+var forumtitle = 'Sensation Android Development';
+var is_mobile = 0;
+// -->
+</script>
+
+
+
+<script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/tn_xdadev.js"></script>
+
+
+
+<!-- / JS -->
+
+<!-- RSS -->
+
+	<link rel="alternate" type="application/rss+xml" title="xda-developers RSS Feed" href="http://forum.xda-developers.com/external.php?type=RSS2">
+	
+	<link rel="alternate" type="application/rss+xml" title="xda-developers - Sensation Android Development - RSS Feed" href="http://forum.xda-developers.com/external.php?type=RSS2&forumids=1112">
+	
+
+<!-- /RSS -->
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12268453-1']);
+  _gaq.push(['_setDomainName', 'xda-developers.com']);
+  _gaq.push(['_setCustomVar',2,'Logged In','No',3]);
+  _gaq.push(['_setCustomVar',3,'Style ID','18',3]);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- /GOOGLE ANALYTICS -->
+		<script type="text/javascript">
+			Event.observe(window, 'load', function(event) {
+				var elements_withTips = $$('.postThanksButton');
+
+				elements_withTips.each(function(targetElement) {
+					var newToolTip = new ToolTip('If a member has posted something that you really appreciate, press this Thanks button. Each member can Thank a limited number of times per day...so only press the button if you really feel appreciative.');
+					newToolTip.bindToElement(targetElement);
+				});
+			});
+		</script>
+	<script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_thanks.js"></script>
+	<title> [GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers</title>
+	
+	<style type="text/css" id="vbulletin_showthread_css">
+	<!--
+	
+	#tag_edit_list { list-style:none; margin:0px; padding:0px; }
+	#tag_edit_list li { float:left; display:block; width:200px; }
+	#tag_edit_list li.mine { font-weight:bold; }
+	
+	#links div { white-space: nowrap; }
+	#links img { vertical-align: middle; }
+	-->
+	</style>
+<style type="text/css">.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gscsep_a{display:none}.gsq_a{padding:0}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gssb_a{padding:0 2px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body onload="">
+
+<!-- header -->
+<div id="xda_global_wrapper">
+
+<a name="top"></a>
+<table id="xda_header" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr id="xda_header_latest">
+	<td>		
+<!-- <span id='xda_header_announce_title'></span>
+-->
+	</td>
+	<td>
+                
+                
+	</td>
+</tr>
+<tr id="xda_titleHeader">
+	<td id="xda_header_left">
+		<a href="http://forum.xda-developers.com/index.php"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/xdaLogo.png" border="0" alt="XDA Developers Android and Mobile Development Forum" title="XDA Developers Android and Mobile Development Forum"></a>
+	</td>
+	<td id="xda_header_right" nowrap="nowrap">
+		<div id="xda_header_social">
+		<ul>
+			<li class="social_twitter"><a title="Twitter" href="http://www.twitter.com/xdadevelopers"><span>Twitter</span></a></li>
+			<li class="social_facebook"><a title="facebook" href="http://www.facebook.com/xda.developers"><span>Facebook</span></a></li>
+			<li class="social_Gplus"><a title="Google Plus" href="https://plus.google.com/b/117899181878309641668/"><span>Google plus</span></a></li>
+			<li class="social_youtube"><a title="Youtube" href="http://www.youtube.com/xdadevelopers"><span>Youtube</span></a></li>
+			<li class="social_rss"><a title="RSS Feed" href="http://forum.xda-developers.com/external.php?type=RSS2"><span>RSS</span></a></li>
+		</ul>
+		</div>
+
+		<!-- Not logged in -->
+		<div id="xda_header_login">
+		<!-- login form -->
+		<form action="http://forum.xda-developers.com/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		
+			<input type="text" name="vb_login_username" id="navbar_username" accesskey="u" tabindex="101" value="User Name" onfocus="if (this.value == &#39;User Name&#39;) this.value = &#39;&#39;;">
+			<input type="password" name="vb_login_password" id="navbar_password" tabindex="102">
+<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" checked="checked">Remember Me?</label>
+<a id="forgotPass_navbar" href="http://forum.xda-developers.com/login.php?do=lostpw">Forgot your password?</a>
+			<input type="submit" class="button" value="Log in" tabindex="104" title="Enter your username and password in the boxes provided to login, or click the &#39;register&#39; button to create a profile for yourself." accesskey="s">
+			<input type="hidden" name="s" value="">
+			<input type="hidden" name="securitytoken" value="guest">
+			<input type="hidden" name="do" value="login">
+			<input type="hidden" name="vb_login_md5password">
+			<input type="hidden" name="vb_login_md5password_utf">
+		</form>
+		<!-- / login form -->
+		</div>
+		<div id="xda_header_register">
+			<a id="header_register_button" href="http://forum.xda-developers.com/register.php" title="Register for an Account"><span>Register</span></a>
+		</div>
+ 
+	</td>
+</tr>
+</tbody></table>
+
+<!-- Need to do something with this, but there isn't room in the UI
+		
+-->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+
+
+
+<!-- /header -->
+<table id="xda_navbar" cellspacing="0" width="100%">
+	<tbody><tr>
+		<td id="navtab_portal"><a href="http://www.xda-developers.com/">Portal</a></td>
+		<td id="navtab_forum"><a href="http://forum.xda-developers.com/">Forum</a></td>
+		<td id="navtab_wiki"><a href="http://forum.xda-developers.com/wiki/">Wiki</a></td>
+                <td id="navtab_xdatv"><a href="http://www.xda-developers.com/xda-tv/">XDA TV</a></td>
+		<td id="navtab_links">
+			<a id="quicklinks" href="http://forum.xda-developers.com/showthread.php?t=1505006#quicklinks">Quick Links <span></span></a>
+
+			<script type="text/javascript">
+				vbmenu_register("quicklinks", true, null, true);
+			</script>
+
+			<div id="quicklinks_menu" style="display: none; opacity: .9">
+				<ul>
+				
+					<li><a href="http://forum.xda-developers.com/search.php?do=getdaily">Today's Posts</a></li>
+				
+				<li><a href="http://forum.xda-developers.com/forumdisplay.php?do=markread&markreadhash=guest">Mark Forum Read</a></li>
+				<li><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" onclick="window.open(&#39;misc.php?do=buddylist&amp;focus=1&#39;,&#39;buddylist&#39;,&#39;statusbar=no,menubar=no,toolbar=no,scrollbars=yes,resizable=yes,width=250,height=300&#39;); return false;">Open Contact Popups</a>			
+				</li>
+				
+
+				<li id="quicklinks_networking" class="header">Networking</li>
+				<li><a href="http://forum.xda-developers.com/profile.php?do=buddylist">
+					Contacts</a>
+				</li>
+				
+				
+				
+
+				<li id="quicklinks_usercp" class="header">
+					<a href="http://forum.xda-developers.com/usercp.php">User Control Panel</a>
+				</li>
+				
+				<li><a href="http://forum.xda-developers.com/profile.php?do=editprofile">Edit Your Details</a></li>
+				<li><a href="http://forum.xda-developers.com/profile.php?do=editoptions">Edit Options</a></li>
+				
+
+				<li id="quicklinks_misc" class="header">Miscellaneous</li>
+				
+				<li><a href="http://forum.xda-developers.com/subscription.php" rel="nofollow">Subscribed Threads</a></li>
+				<li><a href="http://forum.xda-developers.com/member.php?u=0">Your Profile</a></li>
+<!--
+				
+-->
+				</ul>
+			</div>
+		</td>
+ 
+		<td id="navtab_spacer">&nbsp;</td>
+		<td id="navtab_findDevice">
+			<form action="http://forum.xda-developers.com/showthread.php?t=1505006#">
+			<input id="s" name="query" type="text" value="Find Your Device..." onfocus="javascript:if(this.value==&#39;Find Your Device...&#39;) {this.value=&#39;&#39;;}" onblur="javascript:if(this.value==&#39;&#39;) {this.value=&#39;Find Your Device...&#39;}; clearSuggest();" onkeyup="suggest(this.value,event);" onkeydown="return tabfix(this.value,event);" autocomplete="off">
+			<div id="icon"></div>
+			</form>
+                        <p style="display: none"><input class="nodisplayd" type="text" id="keyIndex"></p>
+			<div id="results" style="font-size:12px"></div>
+		</td>
+		<td id="navtab_searchForums" style="border-right-width: 1px; border-right-style: solid; border-right-color: rgb(160, 160, 160);">
+
+    <script src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load('search', '1');
+
+      function inputFocus() {
+        document.getElementById('query-input').style['background'] = '';
+      }
+
+      function inputBlur() {
+        var queryInput = document.getElementById('gsc-input');
+      }
+
+      function init() {
+        google.search.CustomSearchControl.attachAutoCompletion(
+            'partner-pub-2900107662879704:fs7umqefhnf',
+            document.getElementById('gsc-input'),
+            'two-page-form');
+        inputBlur();
+      }
+
+      function submitQuery() {
+        window.location = '/sitesearch.php?q='
+            + encodeURIComponent(
+                document.getElementById('gsc-input').value);
+        return false;
+      }
+
+      google.setOnLoadCallback(init);
+    </script><script src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/saved_resource" type="text/javascript"></script><link href="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/default+es.css" type="text/css" rel="stylesheet"><script src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/default+es.I.js" type="text/javascript"></script>
+
+
+
+			<form onsubmit="return submitQuery()" id="cse-search-box">
+			<input type="text" value="Search All Forums" onblur="if (this.value == &#39;&#39;) this.value = &#39;Search All Forums&#39;;" onfocus="if (this.value == &#39;Search All Forums&#39;) this.value = &#39;&#39;;" name="q" id="gsc-input" dir="ltr" autocomplete="off" spellcheck="false" style="outline: none;">
+			<input type="submit" name="sa" id="gsc-submit" value="Search">
+			<a id="advancedsearch" href="http://forum.xda-developers.com/search.php"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/invisible.png" alt="Advanced Search" width="33" height="28" title="Advanced Search"></a>
+			</form>
+		</td>
+	<td id="sidebar-toggle" style="cursor: pointer; border-left-width: 1px; border-left-style: solid; border-left-color: rgb(218, 218, 218); border-bottom-style: none; width: 40px; background-color: white; box-shadow: rgb(255, 255, 255) 0px 5px; background-position: initial initial; background-repeat: initial initial;" onclick="javascript:xda_sidebar.toggle();" title="Show sidebar"><div style="background-image: url(http://img.media.xda-developers.com/images/XDA2013/thread/sidebar/sidebar-toggle.png); height: 22px; width: 24px; margin: 12px auto 0px; background-position: 0px 0px; background-repeat: no-repeat no-repeat;"></div></td></tr>
+</tbody></table>
+
+<!-- breadcrumb -->
+<table id="pageContainer" cellspacing="0" cellpadding="0">
+<tbody><tr>
+
+	<td id="page_leftPane">
+		
+                <div id="breadcrumb">
+                
+			<a id="bread_home" href="http://forum.xda-developers.com/index.php" accesskey="1"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/invisible.png" alt="XDA Developers" width="21" height="18" title="XDA Developers"></a> 
+			
+	<span class="navbar">&gt; <a href="http://forum.xda-developers.com/forumdisplay.php?f=1109">HTC Sensation</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://forum.xda-developers.com/forumdisplay.php?f=1112">Sensation Android Development</a></span>
+
+
+			&gt; <span>
+	 [GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit)
+
+</span>
+                </div>
+                
+<!-- / breadcrumb -->
+
+
+
+
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+
+	
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none;margin-top:3px" align="left">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tbody><tr>
+			<td class="thead">Search Forums</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option">
+				<form action="http://forum.xda-developers.com/search.php?do=process" method="post">
+
+					<input type="hidden" name="do" value="process">
+					<input type="hidden" name="quicksearch" value="1">
+					<input type="hidden" name="childforums" value="1">
+					<input type="hidden" name="exactname" value="1">
+					<input type="hidden" name="s" value="">
+					<input type="hidden" name="securitytoken" value="guest">
+					<div><input type="text" class="bginput" name="query" size="25" tabindex="1001"><input type="submit" class="button" value="Go" tabindex="1004"></div>
+					<div style="margin-top:6px">
+						<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked">Show Threads</label>
+						&nbsp;
+						<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003">Show Posts</label>
+					</div>
+				</form>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://forum.xda-developers.com/tags.php" rel="nofollow">Tag Search</a></td>
+		</tr>
+		
+		<tr>
+			<td class="vbmenu_option"><a href="http://forum.xda-developers.com/search.php" accesskey="4" rel="nofollow">Advanced Search</a></td>
+		</tr>
+		<tr>
+	<td class="vbmenu_option"><a href="http://forum.xda-developers.com/post_thanks.php?do=findallthanks">Find All Thanked Posts</a></td>
+</tr>
+		</tbody></table>
+	</div>
+	<!-- / header quick search form -->
+	
+	
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<!-- PAGENAV POPUP -->
+	<div class="vbmenu_popup" id="pagenav_menu" style="display: none; position: absolute; z-index: 50;">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tbody><tr>
+			<td class="thead" nowrap="nowrap">Go to Page...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="">
+			<form action="http://forum.xda-developers.com/index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4">
+				<input type="button" class="button" id="pagenav_ibtn" value="Go">
+			</form>
+			</td>
+		</tr>
+		</tbody></table>
+	</div>
+<!-- / PAGENAV POPUP -->
+
+
+
+
+
+<!-- Start Leaderboard Ad Container --> 
+<div id="topcontainbox"> 
+
+<div class="ad-leaderboard">
+<center>
+
+<div id="ad-one">
+
+<!-- begin ad tag (tile=1) -->
+<script type="text/javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random()*1E16);
+document.write('<script type="text/javascript" src="http://ad4.netshelter.net/adj/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;dcopt=ist;sz=728x90;ord=' + ord + '?"><\/script>');
+//]]>
+</script><script type="text/javascript" src="http://ad4.netshelter.net/adj/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;dcopt=ist;sz=728x90;ord=1965554987546056?"></script>
+<noscript>&lt;a href="http://ad4.netshelter.net/jump/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;sz=728x90;ord=123456789?" target="_blank" &gt;&lt;img src="http://ad4.netshelter.net/ad/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;sz=728x90;ord=123456789?" border="0" alt="" /&gt;&lt;/a&gt;</noscript>
+<!-- end ad tag -->
+
+
+</div>
+
+</center>
+
+</div> 
+</div>
+
+
+
+<!-- End Leaderboard Ad Container --> 
+
+<a name="poststop" id="poststop"></a>
+
+
+
+
+<div id="threadtools">
+<!-- thread tools menu -->
+
+	<table id="threadToolsTable" cellpadding="4" cellspacing="1" border="0">
+
+	<tbody><tr>
+		<td class="vbmenu_option"><a href="http://forum.xda-developers.com/printthread.php?t=1505006" accesskey="3" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/print.png" alt="Print" title="Print">Print</a></td>
+	
+		<td class="vbmenu_option"><a href="http://forum.xda-developers.com/sendmessage.php?do=sendtofriend&t=1505006" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/email.png" alt="Email" title="Email">Email</a></td>
+	
+	
+
+       
+
+	
+	
+
+</tr>
+	</tbody></table>
+
+<!-- / thread tools menu -->
+</div>
+
+
+
+
+
+<table class="threadlistControls_right">
+<tbody><tr><td align="right">
+
+<div style="float:right"><div class="pagenav" align="right">
+<table class="pagenavControls">
+<tbody><tr>
+        <td style="border:none; background:none;"><span><small>Page <strong>1</strong> of <strong>97 &nbsp;&nbsp;</strong></small></span></td>
+        
+
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 968"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=2" title="Show results 11 to 20 of 968">2</a></td><td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=3" title="Show results 21 to 30 of 968">3</a></td><td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=11" title="Show results 101 to 110 of 968"><!--+10-->11</a></td><td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=51" title="Show results 501 to 510 of 968"><!--+50-->51</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=2" title="Next » - Results 11 to 20 of 968"><strong>&gt;</strong></a></td>
+
+        <td class="alt1"><a rel="last" class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=97" title="Last Page - Results 961 to 968 of 968"><strong>&gt;&gt;</strong></a></td>
+<td class="vbmenu_control goto_nav" title="" id="pagenav.31" style="cursor: pointer;"> <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/menu_open.gif" border="0" title="" alt=""></td>
+
+</tr>
+</tbody></table>
+</div></div>
+
+<!-- sidebar-less thread search -->
+<div id="sidepanel_less-threadSearch" style="display: block;">
+
+	<table cellpadding="4" cellspacing="1" border="0" width="302px">
+
+	<tbody><tr>
+		<td class="vbmenu_option">
+<div class="header-boxes2" id="sidebar_less-search2">
+			<form action="http://forum.xda-developers.com/search.php?do=process&searchthreadid=1505006" method="post">
+				<input type="text" id="sidepanel_less-searchInput" value="Search this thread" onfocus="javascript:if(this.value==&#39;Search this thread&#39;) {this.value=&#39;&#39;;}" onblur="javascript:if(this.value==&#39;&#39;) {this.value=&#39;Search this thread&#39;}" name="query">
+
+			<input type="hidden" name="s" value="">
+			<input type="hidden" name="securitytoken" value="guest">
+			<input type="hidden" name="do" value="process">
+			<input type="hidden" name="searchthreadid" value="1505006">
+                                <button id="sidebar_less-search-go" title="Search Thread"></button>
+
+		</form>
+		<!-- </div> removed to fix ie7 bug -->
+<a id="sidebar_less-search-advancedSearch" href="http://forum.xda-developers.com/search.php?searchthreadid=1505006" title="Advanced Thread Search"></a>
+	</div>
+    
+	</td>
+	</tr>
+	</tbody></table>
+	
+</div>
+<!-- end sidebar-less thread search -->
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+<!-- controls above postbits -->
+<table class="threadlistControls" style="padding-left:8px;">
+<tbody><tr valign="bottom">
+	
+		<td class="smallfont" width="145">
+			
+				
+					<a href="http://forum.xda-developers.com/newreply.php?do=newreply&noquote=1&p=22700475" rel="nofollow" class="replyButton btn-yellow"><div><div class="speechIcon">&nbsp;</div>Post Reply<span class="addReplyIcon">+</span></div></a>
+				
+		</td>
+	
+
+
+
+
+</tr>
+</tbody></table>
+<!-- end controls above postbits -->
+
+<div style="clear"></div>
+
+
+
+
+
+
+<!-- end content table -->
+
+		
+	
+
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="posts">
+	<table class="postHeader" cellspacing="0">
+		<tbody><tr>
+			<td class="postTitle">
+				<div id="threadTitle"><h1 style="font-size: 1.1em;color: #353535;text-shadow: 1px 1px #DDD;margin: 0px;"><a href="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers.html">[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit)</a></h1></div>
+				<div class="share"><span>Share Thread:</span> 
+                                     <a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="headerFacebook" id="fbs_thread">&nbsp;</a><a href="http://forum.xda-developers.com/retweet.php?t=1505006" target="_blank" class="headerTwitter">&nbsp;</a>
+                                     <a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showthread.php?t=1505006" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_orange.png" border="0"></a>
+                                </div>
+			</td>
+			<td class="submitAsTip"><a href="http://forum.xda-developers.com/votenews.php?topic=1505006">Newsworthy Thread?</a></td>
+		</tr>
+	</tbody></table>
+	
+	<!-- post #22700475 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22700475" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22700475" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22700475" class="posterInfoHead">
+		<div title="blahbl4hblah is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=3017259">blahbl4hblah</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22700475", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 08:26 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		<!-- edit note -->
+			<div class="lastEdited">
+				<em>
+					
+						(Last edited by blahbl4hblah; 8th September 2012 at <span class="time">06:04 AM</span>.)
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22700475" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22700475&postcount=1" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22700475" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22700475&postcount=1" target="new" rel="nofollow" id="postcount22700475" name="1" class="postCount"><strong>#1</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar3017259_9.gif" width="80" height="80" alt="blahbl4hblah&#39;s Avatar" border="0" style="margin-top:6px" title="blahbl4hblah&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Recognized Developer</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>1485</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>5,521</strong></div>
+			<div>Join Date: <strong>Oct 2010</strong></div>
+                        <div>Location: <strong>Los Angeles, CA</strong></div>
+                        
+
+
+      <div id="moreinfo_22700475"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22700475&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22700475&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22700475" class="moreUserInfo" style="display:none">
+                        
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/U.S.A. - T-Mobile.gif" title="U.S.A. - T-Mobile" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br>
+<a href="http://forum.xda-developers.com/donatetome.php?u=3017259" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22700475">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22700475" style="width: auto; overflow-x: auto;">
+
+
+
+			
+
+
+<div style="margin: 0 0 15px 15px; float: right">
+
+<!-- begin ad tag (tile=1) -->
+<script type="text/javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random()*1E16);
+var sidebar_cookie = jQuery.cookie('xda_sidebar_visible');
+console.log('Window Width: '+ jQuery(window).width());
+if (jQuery(window).width() < 1247 || sidebar_cookie == 'false') {
+  document.write('<script type="text/javascript" src="http://ad4.netshelter.net/adj/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;sz=300x250,336x280;ord=' + ord + '?"><\/script>');
+}
+//]]>
+</script><script type="text/javascript" src="http://ad4.netshelter.net/adj/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;sz=300x250,336x280;ord=1965554987546056?"></script>
+<noscript>&lt;a href="http://ad4.netshelter.net/jump/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;sz=300x250,336x280;ord=123456789?" target="_blank" &gt;&lt;img src="http://ad4.netshelter.net/ad/ns.xdadevelopers/forum_atf;ppos=atf;kw=;tile=1;sz=300x250,336x280;ord=123456789?" border="0" alt="" /&gt;&lt;/a&gt;</noscript>
+<!-- end ad tag -->
+
+</div>
+
+
+
+
+
+
+
+
+
+			<div class="smallfont">
+				<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/icon1.gif" alt="Default" border="0" width="24px" style="vertical-align: bottom; max-width: 1075px; overflow-x: auto;" title="Default">
+				<strong>[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit)</strong>
+			</div>
+			<hr size="1" style="color:#fff; background-color:#fff">
+
+			<b>First of all, BIG BIG thanks to SparksCo for his guide for compiling CM7, I used his guide as a base for this</b><br>
+<br>
+Credits: <br>
+CyanogenMod for giving their source to everyone<br>
+SparksCo for teaching me what I know <br>
+Vorbeth for releasing the original source for Sensation<br>
+Elelinux for his hardwork on adding things to the device tree<br>
+<br>
+I'm making this guide for those who don't want to wait for a new CyanogenMod or AOKP build and want to build it themselves.<br>
+Working on both ubuntu 11.10 and 12.04<br>
+<br>
+<b>NOTE: DEPENDING ON YOUR COMPUTER'S HARDWARE, COMPILING TIME WILL BE DIFFERENT</b><br>
+<font color="Red">If you have a MAC OSX, I do not have a guide for that as I don't have one.</font><br>
+<br>
+<b><font size="5">Be aware for which part is for AOKP and CyanogenMod<br>
+I have put "AOKP" and "CyanogenMod" Labels to help</font></b><br>
+<br>
+<b><font size="4">EVERYTHING THAT IS IN A BOX, OPEN TERMINAL AND ENTER THE COMMAND IN THAT SECTION</font></b><br>
+<br>
+<b><font size="4">Guide Requirements:<br>
+- Computer<br>
+- Common Sense<br>
+- Some Linux Experience<br>
+- Ubuntu 64-bit Installed<br>
+- At least 4GB of ram with a dual core processor.</font></b><br>
+<br>
+<b><font size="2">Required Software to Install:</font></b><br>
+<br>
+<i>For 32-bit and 64-bit System</i><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo apt-get install git-core gnupg flex bison python rar original-awk gawk p7zip-full gperf libsdl1.2-dev libesd0-dev libwxgtk2.6-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev pngcrush schedtool xsltproc</pre>
+</div><i>For 64-bit System</i><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo apt-get install g++-multilib lib32z1-dev ia32-libs lib32ncurses5-dev lib32readline-gplv2-dev gcc-multilib g++-multilib</pre>
+</div><i>Other Required Software:</i><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo apt-get install libc6-dev x11proto-core-dev libx11-dev libgl1-mesa-dev mingw32 tofrodos python-markdown libxml2-utils</pre>
+</div><i>Link libx11</i><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo ln -s /usr/lib/i386-linux-gnu/libX11.so.6 /usr/lib/i386-linux-gnu/libX11.so</pre>
+</div><font color="Red">You must have a 1.6.x to compile on the ics branch of cyanogenmod.</font><br>
+<br>
+<b>MUST Install Java 1.6 (NOT Java 1.7)</b>:<br>
+<br>
+1a. <i>Download <b>Java JDK</b> for Linux 64-bit from Java site</i><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">http://www.oracle.com/technetwork/java/javase/downloads/index.html</pre>
+</div>Be sure to download (## will change if there's an update): <br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">jdk-6u##-linux-x64.bin</pre>
+</div>1b. <i>Move the downloaded Java JDK into your home directory</i><br>
+<br>
+1c. <i>Be sure to completely remove ALL OTHER JAVA</i><br>
+<br>
+<b>Don't worry if some things are asked to be installed just accept!</b><br>
+<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo apt-get purge openjdk-\* icedtea-\* icedtea6-\*</pre>
+</div>1d. <i>Copy Java JDK into /opt/java/64</i><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 130px;
+		text-align: left;
+		overflow: auto">sudo mkdir -p /opt/java/64/
+sudo cp jdk-6u##-linux-x64.bin /opt/java/64
+sudo su -
+cd /opt/java/64
+chmod +x jdk-6u##-linux-x64.bin
+./jdk-6u##-linux-x64.bin
+exit</pre>
+</div>1e. <i>Add the needed PATH to .bashrc</i><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">gedit ~/.bashrc</pre>
+</div>Add these lines to .bashrc (Better to be near the top):<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 66px;
+		text-align: left;
+		overflow: auto"># Java PATHs
+export JAVA_HOME=/opt/java/64/jdk1.6.0_##
+export PATH=$PATH:$JAVA_HOME/bin</pre>
+</div><b>Setting Up Android SDK</b><br>
+<br>
+2a. Download Android SDK at <a href="http://developer.android.com/sdk/index.html" target="_blank" rel="nofollow">http://developer.android.com/sdk/index.html</a><br>
+<br>
+2b. Extract it to your home folder [Ex. ~/android/sdk]<br>
+<br>
+2c. Add Android SDK Path<br>
+<br>
+gedit ~/.bashrc<br>
+Enter the Following:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 82px;
+		text-align: left;
+		overflow: auto">#Android PATH
+export PATH=$PATH:~/android/sdk
+export PATH=$PATH:~/android/sdk/platform-tools
+export PATH=$PATH:~/android/sdk/tools</pre>
+</div>2d. Add Extra Path For Device:<br>
+<br>
+sudo gedit /etc/udev/rules.d/99-android.rules (Text Editor will open up)<br>
+Enter this in it:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 498px;
+		text-align: left;
+		overflow: auto">#Acer
+SUBSYSTEM==usb, SYSFS{idVendor}==0502, MODE=0666
+#ASUS
+SUBSYSTEM==usb, SYSFS{idVendor}==0b05, MODE=0666
+#Dell
+SUBSYSTEM==usb, SYSFS{idVendor}==413c, MODE=0666
+#Foxconn
+SUBSYSTEM==usb, SYSFS{idVendor}==0489, MODE=0666
+#Garmin-Asus
+SUBSYSTEM==usb, SYSFS{idVendor}==091E, MODE=0666
+#Google
+SUBSYSTEM==usb, SYSFS{idVendor}==18d1, MODE=0666
+#HTC
+SUBSYSTEM==usb, SYSFS{idVendor}==0bb4, MODE=0666
+#Huawei
+SUBSYSTEM==usb, SYSFS{idVendor}==12d1, MODE=0666
+#K-Touch
+SUBSYSTEM==usb, SYSFS{idVendor}==24e3, MODE=0666
+#KT Tech
+SUBSYSTEM==usb, SYSFS{idVendor}==2116, MODE=0666
+#Kyocera
+SUBSYSTEM==usb, SYSFS{idVendor}==0482, MODE=0666
+#Lenevo
+SUBSYSTEM==usb, SYSFS{idVendor}==17EF, MODE=0666
+#LG
+SUBSYSTEM==usb, SYSFS{idVendor}==1004, MODE=0666
+#Motorola
+SUBSYSTEM==usb, SYSFS{idVendor}==22b8, MODE=0666
+#NEC
+SUBSYSTEM==usb, SYSFS{idVendor}==0409, MODE=0666
+#Nook
+SUBSYSTEM==usb, SYSFS{idVendor}==2080, MODE=0666
+#Nvidia
+SUBSYSTEM==usb, SYSFS{idVendor}==0955, MODE=0666
+#OTGV
+SUBSYSTEM==usb, SYSFS{idVendor}==2257, MODE=0666
+#Pantech
+SUBSYSTEM==usb, SYSFS{idVendor}==10A9, MODE=0666
+#Philips
+SUBSYSTEM==usb, SYSFS{idVendor}==0471, MODE=0666
+#PMC-Sierra
+SUBSYSTEM==usb, SYSFS{idVendor}==04da, MODE=0666
+#Qualcomm
+SUBSYSTEM==usb, SYSFS{idVendor}==05c6, MODE=0666
+#SK Telesys
+SUBSYSTEM==usb, SYSFS{idVendor}==1f53, MODE=0666
+#Samsung
+SUBSYSTEM==usb, SYSFS{idVendor}==04e8, MODE=0666
+#Sharp
+SUBSYSTEM==usb, SYSFS{idVendor}==04dd, MODE=0666
+#Sony Ericsson
+SUBSYSTEM==usb, SYSFS{idVendor}==0fce, MODE=0666
+#Toshiba
+SUBSYSTEM==usb, SYSFS{idVendor}==0930, MODE=0666
+#ZTE
+SUBSYSTEM==usb, SYSFS{idVendor}==19D2, MODE=0666
+
+
+SUBSYSTEM=="usb", ATTRS{idVendor}=="####:####", SYMLINK+="android_adb", MODE="0666" GROUP="plugdev"
+TEST=="/var/run/ConsoleKit/database", \
+RUN+="udev-acl --action=$env{action} --device=$env{DEVNAME}"</pre>
+</div>After this, close it and then enter:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">sudo chmod +x /etc/udev/rules.d/99-android.rules</pre>
+</div><b><u>If your using ANY AOSP rom like AOKP or CM9 and CM10</u></b><br>
+Go into developer options and go to root access and change it from "Apps only" to Apps and ADB"<br>
+<br>
+2e. Install Certain Android SDK Tools<br>
+<br>
+Type:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">android</pre>
+</div>Check Android SDK Tools and Android SDK platform-tools and Install them <br>
+<br>
+<b>Setting Up the .bashrc file</b><br>
+<br>
+gedit ~/.bashrc<br>
+Enter the Following:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 146px;
+		text-align: left;
+		overflow: auto">#Android PATH
+export PATH=$PATH:~/android/sdk
+export PATH=$PATH:~/android/sdk/platform-tools
+export PATH=$PATH:~/android/sdk/tools
+
+#Java PATH
+export JAVA_HOME=/opt/java/64/jdk1.6.0_32
+export PATH=$PATH:$JAVA_HOME/bin</pre>
+</div>3b. After your done setting this up, close .bashrc file.<br>
+<br>
+<b>Setup Workplace</b><br>
+<br>
+4a. Download CyanogenMod 9 Source<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 82px;
+		text-align: left;
+		overflow: auto">mkdir -p ~/bin
+mkdir -p ~/android/system
+curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo &gt; ~/bin/repo
+chmod a+x ~/bin/repo (Reboot your computer after this)</pre>
+</div>4b. Add Repo Path<br>
+<br>
+gedit ~/.bashrc<br>
+<br>
+Enter the following:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">export PATH=$PATH:~/bin</pre>
+</div>4c. Setup Necessary Source<br>
+<br>
+<b>For CyanogenMod 9</b><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">cd ~/android/system
+repo init -u git://github.com/CyanogenMod/android.git -b ics</pre>
+</div><b>For CyanogenMod 10</b><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">cd ~/android/system
+repo init -u git://github.com/CyanogenMod/android.git -b jellybean</pre>
+</div>4d. Download Necessary Source<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">repo sync</pre>
+</div>4e. Download Extra Needed Files<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">~/android/system/vendor/cm/get-prebuilts</pre>
+</div><b>Your Final .bashrc</b><br>
+<br>
+It SHOULD Look Something Like This:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 162px;
+		text-align: left;
+		overflow: auto">#Android PATH
+export PATH=$PATH:~/android/sdk
+export PATH=$PATH:~/android/sdk/platform-tools
+export PATH=$PATH:~/android/sdk/tools
+export PATH=$PATH:~/bin
+
+#Java PATH
+export JAVA_HOME=/opt/java/64/jdk1.6.0_##
+export PATH=$PATH:$JAVA_HOME/bin</pre>
+</div><b>Building CyanogenMod</b><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">. build/envsetup.sh; lunch cm_pyramid-userdebug; mka bacon</pre>
+</div><b>Making a New Build</b><br>
+<br>
+Go inside to your source folder and delete the 'out' folder<br>
+<br>
+<b>THEN Do This:</b><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">repo sync</pre>
+</div><div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">. build/envsetup.sh; lunch cm_pyramid-userdebug; mka bacon</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig" style="width: auto; overflow-x: auto;">
+				<b>Before you even ask for help, do help yourself and search for it first!</b><br>
+<br>
+<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6848177_orig.png" border="0" alt="" style="max-width: 1075px; overflow-x: auto;">[
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22700475" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22700475"><div>
+	<table id="thanksTable" class="tborder" cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following 66 Users Say Thank You to blahbl4hblah For This Useful Post: [ <a href="http://forum.xda-developers.com/showthread.php?t=1505006#" onclick="return toggle_collapse(&#39;Thanks_22700475&#39;)">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" style="float:right" onclick="return toggle_collapse(&#39;Thanks_22700475&#39;)"><img id="collapseimg_Thanks_22700475" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_22700475" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="http://forum.xda-developers.com/member.php?u=2725790" rel="nofollow">akos.szekacs</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3552309" rel="nofollow">Alouch47</a>&nbsp;(25th April 2012), <a href="http://forum.xda-developers.com/member.php?u=4440107" rel="nofollow">AndroidNeophyte</a>&nbsp;(Yesterday), <a href="http://forum.xda-developers.com/member.php?u=4236437" rel="nofollow">antijesse</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4513658" rel="nofollow">atltrickster</a>&nbsp;(26th February 2012), <a href="http://forum.xda-developers.com/member.php?u=388213" rel="nofollow">banesi</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4118736" rel="nofollow">bigevild</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=4349249" rel="nofollow">biggunsv</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4550140" rel="nofollow">BiteBlaze</a>&nbsp;(17th April 2012), <a href="http://forum.xda-developers.com/member.php?u=1937122" rel="nofollow">BookCase</a>&nbsp;(30th March 2012), <a href="http://forum.xda-developers.com/member.php?u=1617770" rel="nofollow">bruce2728</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=4296933" rel="nofollow">BuXuRa</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4581689" rel="nofollow">chiefdome</a>&nbsp;(3rd August 2012), <a href="http://forum.xda-developers.com/member.php?u=2501405" rel="nofollow">DeezNotes</a>&nbsp;(14th April 2012), <a href="http://forum.xda-developers.com/member.php?u=1033653" rel="nofollow">dessolator666</a>&nbsp;(26th September 2012), <a href="http://forum.xda-developers.com/member.php?u=3934937" rel="nofollow">dislplin01</a>&nbsp;(7th May 2012), <a href="http://forum.xda-developers.com/member.php?u=4251642" rel="nofollow">droidgirl74</a>&nbsp;(6th March 2012), <a href="http://forum.xda-developers.com/member.php?u=3452030" rel="nofollow">eggyenergy</a>&nbsp;(7th March 2012), <a href="http://forum.xda-developers.com/member.php?u=4081787" rel="nofollow">enryea123</a>&nbsp;(17th April 2012), <a href="http://forum.xda-developers.com/member.php?u=4332015" rel="nofollow">Evil_Genius2496</a>&nbsp;(8th March 2012), <a href="http://forum.xda-developers.com/member.php?u=1828342" rel="nofollow"><span style="font-weight: bold; color: DarkOrange;">Faryaab</span></a>&nbsp;(29th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1863570" rel="nofollow">felek73</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2879148" rel="nofollow">ferrodata</a>&nbsp;(23rd February 2012), <a href="http://forum.xda-developers.com/member.php?u=2885873" rel="nofollow">Gamesoul Master</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=269849" rel="nofollow">hav0c</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4307640" rel="nofollow">Headbanger1982</a>&nbsp;(25th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4191344" rel="nofollow">iJohnny</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1322707" rel="nofollow">imblacklife</a>&nbsp;(23rd March 2012), <a href="http://forum.xda-developers.com/member.php?u=1823993" rel="nofollow">Jamison904</a>&nbsp;(24th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3341031" rel="nofollow">jangst123</a>&nbsp;(14th September 2012), <a href="http://forum.xda-developers.com/member.php?u=3541083" rel="nofollow">JDR0iD</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3367894" rel="nofollow">Jiggs82</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4479533" rel="nofollow">jimam</a>&nbsp;(7th May 2012), <a href="http://forum.xda-developers.com/member.php?u=2974864" rel="nofollow">jmwils3</a>&nbsp;(15th June 2012), <a href="http://forum.xda-developers.com/member.php?u=1566421" rel="nofollow">kenny98023</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3198541" rel="nofollow">Krendelrus</a>&nbsp;(6th April 2012), <a href="http://forum.xda-developers.com/member.php?u=2945234" rel="nofollow">kxmas</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=1082000" rel="nofollow">mastersjef</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=4046817" rel="nofollow">matt73300</a>&nbsp;(14th July 2012), <a href="http://forum.xda-developers.com/member.php?u=2822284" rel="nofollow"><span style="color: green; font-style: italic;">matt95</span></a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4688934" rel="nofollow">Mesaman2012</a>&nbsp;(12th September 2012), <a href="http://forum.xda-developers.com/member.php?u=259557" rel="nofollow">Mountaineer</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1950163" rel="nofollow">mpmilestogo</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3581226" rel="nofollow">MrEzzzkiel</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=2471366" rel="nofollow">Noplait</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4388034" rel="nofollow">progmanos</a>&nbsp;(26th July 2012), <a href="http://forum.xda-developers.com/member.php?u=1693666" rel="nofollow">PSP_Hacker</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2769397" rel="nofollow">rangers</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3815580" rel="nofollow">rawdealer</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3970768" rel="nofollow">raycaster3</a>&nbsp;(12th April 2012), <a href="http://forum.xda-developers.com/member.php?u=3529053" rel="nofollow">ryanmat</a>&nbsp;(9th June 2012), <a href="http://forum.xda-developers.com/member.php?u=272579" rel="nofollow">SatScan</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2373089" rel="nofollow">schmellic</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4472631" rel="nofollow">sha-ba</a>&nbsp;(27th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2899071" rel="nofollow">silord</a>&nbsp;(26th June 2012), <a href="http://forum.xda-developers.com/member.php?u=2394329" rel="nofollow">sparksco</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2060305" rel="nofollow">squeeish</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2628601" rel="nofollow">Sym_Link</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3134732" rel="nofollow">synapses</a>&nbsp;(29th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1058027" rel="nofollow">t0ny0</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=3129851" rel="nofollow">tinason</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=4283226" rel="nofollow">twocrows</a>&nbsp;(22nd February 2012), <a href="http://forum.xda-developers.com/member.php?u=4775343" rel="nofollow">winning0308</a>&nbsp;(3rd November 2012), <a href="http://forum.xda-developers.com/member.php?u=1479114" rel="nofollow">ycronoy</a>&nbsp;(16th April 2012), <a href="http://forum.xda-developers.com/member.php?u=1625505" rel="nofollow">yozpalang</a>&nbsp;(23rd February 2012), <a href="http://forum.xda-developers.com/member.php?u=2454910" rel="nofollow">zerozwy</a>&nbsp;(8th March 2012)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 22700475 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22700475_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=3017259" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+ 
+         <a href="http://www.twitter.com/derykisonder"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Twitter.gif"> Follow on Twitter</a>
+
+ 
+         <a href="https://plus.google.com/https://plus.google.com/101815913097911953718"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Google+.gif"> Follow on Google+</a>  
+
+
+
+	
+</div>
+<!-- / post 22700475 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22700475 -->
+
+
+
+<!--
+<center>
+ <script type='text/javascript'>
+(function() {
+var useSSL = 'https:' == document.location.protocol;
+var src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.defineSlot('/1259802/Forum_Unicorn', [728, 90], 'div-gpt-ad-1350411704125-0').addService(googletag.pubads());
+googletag.pubads().enableSyncRendering();
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+</script>
+
+<div id='div-gpt-ad-1350411704125-0'>
+<script type='text/javascript'>
+googletag.display('div-gpt-ad-1350411704125-0');
+</script>
+</div>
+</center>
+-->
+
+
+  <script type="text/javascript">
+  //<![CDATA[
+  if(typeof tn_ad_insert != "undefined") {
+    tn_ad_insert.tn_place_ad_top();
+  }
+  //]]>
+  </script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+
+
+<!-- post #22700558 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22700558" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22700558" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22700558" class="posterInfoHead">
+		<div title="blahbl4hblah is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=3017259">blahbl4hblah</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22700558", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 08:30 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		<!-- edit note -->
+			<div class="lastEdited">
+				<em>
+					
+						(Last edited by blahbl4hblah; 8th September 2012 at <span class="time">06:02 AM</span>.)
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22700558" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22700558&postcount=2" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22700558" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22700558&postcount=2" target="new" rel="nofollow" id="postcount22700558" name="2" class="postCount"><strong>#2</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar3017259_9.gif" width="80" height="80" alt="blahbl4hblah&#39;s Avatar" border="0" style="margin-top:6px" title="blahbl4hblah&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Recognized Developer</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>1485</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>5,521</strong></div>
+			<div>Join Date: <strong>Oct 2010</strong></div>
+                        <div>Location: <strong>Los Angeles, CA</strong></div>
+                        
+
+
+      <div id="moreinfo_22700558"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22700558&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22700558&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22700558" class="moreUserInfo" style="display:none">
+                        
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/U.S.A. - T-Mobile.gif" title="U.S.A. - T-Mobile" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br>
+<a href="http://forum.xda-developers.com/donatetome.php?u=3017259" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22700558">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22700558" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			<div class="smallfont">
+				<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/icon1.gif" alt="Default" border="0" width="24px" style="vertical-align: bottom; max-width: 1075px; overflow-x: auto;" title="Default">
+				<strong>Compile AOKP Section</strong>
+			</div>
+			<hr size="1" style="color:#fff; background-color:#fff">
+
+			Be sure to follow the steps from the above post and <b>ONLY</b> use this instead of the part called <b>4c. Setup Necessary Source</b><br>
+<br>
+<b>FOR AOKP (ICS Version)</b><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">cd ~/android/system
+repo init -u https://github.com/AOKP/platform_manifest.git -b ics</pre>
+</div>Temporary fix to build:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">install -d prebuilt/android-arm/kernel</pre>
+</div>Then do:<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">curl -o prebuilt/android-arm/kernel/LINUX_KERNEL_COPYING -O https://raw.github.com/ezterry/kernel-biff-testing/ezgb-2636/COPYING</pre>
+</div><b>FOR AOKP (JELLYBEAN Version)</b><br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 50px;
+		text-align: left;
+		overflow: auto">cd ~/android/system
+repo init -u https://github.com/AOKP/platform_manifest.git -b jb</pre>
+</div>5b. Building AOKP<br>
+<div style="margin:20px; margin-top:5px">
+	<div class="smallfont" style="margin-bottom:2px">Code:</div>
+	<pre class="alt2" dir="ltr" style="
+		margin: 0px;
+		padding: 6px;
+		border: 1px inset;
+		width: 640px;
+		height: 34px;
+		text-align: left;
+		overflow: auto">. build/envsetup.sh; lunch aokp_pyramid-userdebug; mka bacon</pre>
+</div>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig" style="width: auto; overflow-x: auto;">
+				<b>Before you even ask for help, do help yourself and search for it first!</b><br>
+<br>
+<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6848177_orig.png" border="0" alt="" style="max-width: 1075px; overflow-x: auto;">[
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22700558" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22700558"><div>
+	<table id="thanksTable" class="tborder" cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following 15 Users Say Thank You to blahbl4hblah For This Useful Post: [ <a href="http://forum.xda-developers.com/showthread.php?t=1505006#" onclick="return toggle_collapse(&#39;Thanks_22700558&#39;)">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" style="float:right" onclick="return toggle_collapse(&#39;Thanks_22700558&#39;)"><img id="collapseimg_Thanks_22700558" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_22700558" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="http://forum.xda-developers.com/member.php?u=4440107" rel="nofollow">AndroidNeophyte</a>&nbsp;(Yesterday), <a href="http://forum.xda-developers.com/member.php?u=1937122" rel="nofollow">BookCase</a>&nbsp;(30th March 2012), <a href="http://forum.xda-developers.com/member.php?u=1617770" rel="nofollow">bruce2728</a>&nbsp;(2nd June 2012), <a href="http://forum.xda-developers.com/member.php?u=3934937" rel="nofollow">dislplin01</a>&nbsp;(7th May 2012), <a href="http://forum.xda-developers.com/member.php?u=4081787" rel="nofollow">enryea123</a>&nbsp;(17th April 2012), <a href="http://forum.xda-developers.com/member.php?u=269849" rel="nofollow">hav0c</a>&nbsp;(3rd March 2012), <a href="http://forum.xda-developers.com/member.php?u=4307640" rel="nofollow">Headbanger1982</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1823993" rel="nofollow">Jamison904</a>&nbsp;(30th April 2012), <a href="http://forum.xda-developers.com/member.php?u=2974864" rel="nofollow">jmwils3</a>&nbsp;(15th June 2012), <a href="http://forum.xda-developers.com/member.php?u=3581226" rel="nofollow">MrEzzzkiel</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=1693666" rel="nofollow">PSP_Hacker</a>&nbsp;(19th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3815580" rel="nofollow">rawdealer</a>&nbsp;(27th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2899071" rel="nofollow">silord</a>&nbsp;(26th June 2012), <a href="http://forum.xda-developers.com/member.php?u=2709401" rel="nofollow">tomS01</a>&nbsp;(20th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2454910" rel="nofollow">zerozwy</a>&nbsp;(21st March 2012)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 22700558 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22700558_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=3017259" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+ 
+         <a href="http://www.twitter.com/derykisonder"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Twitter.gif"> Follow on Twitter</a>
+
+ 
+         <a href="https://plus.google.com/https://plus.google.com/101815913097911953718"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Google+.gif"> Follow on Google+</a>  
+
+
+
+	
+</div>
+<!-- / post 22700558 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22700558 --><!-- post #22702249 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22702249" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22702249" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22702249" class="posterInfoHead">
+		<div title="blahbl4hblah is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=3017259">blahbl4hblah</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22702249", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 10:02 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		<!-- edit note -->
+			<div class="lastEdited">
+				<em>
+					
+						(Last edited by blahbl4hblah; 23rd May 2012 at <span class="time">06:14 AM</span>.)
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22702249" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22702249&postcount=3" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22702249" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22702249&postcount=3" target="new" rel="nofollow" id="postcount22702249" name="3" class="postCount"><strong>#3</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar3017259_9.gif" width="80" height="80" alt="blahbl4hblah&#39;s Avatar" border="0" style="margin-top:6px" title="blahbl4hblah&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Recognized Developer</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>1485</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>5,521</strong></div>
+			<div>Join Date: <strong>Oct 2010</strong></div>
+                        <div>Location: <strong>Los Angeles, CA</strong></div>
+                        
+
+
+      <div id="moreinfo_22702249"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22702249&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22702249&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22702249" class="moreUserInfo" style="display:none">
+                        
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/U.S.A. - T-Mobile.gif" title="U.S.A. - T-Mobile" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br>
+<a href="http://forum.xda-developers.com/donatetome.php?u=3017259" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22702249">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22702249" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			<div class="smallfont">
+				<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/icon1.gif" alt="Default" border="0" width="24px" style="vertical-align: bottom; max-width: 1075px; overflow-x: auto;" title="Default">
+				<strong>Compiling error solutions</strong>
+			</div>
+			<hr size="1" style="color:#fff; background-color:#fff">
+
+			error: The requested URL returned error: 403 while accessing <a href="https://android.googlesource.com/pla...blzf/info/refs:" target="_blank" rel="nofollow">https://android.googlesource.com/pla...blzf/info/refs:</a><br>
+<a href="http://forum.xda-developers.com/showpost.php?p=23205163&postcount=423" target="_blank" rel="nofollow">http://forum.xda-developers.com/show...&amp;postcount=423</a><br>
+<br>
+Correct repo file for ~/bin/repo:<br>
+<a href="http://forum.xda-developers.com/showpost.php?p=23174017&postcount=413" target="_blank" rel="nofollow">http://forum.xda-developers.com/show...&amp;postcount=413</a><br>
+<br>
+Overall repo fix:<br>
+<a href="http://forum.xda-developers.com/showpost.php?p=23147034&postcount=400" target="_blank" rel="nofollow">http://forum.xda-developers.com/show...&amp;postcount=400</a><br>
+<a href="http://forum.xda-developers.com/showpost.php?p=23207819&postcount=434" target="_blank" rel="nofollow">http://forum.xda-developers.com/show...&amp;postcount=434</a>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig" style="width: auto; overflow-x: auto;">
+				<b>Before you even ask for help, do help yourself and search for it first!</b><br>
+<br>
+<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6848177_orig.png" border="0" alt="" style="max-width: 1075px; overflow-x: auto;">[
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22702249" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22702249"><div>
+	<table id="thanksTable" class="tborder" cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following 15 Users Say Thank You to blahbl4hblah For This Useful Post: [ <a href="http://forum.xda-developers.com/showthread.php?t=1505006#" onclick="return toggle_collapse(&#39;Thanks_22702249&#39;)">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" style="float:right" onclick="return toggle_collapse(&#39;Thanks_22702249&#39;)"><img id="collapseimg_Thanks_22702249" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_22702249" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="http://forum.xda-developers.com/member.php?u=4513658" rel="nofollow">atltrickster</a>&nbsp;(26th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1937122" rel="nofollow">BookCase</a>&nbsp;(30th March 2012), <a href="http://forum.xda-developers.com/member.php?u=3934937" rel="nofollow">dislplin01</a>&nbsp;(7th May 2012), <a href="http://forum.xda-developers.com/member.php?u=4081787" rel="nofollow">enryea123</a>&nbsp;(17th April 2012), <a href="http://forum.xda-developers.com/member.php?u=269849" rel="nofollow">hav0c</a>&nbsp;(3rd March 2012), <a href="http://forum.xda-developers.com/member.php?u=4307640" rel="nofollow">Headbanger1982</a>&nbsp;(25th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1322707" rel="nofollow">imblacklife</a>&nbsp;(23rd March 2012), <a href="http://forum.xda-developers.com/member.php?u=1823993" rel="nofollow">Jamison904</a>&nbsp;(30th April 2012), <a href="http://forum.xda-developers.com/member.php?u=3367894" rel="nofollow">Jiggs82</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=2974864" rel="nofollow">jmwils3</a>&nbsp;(15th June 2012), <a href="http://forum.xda-developers.com/member.php?u=1950163" rel="nofollow">mpmilestogo</a>&nbsp;(24th February 2012), <a href="http://forum.xda-developers.com/member.php?u=3581226" rel="nofollow">MrEzzzkiel</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=3815580" rel="nofollow">rawdealer</a>&nbsp;(22nd February 2012), <a href="http://forum.xda-developers.com/member.php?u=2899071" rel="nofollow">silord</a>&nbsp;(26th June 2012), <a href="http://forum.xda-developers.com/member.php?u=2454910" rel="nofollow">zerozwy</a>&nbsp;(8th March 2012)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 22702249 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22702249_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=3017259" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+ 
+         <a href="http://www.twitter.com/derykisonder"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Twitter.gif"> Follow on Twitter</a>
+
+ 
+         <a href="https://plus.google.com/https://plus.google.com/101815913097911953718"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Google+.gif"> Follow on Google+</a>  
+
+
+
+	
+</div>
+<!-- / post 22702249 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22702249 --><!-- post #22702931 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22702931" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22702931" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22702931" class="posterInfoHead">
+		<div title="blahbl4hblah is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=3017259">blahbl4hblah</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22702931", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 10:40 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		<!-- edit note -->
+			<div class="lastEdited">
+				<em>
+					
+						(Last edited by blahbl4hblah; 24th February 2012 at <span class="time">04:30 AM</span>.)
+					
+					
+				</em>
+			</div>
+		<!-- / edit note -->
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22702931" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22702931&postcount=4" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22702931" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22702931&postcount=4" target="new" rel="nofollow" id="postcount22702931" name="4" class="postCount"><strong>#4</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar3017259_9.gif" width="80" height="80" alt="blahbl4hblah&#39;s Avatar" border="0" style="margin-top:6px" title="blahbl4hblah&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Recognized Developer</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>1485</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>5,521</strong></div>
+			<div>Join Date: <strong>Oct 2010</strong></div>
+                        <div>Location: <strong>Los Angeles, CA</strong></div>
+                        
+
+
+      <div id="moreinfo_22702931"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22702931&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22702931&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22702931" class="moreUserInfo" style="display:none">
+                        
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/U.S.A. - T-Mobile.gif" title="U.S.A. - T-Mobile" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br>
+<a href="http://forum.xda-developers.com/donatetome.php?u=3017259" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22702931">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22702931" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			<div class="smallfont">
+				<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/icon1.gif" alt="Default" border="0" width="24px" style="vertical-align: bottom; max-width: 1075px; overflow-x: auto;" title="Default">
+				<strong>Reference</strong>
+			</div>
+			<hr size="1" style="color:#fff; background-color:#fff">
+
+			This section is to help those who may look for answers<br>
+<br>
+<b>Basic Linux Commands</b><br>
+<a href="http://ss64.com/bash/" target="_blank" rel="nofollow">http://ss64.com/bash/</a><br>
+<br>
+<b>CyanogenMod Wiki</b><br>
+<a href="http://wiki.cyanogenmod.com/wiki/Main_Page" target="_blank" rel="nofollow">http://wiki.cyanogenmod.com/wiki/Main_Page</a><br>
+<br>
+<b>Difference between breakfast, brunch and lunch</b><br>
+<a href="http://synrgi.wordpress.com/2011/09/16/breakfast-brunch-and-lunch/" target="_blank" rel="nofollow">http://synrgi.wordpress.com/2011/09/...nch-and-lunch/</a><br>
+<br>
+<b>Installing Android SDK</b><br>
+<a href="http://developer.android.com/sdk/installing.html" target="_blank" rel="nofollow">http://developer.android.com/sdk/installing.html</a>
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig" style="width: auto; overflow-x: auto;">
+				<b>Before you even ask for help, do help yourself and search for it first!</b><br>
+<br>
+<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6848177_orig.png" border="0" alt="" style="max-width: 1075px; overflow-x: auto;">[
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22702931" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22702931"><div>
+	<table id="thanksTable" class="tborder" cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following 10 Users Say Thank You to blahbl4hblah For This Useful Post: [ <a href="http://forum.xda-developers.com/showthread.php?t=1505006#" onclick="return toggle_collapse(&#39;Thanks_22702931&#39;)">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" style="float:right" onclick="return toggle_collapse(&#39;Thanks_22702931&#39;)"><img id="collapseimg_Thanks_22702931" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_22702931" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="http://forum.xda-developers.com/member.php?u=4513658" rel="nofollow">atltrickster</a>&nbsp;(26th February 2012), <a href="http://forum.xda-developers.com/member.php?u=1937122" rel="nofollow">BookCase</a>&nbsp;(30th March 2012), <a href="http://forum.xda-developers.com/member.php?u=4081787" rel="nofollow">enryea123</a>&nbsp;(17th April 2012), <a href="http://forum.xda-developers.com/member.php?u=269849" rel="nofollow">hav0c</a>&nbsp;(30th March 2012), <a href="http://forum.xda-developers.com/member.php?u=4307640" rel="nofollow">Headbanger1982</a>&nbsp;(17th March 2012), <a href="http://forum.xda-developers.com/member.php?u=1322707" rel="nofollow">imblacklife</a>&nbsp;(23rd March 2012), <a href="http://forum.xda-developers.com/member.php?u=1823993" rel="nofollow">Jamison904</a>&nbsp;(24th February 2012), <a href="http://forum.xda-developers.com/member.php?u=2974864" rel="nofollow">jmwils3</a>&nbsp;(15th June 2012), <a href="http://forum.xda-developers.com/member.php?u=3581226" rel="nofollow">MrEzzzkiel</a>&nbsp;(21st February 2012), <a href="http://forum.xda-developers.com/member.php?u=2899071" rel="nofollow">silord</a>&nbsp;(26th June 2012)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 22702931 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22702931_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=3017259" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+ 
+         <a href="http://www.twitter.com/derykisonder"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Twitter.gif"> Follow on Twitter</a>
+
+ 
+         <a href="https://plus.google.com/https://plus.google.com/101815913097911953718"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Google+.gif"> Follow on Google+</a>  
+
+
+
+	
+</div>
+<!-- / post 22702931 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22702931 --><!-- post #22704351 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22704351" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22704351" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22704351" class="posterInfoHead">
+		
+<div title="n1kon is online now" class="posterIcon online">&nbsp;</div>
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=290543">n1kon</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22704351", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 11:55 AM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22704351" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22704351&postcount=5" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22704351" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22704351&postcount=5" target="new" rel="nofollow" id="postcount22704351" name="5" class="postCount"><strong>#5</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=290543"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar290543_4.gif" width="80" height="50" alt="n1kon&#39;s Avatar" border="0" style="margin-top:6px" title="n1kon&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Senior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>58</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/2.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>383</strong></div>
+			<div>Join Date: <strong>Mar 2006</strong></div>
+                        
+                        
+
+
+      <div id="moreinfo_22704351"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22704351&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22704351&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22704351" class="moreUserInfo" style="display:none">
+                        <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/England.gif" title="England" class="flag" alt="Flag"><br><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/United Kingdom - T-Mobile (One2One).gif" title="United Kingdom - T-Mobile (One2One)" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22704351">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22704351" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			You running a nightly?<br>
+<br>
+Sent from my HTC Sensation XE with Beats Audio using Tapatalk
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22704351" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22704351"></div>
+
+ 
+<!-- post 22704351 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22704351_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=290543"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=290543" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+	
+</div>
+<!-- / post 22704351 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22704351 --><!-- post #22704490 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22704490" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22704490" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22704490" class="posterInfoHead">
+		<div title="matt95 is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=2822284"><span style="color: green; font-style: italic;">matt95</span></a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22704490", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 12:04 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22704490" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22704490&postcount=6" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22704490" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22704490&postcount=6" target="new" rel="nofollow" id="postcount22704490" name="6" class="postCount"><strong>#6</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=2822284"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar2822284_9.gif" width="80" height="80" alt="matt95&#39;s Avatar" border="0" style="margin-top:6px" title="matt95&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Recognized Contributor</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>900</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/4.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>3,775</strong></div>
+			<div>Join Date: <strong>Aug 2010</strong></div>
+                        <div>Location: <strong>Verona</strong></div>
+                        
+
+
+      <div id="moreinfo_22704490"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22704490&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22704490&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22704490" class="moreUserInfo" style="display:none">
+                        <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Italy.gif" title="Italy" class="flag" alt="Flag"><br><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Italy - Vodafone.gif" title="Italy - Vodafone" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br>
+<a href="http://forum.xda-developers.com/donatetome.php?u=2822284" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22704490">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22704490" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			hi man thank you for this guide, i got a problem<br>
+when i try to install the first files for sistem 64 bit i get this error:<br>
+<br>
+Package awk is a virtual package provided by:<br>
+  original-awk 2011-05-06-1<br>
+  mawk 1.3.3-15ubuntu2<br>
+  gawk 1:3.1.8+dfsg-0.1build1<br>
+You should explicitly select one to install.<br>
+<br>
+E: Package 'awk' has no installation candidate<br>
+E: Unable to locate package 7zip
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig" style="width: auto; overflow-x: auto;">
+				<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/sigfmk.png" border="0" alt="" style="max-width: 1075px; overflow-x: auto;"><a href="https://plus.google.com/u/0/112209459600537853353/posts" target="_blank" rel="nofollow" style=""><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/google+2.png" border="0" alt="" style="max-width: 0px; overflow-x: auto;"></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=9MM32UUZTNKXL&lc=IT&item_name=Matt95%20Donations&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHo" target="_blank" rel="nofollow" style=""><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/timthumb.php" border="0" alt="" style="max-width: 0px; overflow-x: auto;"></a>
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22704490" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22704490"></div>
+
+ 
+<!-- post 22704490 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22704490_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=2822284"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=2822284" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+ 
+         <a href="http://www.twitter.com/_matt95__"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Twitter.gif"> Follow on Twitter</a>
+
+ 
+         <a href="https://plus.google.com/https://plus.google.com/u/0/"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Google+.gif"> Follow on Google+</a>  
+
+ 
+         <a href="http://www.facebook.com/Mattia%20Mat%20Righetti"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Facebook.gif"> View Facebook page</a> 
+
+
+	
+</div>
+<!-- / post 22704490 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22704490 --><!-- post #22704870 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22704870" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22704870" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22704870" class="posterInfoHead">
+		<div title="miniudavid is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=4203325">miniudavid</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22704870", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 12:24 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22704870" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22704870&postcount=7" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22704870" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22704870&postcount=7" target="new" rel="nofollow" id="postcount22704870" name="7" class="postCount"><strong>#7</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Senior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>14</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/0.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>183</strong></div>
+			<div>Join Date: <strong>Aug 2011</strong></div>
+                        
+                        
+
+
+      <div id="moreinfo_22704870"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22704870&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22704870&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22704870" class="moreUserInfo" style="display:none">
+                        <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Germany.gif" title="Germany" class="flag" alt="Flag"><br><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Germany - Vodafone (D2).gif" title="Germany - Vodafone (D2)" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22704870">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22704870" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			You say that it is not recommended to do it in a virtual machine. What if I got 8 gigs of memory? Could I try it?? Thanx<br>
+<br>
+Sent from my Sensation using XDA App
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22704870" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22704870"></div>
+
+ 
+<!-- post 22704870 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22704870_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=4203325"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=4203325" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+	
+</div>
+<!-- / post 22704870 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22704870 --><!-- post #22706083 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22706083" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22706083" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22706083" class="posterInfoHead">
+		<div title="webmasteryoda is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=4154043">webmasteryoda</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22706083", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 01:27 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22706083" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22706083&postcount=8" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22706083" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22706083&postcount=8" target="new" rel="nofollow" id="postcount22706083" name="8" class="postCount"><strong>#8</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=4154043"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar4154043_1.gif" width="80" height="80" alt="webmasteryoda&#39;s Avatar" border="0" style="margin-top:6px" title="webmasteryoda&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>18</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/0.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>73</strong></div>
+			<div>Join Date: <strong>Jun 2011</strong></div>
+                        <div>Location: <strong>Kula</strong></div>
+                        
+
+
+      <div id="moreinfo_22706083"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22706083&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22706083&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22706083" class="moreUserInfo" style="display:none">
+                        <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Serbia.gif" title="Serbia" class="flag" alt="Flag"><br><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Serbia - mts.gif" title="Serbia - mts" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22706083">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22706083" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			Nope.<br>
+A box is a box.<br>
+Ubuntu standalone is a very powerfull machine.<br>
+Just install 64bit and my advice to you: avoid Ubuntu. Try another version, which is compatible with this guide. I suggest Kubuntu or Xubuntu (64).
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22706083" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22706083"></div>
+
+ 
+<!-- post 22706083 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22706083_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=4154043"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=4154043" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+
+
+
+
+	
+</div>
+<!-- / post 22706083 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22706083 --><!-- post #22706196 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22706196" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->
+
+
+
+<table class="tborder" id="post22706196" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22706196" class="posterInfoHead">
+		
+<div title="Vorbeth is online now" class="posterIcon online">&nbsp;</div>
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=287340">Vorbeth</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22706196", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 01:32 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22706196" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22706196&postcount=9" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22706196" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22706196&postcount=9" target="new" rel="nofollow" id="postcount22706196" name="9" class="postCount"><strong>#9</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=287340"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar287340_2.gif" width="80" height="80" alt="Vorbeth&#39;s Avatar" border="0" style="margin-top:6px" title="Vorbeth&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Senior Member</strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>2272</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/7.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>1,911</strong></div>
+			<div>Join Date: <strong>Mar 2006</strong></div>
+                        <div>Location: <strong>Bridlington</strong></div>
+                        
+
+
+      <div id="moreinfo_22706196"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22706196&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22706196&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22706196" class="moreUserInfo" style="display:none">
+                        <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/United Kingdom.gif" title="United Kingdom" class="flag" alt="Flag"><br><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/United Kingdom - Three.gif" title="United Kingdom - Three" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br>
+<a href="http://forum.xda-developers.com/donatetome.php?u=287340" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22706196">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22706196" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			<div style="margin:0px 0px 10px 0px ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="alt2" style="border:1px solid #B4B4B4;border-radius: 3px;background-color: #E9E9E9;padding: 10px;">
+			
+				<div>
+					Originally Posted by <strong>webmasteryoda</strong>
+					<a href="http://forum.xda-developers.com/showthread.php?p=22706083#post22706083" rel="nofollow" style=""><img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewpost.png" border="0" alt="View Post" title="View Post" style="max-width: 0px; overflow-x: auto;"></a>
+				</div>
+				<div style="font-style:italic">Nope.<br>
+A box is a box.<br>
+Ubuntu standalone is a very powerfull machine.<br>
+Just install 64bit and my advice to you: avoid Ubuntu. Try another version, which is compatible with this guide. I suggest Kubuntu or Xubuntu (64).</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>Ubuntu is fine, just strip out unity &amp; replace with gnome shell :P
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig" style="width: auto; overflow-x: auto;">
+				<font size="1"><b>Acer Iconia Tab A700</b> - <a href="http://forum.xda-developers.com/showthread.php?t=1952124" target="_blank" rel="nofollow">iconiaN Internal dev builds</a></font>
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22706196" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+
+ <div id="post_thanks_box_22706196"><div>
+	<table id="thanksTable" class="tborder" cellspacing="0">
+		<thead>
+			<tr>
+				<td class="alt2">
+					
+						The Following User Says Thank You to Vorbeth For This Useful Post: [ <a href="http://forum.xda-developers.com/showthread.php?t=1505006#" onclick="return toggle_collapse(&#39;Thanks_22706196&#39;)">Click to Expand</a> ]
+					
+				</td>
+				<td class="collapseCell">
+					<div class="thanksCollapseIcon"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" style="float:right" onclick="return toggle_collapse(&#39;Thanks_22706196&#39;)"><img id="collapseimg_Thanks_22706196" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/yellowArrowRight.png"></a></div>
+				</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="collapseobj_Thanks_22706196" style="display:none">
+				<td class="alt1" colspan="2">
+					<div> <a href="http://forum.xda-developers.com/member.php?u=2394329" rel="nofollow">sparksco</a>&nbsp;(19th February 2012)</div>
+
+					
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div></div>
+
+ 
+<!-- post 22706196 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22706196_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=287340"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=287340" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+ 
+         <a href="http://www.twitter.com/@vorbeth"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Twitter.gif"> Follow on Twitter</a>
+
+
+
+
+	
+</div>
+<!-- / post 22706196 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22706196 --><!-- post #22707793 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+	<div id="edit22707793" style="padding:0px 0px 6px 0px">
+	
+
+
+
+<table class="tborder" id="post22707793" cellspacing="0">
+<tbody><tr>
+	<td id="postmenu_22707793" class="posterInfoHead">
+		<div title="blahbl4hblah is offline" class="posterIcon">&nbsp;</div>
+
+
+		
+			<a class="posterName" href="http://forum.xda-developers.com/member.php?u=3017259">blahbl4hblah</a>
+		<script type="text/javascript"> vbmenu_register("postmenu_22707793", true); </script>
+		
+	</td>
+	<td class="postContentHead">
+		<img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/post_old.gif" alt="Old" border="0" style="margin-top:3px; margin-right: 8px; float:left" title="Old"><div class="postDate">
+			<!-- status icon and date -->
+			
+				19th February 2012, 02:45 PM
+			
+			
+			<!-- / status icon and date -->
+		</div>
+		
+		
+		
+		<div class="postModTools">
+
+
+			
+			
+
+			<a href="http://forum.xda-developers.com/retweet_forums.php?p=22707793" target="_blank" title="Tweet this post" class="postTwitterIcon"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/twitter.png"></a>
+			<a href="http://forum.xda-developers.com/showthread.php?p=22707793&postcount=10" target="_blank" title="Share this post on Facebook" class="postFacebookIcon fbs_post"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/facebook.png"></a>
+<a href="https://plus.google.com/share?url=http://forum.xda-developers.com/showpost.php?p=22707793" target="_blank" title="Share this post on Google+" class="headerGPlusIcon" style="margin-left: 5px;" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/gplus_grey.png" style="margin-top: 1px;" border="0"></a>
+
+
+			<a href="http://forum.xda-developers.com/showpost.php?p=22707793&postcount=10" target="new" rel="nofollow" id="postcount22707793" name="10" class="postCount"><strong>#10</strong></a> &nbsp;
+			
+		</div>
+	</td>
+</tr>
+<tr>
+	<td class="posterInfo">
+		<!-- user info -->
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/avatar3017259_9.gif" width="80" height="80" alt="blahbl4hblah&#39;s Avatar" border="0" style="margin-top:6px" title="blahbl4hblah&#39;s Avatar"></a>
+
+
+		
+
+		<div class="basicUserInfo">
+			<strong>Recognized Developer</strong> - <strong><u>OP</u></strong>
+			
+		<div class="userThanksInfo">
+			Thanks Meter <b>1485</b><br>
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6.jpg" alt="">
+		</div>
+                 
+			<div>Posts: <strong>5,521</strong></div>
+			<div>Join Date: <strong>Oct 2010</strong></div>
+                        <div>Location: <strong>Los Angeles, CA</strong></div>
+                        
+
+
+      <div id="moreinfo_22707793"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#" class="moreInfoButton btn-silver" onclick="document.getElementById(&#39;moreinfo_22707793&#39;).style.display = &#39;none&#39;; return toggle_collapse(&#39;more_22707793&#39;);">More Info <span class="moreInfoButtonToggle" style="font-weight: normal">&gt;</span></a></div>
+		</div>
+		<div id="collapseobj_more_22707793" class="moreUserInfo" style="display:none">
+                        
+			<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/U.S.A. - T-Mobile.gif" title="U.S.A. - T-Mobile" class="carrier" alt="Carrier"><br><br>
+			
+			
+			
+			
+                        
+			<div style="margin-top: 7px">    </div>
+		</div>
+
+
+
+<br>
+<a href="http://forum.xda-developers.com/donatetome.php?u=3017259" rel="nofollow" class="donateButton btn-silver"><div class="donateIcon">&nbsp;</div>DONATE TO ME</a>
+
+		<!-- / user info -->
+	</td>
+
+	
+	<td class="alt1 postContent" id="td_post_22707793">
+	
+		
+	<!-- message, attachments, sig -->
+
+		
+
+		<!-- message -->
+		<div id="post_message_22707793" style="width: auto; overflow-x: auto;">
+
+
+
+
+
+
+
+			<div style="margin:0px 0px 10px 0px ">
+	<div class="smallfont" style="margin-bottom:2px">Quote:</div>
+	<table cellpadding="6" cellspacing="0" border="0">
+	<tbody><tr>
+		<td class="alt2" style="border:1px solid #B4B4B4;border-radius: 3px;background-color: #E9E9E9;padding: 10px;">
+			
+				<div>
+					Originally Posted by <strong>matt95</strong>
+					<a href="http://forum.xda-developers.com/showthread.php?p=22704490#post22704490" rel="nofollow" style=""><img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewpost.png" border="0" alt="View Post" title="View Post" style="max-width: 0px; overflow-x: auto;"></a>
+				</div>
+				<div style="font-style:italic">hi man thank you for this guide, i got a problem<br>
+when i try to install the first files for sistem 64 bit i get this error:<br>
+<br>
+Package awk is a virtual package provided by:<br>
+  original-awk 2011-05-06-1<br>
+  mawk 1.3.3-15ubuntu2<br>
+  gawk 1:3.1.8+dfsg-0.1build1<br>
+You should explicitly select one to install.<br>
+<br>
+E: Package 'awk' has no installation candidate<br>
+E: Unable to locate package 7zip</div>
+			
+		</td>
+	</tr>
+	</tbody></table>
+</div>It might not be 7zip but 7za <br>
+As for awk try to install original-awk I wasn't sure actually since I had my computer setup for a long time already with everything
+		</div>
+		<!-- / message -->
+
+		
+
+		
+
+                
+		
+                
+		
+		<!-- sig -->
+			<div class="postsig" style="width: auto; overflow-x: auto;">
+				<b>Before you even ask for help, do help yourself and search for it first!</b><br>
+<br>
+<img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/6848177_orig.png" border="0" alt="" style="max-width: 1075px; overflow-x: auto;">[
+			</div>
+		<!-- / sig -->
+		
+	</td>
+</tr>
+<tr>
+	<td class="posterInfoFoot">
+<ul class="threadcontrols3_2012" style="display:none">
+
+
+			</ul>
+		
+	
+
+	
+	</td>
+
+
+	<td class="postContentFoot">
+		
+		
+		
+			
+		
+
+		<div class="postControls">
+			<!-- controls -->
+			
+			
+			
+				<a href="http://forum.xda-developers.com/newreply.php?do=newreply&p=22707793" rel="nofollow" class="postbitFunction"><div class="quoteIcon">&nbsp;</div>REPLY</a>
+			
+                        
+			
+			
+			
+			
+			
+			
+				
+			
+			<!-- / controls -->
+		</div>
+
+	<!-- message, attachments, sig -->
+
+	</td>
+</tr>
+</tbody></table>
+
+
+<br>
+			<script type="text/javascript">
+//<![CDATA[
+tn_ad_insert.tn_place_ad_bottom();
+//]]>
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
+
+ <div id="post_thanks_box_22707793"></div>
+
+ 
+<!-- post 22707793 popup menu -->
+<div class="vbmenu_popup postmenu_profile" id="postmenu_22707793_menu" style="display:none;">
+	
+		<a href="http://forum.xda-developers.com/member.php?u=3017259"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/profile.png"> View Profile</a>
+	
+	
+	
+	
+	
+		<a href="http://forum.xda-developers.com/search.php?do=finduser&u=3017259" rel="nofollow"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/viewPosts.png"> View Forum Posts</a>
+	
+	
+        
+ 
+         <a href="http://www.twitter.com/derykisonder"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Twitter.gif"> Follow on Twitter</a>
+
+ 
+         <a href="https://plus.google.com/https://plus.google.com/101815913097911953718"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/Google+.gif"> Follow on Google+</a>  
+
+
+
+	
+</div>
+<!-- / post 22707793 popup menu -->
+
+
+
+	</div>
+	
+		</div>
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #22707793 -->
+	
+	<div id="lastpost"></div>
+</div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:100%; text-align:left">
+		<div style="padding:0px 0px 0px 0px" align="left">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table class="threadlistControls">
+<tbody><tr valign="top">
+	
+		<td class="smallfont" width="135">
+			
+				
+					<a href="http://forum.xda-developers.com/newreply.php?do=newreply&noquote=1&p=22707793" rel="nofollow" class="btn-yellow replyButton"><div><div class="speechIcon">&nbsp;</div>Post Reply<span class="addReplyIcon">+</span></div></a>
+				
+		</td>
+	
+</tr>
+</tbody></table>
+
+<table class="threadlistControls_right">
+<tbody><tr valign="top">
+	
+		<td align="right"><div class="pagenav" align="right">
+<table class="pagenavControls">
+<tbody><tr>
+        <td style="border:none; background:none;"><span><small>Page <strong>1</strong> of <strong>97 &nbsp;&nbsp;</strong></small></span></td>
+        
+
+	
+		<td class="alt2"><span class="smallfont" title="Showing results 1 to 10 of 968"><strong>1</strong></span></td>
+ <td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=2" title="Show results 11 to 20 of 968">2</a></td><td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=3" title="Show results 21 to 30 of 968">3</a></td><td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=11" title="Show results 101 to 110 of 968"><!--+10-->11</a></td><td class="alt1"><a class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=51" title="Show results 501 to 510 of 968"><!--+50-->51</a></td>
+	<td class="alt1"><a rel="next" class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=2" title="Next » - Results 11 to 20 of 968"><strong>&gt;</strong></a></td>
+
+        <td class="alt1"><a rel="last" class="smallfont" href="http://forum.xda-developers.com/showthread.php?t=1505006&page=97" title="Last Page - Results 961 to 968 of 968"><strong>&gt;&gt;</strong></a></td>
+<td class="vbmenu_control goto_nav" title="" id="pagenav.123" style="cursor: pointer;"> <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/menu_open.gif" border="0" title="" alt=""></td>
+
+</tr>
+</tbody></table>
+</div>
+		
+		</td>
+	
+</tr>
+</tbody></table>
+
+
+
+
+<!-- / controls below postbits -->
+
+
+
+
+
+
+<!-- thread tags -->
+	<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="clear: both;">
+	<tbody><tr>
+		<td class="thead">
+			
+			<a name="taglist"></a>
+			<a href="http://forum.xda-developers.com/tags.php">Tags</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="alt1 smallfont" id="tag_list_cell"><a href="http://forum.xda-developers.com/tags.php?tag=cm9">cm9</a>, <a href="http://forum.xda-developers.com/tags.php?tag=guide">guide</a>, <a href="http://forum.xda-developers.com/tags.php?tag=ics">ics</a>, <a href="http://forum.xda-developers.com/tags.php?tag=pyramid">pyramid</a>, <a href="http://forum.xda-developers.com/tags.php?tag=sensation">sensation</a> <img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/11x11progress.gif" id="tag_form_progress" class="inlineimg" style="display:none" alt=""></td>
+	</tr>
+	</tbody></table>
+
+	<script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/vbulletin_ajax_taglist.js"></script>
+		<script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/vbulletin_ajax_tagsugg.js"></script>
+<!-- / thread tags -->
+
+
+
+
+
+<!-- lightbox scripts -->
+	<script type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/vbulletin_lightbox.js"></script>
+	<script type="text/javascript">
+	<!--
+	vBulletin.register_control("vB_Lightbox_Container", "posts", 1);
+	//-->
+	</script>
+<!-- / lightbox scripts -->
+
+
+
+
+
+
+
+
+
+
+<!-- next / previous links -->
+	<div align="center" style="margin: 10px 0;">
+		<strong>«</strong>
+			<a href="http://forum.xda-developers.com/showthread.php?t=1505006&goto=nextoldest" rel="nofollow">Previous Thread</a>
+			|
+			<a href="http://forum.xda-developers.com/showthread.php?t=1505006&goto=nextnewest" rel="nofollow">Next Thread</a>
+		<strong>»</strong>
+	</div>
+<!-- / next / previous links -->
+
+
+
+		
+                <div id="breadcrumb">
+                
+			<a id="bread_home" href="http://forum.xda-developers.com/index.php" accesskey="1"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/invisible.png" alt="XDA Developers" width="21" height="18" title="XDA Developers"></a> 
+			
+	<span class="navbar">&gt; <a href="http://forum.xda-developers.com/forumdisplay.php?f=1109">HTC Sensation</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://forum.xda-developers.com/forumdisplay.php?f=1112">Sensation Android Development</a></span>
+
+
+			&gt; <span>
+	 [GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit)
+
+</span>
+                </div>
+                
+
+
+
+
+
+
+
+
+<!-- popup menu contents -->
+<br>
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="http://forum.xda-developers.com/postings.php?t=1505006&pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Thread Tools<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/printer.gif" alt="Show Printable Version" title="Show Printable Version"> <a href="http://forum.xda-developers.com/printthread.php?t=1505006" accesskey="3" rel="nofollow">Show Printable Version</a></td>
+	</tr>
+	
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/sendtofriend.gif" alt="Email this Page" title="Email this Page"> <a href="http://forum.xda-developers.com/sendmessage.php?do=sendtofriend&t=1505006" rel="nofollow">Email this Page</a></td>
+	</tr>
+	
+	
+	
+	
+	</tbody></table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Display Modes<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/mode_linear.gif" alt="Linear Mode" title="Linear Mode"> <strong>Linear Mode</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/mode_hybrid.gif" alt="Hybrid Mode" title="Hybrid Mode"> <a href="http://forum.xda-developers.com/showthread.php?mode=hybrid&t=1505006">Switch to Hybrid Mode</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/mode_threaded.gif" alt="Threaded Mode" title="Threaded Mode"> <a href="http://forum.xda-developers.com/showthread.php?p=22700475&mode=threaded#post22700475">Switch to Threaded Mode</a></td>
+	
+	</tr>
+	</tbody></table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+<!-- thread search menu -->
+<div class="vbmenu_popup" id="threadsearch_menu" style="display:none">
+<form action="http://forum.xda-developers.com/search.php?do=process&searchthreadid=1505006" method="post">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tbody><tr>
+		<td class="thead">Search this Thread<a name="goto_threadsearch"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option" title="nohilite">
+			<input type="hidden" name="s" value="">
+			<input type="hidden" name="securitytoken" value="guest">
+			<input type="hidden" name="do" value="process">
+			<input type="hidden" name="searchthreadid" value="1505006">
+			<input type="text" class="bginput" name="query" size="25"><input type="submit" class="button" value="Go"><br>
+		</td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><a href="http://forum.xda-developers.com/search.php?searchthreadid=1505006">Advanced Search</a></td>
+	</tr>
+	</tbody></table>
+</form>
+</div>
+<!-- / thread search menu -->
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table id="stats">
+<tbody><tr valign="bottom">
+        
+	<td id="ad-billboard-bottom">	
+<iframe src="about:blank" width="0" height="0" frameborder="0" scrolling="no" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 300px 250px;"></iframe></td>
+
+	
+	<td valign="top">
+		<table class="tborder" cellspacing="0">
+<thead>
+<tr>
+	<td class="tcat">
+		<div class="postingRulesIcon"></div>
+		<strong>Posting Rules</strong>
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules">
+<tr>
+	<td class="alt1">
+		
+			
+				<div id="postingRulesRight">
+					<div>You may not post new threads</div>
+					<div>You may not post replies</div>
+					<div>You may not post attachments</div>
+					<div>You may not edit your posts</div>
+				</div>
+			
+			<div id="postingRulesLeft">
+				<div>BB code is <a href="http://forum.xda-developers.com/misc.php?do=bbcode"><strong>On</strong></a></div>
+				<div>Smilies are <a href="http://forum.xda-developers.com/misc.php?do=showsmilies"><strong>On</strong></a></div>
+				<div>[IMG] code is <a href="http://forum.xda-developers.com/misc.php?do=bbcode#imgcode"><strong>On</strong></a></div>
+				<div>HTML code is <strong>Off</strong></div>
+			</div>
+		
+	</td>
+</tr>
+</tbody>
+</table>
+                <br>
+                <span style="margin-left:5px"><a href="http://forum.xda-developers.com/showthread.php?t=1505006#poststop">Go to top of page...</a></span>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tbody><tr>
+			<td>
+			
+			</td>
+		</tr>
+		</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+<!-- /forum rules and admin links -->
+
+<br>
+
+<!-- begin sidebar -->
+
+
+<!-- End the pageContainer table that was started in navbar -->
+</div></div></div></td>
+
+
+
+<td id="page_rightPane" style="display: none;">
+
+<!-- sidebarcookie: false -->
+
+
+
+<script type="text/javascript">
+  var sidebarContentLoaded = 'false';
+  _gaq.push(['_setCustomVar',1,'Sidebar Showing','No',3]);
+</script>
+
+
+
+
+<!-- end sidebar -->
+
+
+
+		
+	
+
+
+<!-- / close content container -->
+
+
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+<table id="xda_footer" cellspacing="0">
+	<tbody><tr>
+		<td id="footer_xdaLogo">
+			<a href="http://forum.xda-developers.com/"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/xdaLogo_small.png" alt="XDA Developers Android Forum" title="XDA Developers Android Forum"></a>
+			<p>XDA Developers was founded by developers, for developers. It is now a valuable resource for people who want to make the most of their mobile devices, from customizing the look and feel to adding new functionality. <a href="http://www.xda-developers.com/recognized-developer-program/">Are you a developer?</a></p>
+
+			
+			<select name="styleid" onchange="switch_id(this, &#39;style&#39;)">
+				<optgroup label="Quick Style Chooser">
+					<option value="15" class="">-- XDA Classic</option>
+<option value="16" class="">-- XDA 2010</option>
+<option value="18" class="" selected="selected">-- XDA 2013 Beta</option>
+<option value="19" class="">---- XDA 2013 Beta - 1024</option>
+
+				</optgroup>
+			</select>
+			
+		</td>
+		<td id="footer_download">
+			<h2>Download the XDA Android App</h2>
+			<p>Get the XDA forums on your Android Device.</p>
+			<a href="https://play.google.com/store/apps/developer?id=xda-developers"><img src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/google-play-logo.png" alt="XDA Google Play" title="XDA Google Play"></a>
+		</td>
+		<td id="footer_moreinfo">
+			<h2>More Info</h2>
+			<a href="http://www.xda-developers.com/contact/">Contact Us</a>
+			<a href="http://www.xda-developers.com/suggest-content/">Suggest Content</a>
+			<a href="http://www.xda-developers.com/index.php/xda-developers-privacy-policy/">Privacy Policy</a>
+			<a href="http://forum.xda-developers.com/external.php?type=RSS2">RSS</a>
+		</td>
+		<td id="footer_social">
+		<h2>Be Social</h2>
+		<ul>
+			<li class="social_twitter"><a title="Twitter" href="http://www.twitter.com/xdadevelopers"><span>Twitter</span></a></li>
+			<li class="social_facebook"><a title="facebook" href="http://www.facebook.com/xda.developers"><span>Facebook</span></a></li>
+			<li class="social_Gplus"><a title="Google Plus" href="https://plus.google.com/b/117899181878309641668/"><span>Google plus</span></a></li>
+			<li class="social_youtube"><a title="Youtube" href="http://www.youtube.com/xdadevelopers"><span>Youtube</span></a></li>
+			<li class="social_rss"><a title="RSS Feed" href="http://forum.xda-developers.com/external.php?type=RSS2"><span>RSS</span></a></li>
+		</ul>
+<br>
+<small>Copyright© xda-developers. &nbsp;<br>
+Powered by <a href="http://www.axivo.com/searchlight/">Searchlight</a> © 2013 Axivo Inc.</small>
+<small> 
+                
+				</small>
+		</td>
+	</tr>
+
+
+<tr>
+<td colspan="4" style="border:none">
+<!-- call this function to enable ads -->
+
+<center>
+
+<iframe src="about:blank" width="0" height="0" frameborder="0" scrolling="no" style="display: none !important; visibility: hidden !important; opacity: 0 !important; background-position: 728px 90px;"></iframe>
+
+</center>
+
+</td>
+</tr>
+</tbody></table>
+
+<!-- /xda_global_wrapper -->
+</div>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!-- modal QR -->
+<script type="text/javascript">
+//if a QR link is clicked, prevent the default action and open the modal window
+jQuery('a.qrLink').each(function(QRLink) {
+	jQuery(this).on('click', function() {
+          var attachmentID = jQuery(this).attr('id');
+          openQR(attachmentID);
+        });
+});
+function openQR(attachmentID) {
+	jQuery('#qrCode').load('/qrcode.php?attachmentid='+attachmentID);
+	jQuery('#qrModal').show();
+	jQuery('#qrOverlay').show();
+}
+function closeQR() {
+	jQuery('#qrModal').hide();
+	jQuery('#qrOverlay').hide();
+}
+</script>
+<!-- end modal QR -->
+<!-- QR modal -->
+<div id="qrOverlay" style="display:none;background:rgba(0,0,0,0.7);width:100%;height:100%;position:fixed;top:0;left:0;z-index:90;">
+	<a href="javascript:closeQR();" style="display:block;width:100%;height:100%;z-index:91;position:absolute;top:0;left:0;"></a>
+	<div id="qrModal" style="display:none;width:250px;height:250px;z-index:99;position:relative;margin-top:-125px;margin-left:-125px;top:50%;left:50%;opacity:1;">
+		<a href="javascript:closeQR();" style="position:absolute;margin-top:0.5em;margin-left:235px;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAdCAYAAABfeMd1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA8xJREFUeNqclktIVFEYx+fO+GjUGqw0S/IRGtTKENtkqJTkooUwC0EQNNpEEiJYoISbKAhcCYogagvBlbRQW/kAIdAkbRGIi3RiNIfJR+qk4zxO/2/4zu3cOw+tA7+5c8/j+5/vfN8592hCCMspSy4o4acXLIHVU40kkQTkglfgm4hd3KAb3PxfESf4KU5XAuBRPA0tznINgCa1Yn193bK0tBR5ZmVlWUpKSiyFhYXmcfPgiaZpn0/yZEKd4vLysqioqKCZRAEhMTc3Z/bqy0nL9Uzt3dXVJex2e0wBic1mEx0dHcLv96tDX8cTyVN7tbW1JTRupr6+3uzR7Vgib2Tr5ORklJHa2lrDe0FBgVhcXDTUDw8PqyIfY4m4ZGt5ebnB4OrqaqS+srJSj8XOzk6kbnBwUO9XVFQkgsGgKmTTRQ4PD/NlrcvlivKis7Mz0kZiJBRLQDI7O/s3rwOBu7oI1B/KhrGxsaiBtDTSsCyxBIj+/n69D+w+Jg0r/YTD4Wy5fF6vNyoD19bWLENDQ4b3pqammBtPHQ+diF0rNo4GxT3Z4HA4ogbSxmtsbNTf4ZnhXS1Ief1/KBQ6og0f2fXIkuJ4MVGDLBOACtVRW6KYuN3ue7oISIc3btmoDp6enjYYbWlp0Y3Qf1UAx40hu0pLSx0yJPRz1uPxvJONo6OjhswiAZm+BBlX3yU9PT26gM/no/PrHLDpIr29vQ/U7GloaDBk10k7vrq62uDF+Pg4ZYbDIAKuzc/PD8hOdBbRUXGaI6Wmpkbs7+/rAltbW19RX2wWSQd54A6WzaV6REcFjvSYxikGtESqBwcHB7vt7e30bSngyVtl4M+AHHCrubn5+cbGxqb5tFtYWBB9fX2iu7s78pyZmYn6ciF2e62trS9hpwxcAWlqdqWA8+A6uA+ejoyMfBL/UFZWVjbr6ureYmwNuAEugtSIff4y0rpl8CWhFDjBC6fT+R4BdB8dHYXiGZ+amvJgY35A/3ZQB+iIv8pLlaR/frHpad2S2b1McJk75vPzUlVVVV5ZWdmF5ORkGw6+EL6YvyYmJlyIxyba3eA7swG2gQ8E6NSSIhoHKIWTgISyWSyH/2fyJMjrMPgNdvl6REI/gAfsgANwTCcLJYh+kWAhGwulcfplcqwyeWPZuQ8NpnNpn41uM3vsAQkEOQuNtxWTUCp7lcHPNK6zsifH7I2PZ+5j4QBPIhz3SqQsXRLHKZVFU/hd4xkGWcjPT7k8IelBwnsXC0kxK3tn4/9SJKwYDTPCLJDocmcWlPtJUy86isGERv4IMACaz3RmXeGcqwAAAABJRU5ErkJggg%3D%3D"></a><br>
+		<div id="qrCode"></div>
+	</div>
+</div>
+<!-- end QR modal -->
+
+
+<script language="JavaScript" type="text/javascript"> var DR_id = "1359";</script>
+<script async="" language="JavaScript" type="text/javascript" src="http://cdn.viglink.com/api/merged.js"></script>
+<script async="" type="text/javascript" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/s1.js"></script>
+
+
+
+
+<script async="" type="text/javascript"> 
+(function() {
+    var nstrack = document.createElement("script"), el_nstrack = document.getElementsByTagName("script")[0]; nstrack.async = true;
+    nstrack.src = "http://track.netshelter.net/async/js/sites/xda-developers.com-async.js";
+    el_nstrack.parentNode.insertBefore(nstrack, el_nstrack);
+  })();
+</script>
+
+<script type="text/javascript">
+  _gaq.push(['_trackPageview']);
+</script><div class="smallfont"><!--VBOCR--></div>
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+<script type="text/javascript">
+xda_showthread.init();
+xda_sidebar.init();
+</script>
+
+
+<!-- Page generated on 3 January 2013 16:28:43 in 0.58997 / 0.025017  seconds with 11 queries by titan --></div></div></div><iframe width="1px" height="1px" frameborder="0" style="visibility:hidden;position:absolute;border:medium none" src="./[GUIDE]Compile AOKP and CyanogenMod for HTC Sensation on Ubuntu (ONLY 64-bit) - xda-developers_files/s2.html"></iframe><table cellspacing="0" cellpadding="0" style="width: 192px; display: none; top: 136px; position: absolute; left: 963px;" class="gstl_0 gssb_c"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body></html>

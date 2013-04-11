@@ -1,0 +1,3157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" id="vbulletin_html">
+<head>
+<base href="http://www.thriveforums.org/forum/" /><!--[if IE]></base><![endif]-->
+	<link rel="canonical" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html" />
+
+<!-- Tapatalk Detect Start -->
+<script type="text/javascript" src="http://www.thriveforums.org/forum/mobiquo/tapatalkdetect-nochrome.js"></script>
+<!-- Tapatalk Detect End -->
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="http://www.thriveforums.org/forum" />
+
+<meta name="generator" content="vBulletin 4.1.4" />
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.9.0/build/yuiloader-dom-event/yuiloader-dom-event.js&amp;2.9.0/build/connection/connection-min.js"></script>
+
+<script type="text/javascript">
+<!--
+	var SESSIONURL = "s=6841feb72dda5fe2c19c17218b31ba10&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc";
+	var IMGDIR_BUTTON = "images/styles/ShinyBlue/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "414";
+	var BBURL = "http://www.thriveforums.org/forum";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread.php?t=14517";
+	var PATHS = {forum : ""}
+// -->
+</script>
+<script type="text/javascript" src="http://www.thriveforums.org/forum/clientscript/vbulletin-core.js?v=414"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Toshiba Thrive Forum RSS Feed" href="http://www.thriveforums.org/forum/external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Toshiba Thrive Forum - tybar Development - RSS Feed" href="http://www.thriveforums.org/forum/external.php?type=RSS2&amp;forumids=64" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="http://www.thriveforums.org/forum/css.php?styleid=2&amp;langid=1&amp;d=1356741066&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css,vbseo_buttons.css,vbseo_buttons_fix.css" />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://www.thriveforums.org/forum/css.php?styleid=2&amp;langid=1&amp;d=1356741066&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+
+
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-7140863250046446");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-160s1");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-300f");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-300l");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-300R");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-336");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-468");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-468g");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-728n");
+GA_googleAddSlot("ca-pub-7140863250046446", "thrive-728x90-bottom");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+</script>
+
+ <script type="text/javascript"> vBulletin.add_event("SkimlinksActivate"); </script>
+	<meta name="keywords" content="HOW,Set,up,build,environment,CM10,showing, stuff, computer, future, point, cm10, nice, environment, build, choose, [how-to], dualboot, messin" />
+	<meta name="description" content="In the interest of getting more people involved in this project, I'm going to write up a basic how-to for setting up a build environment to compile" />
+
+	<title> [HOW-TO] Set up a build environment for CM10</title>
+	<link rel="canonical" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html" />
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="http://www.thriveforums.org/forum/css.php?styleid=2&amp;langid=1&amp;d=1356741066&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="http://www.thriveforums.org/forum/css.php?styleid=2&amp;langid=1&amp;d=1356741066&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="http://www.thriveforums.org/forum/css.php?styleid=2&amp;langid=1&amp;d=1356741066&amp;td=ltr&amp;sheet=additional.css" />
+ <script type="text/javascript" src="http://www.thriveforums.org/forum/vbseo/resources/scripts/vbseo_ui.js?v=a4"></script>
+<script type="text/javascript">
+ YAHOO.util.Event.onDOMReady(function (){
+ 	vbseoui = new vBSEO_UI();
+ 	vbseoui.page_init(Array('postbody','blogbit','content','postcontainer','vbseo_like_postbit'), Array("php",0));
+ });
+</script>
+ 
+<link rel="stylesheet" type="text/css" href="http://www.thriveforums.org/forum/css.php?styleid=2&amp;langid=1&amp;d=1356741066&amp;sheet=additional.css" />
+<script type="text/javascript" src="http://www.thriveforums.org/forum/plugins/forumfoundry/shared/jquery-1.4.2-min.js"></script>
+
+<script type="text/javascript" src="http://www.thriveforums.org/forum/plugins/forumfoundry/findme/scripts/jquery/cse.php?cse=partner-pub-7140863250046446:q0u9wkgl7ha"></script>
+
+</head>
+
+<body>
+
+	<div id="pageWrapper">
+		<div id="topBar">
+			<div style="padding-top: 13px; float:left;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7140863250046446";
+/* thrive-468x15-link */
+google_ad_slot = "8966411520";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+	<div class="memberBox">
+	
+				
+		<div class="loginLeft">
+		<!-- login form -->
+		<form action="http://www.thriveforums.org/forum/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="http://www.thriveforums.org/forum/clientscript/vbulletin_md5.js?v=384"></script>
+					
+		<ul>
+			<li ><span class="loginTxt">Login:</span></li>
+			<li class="inputPad"><div class="loginBoxInput"><input type="text" class="loginInput" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" /><input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" /></div></li>
+			<li class="inputPad"><div class="loginBoxInput"><input type="password" class="loginInput" tabindex="102" name="vb_login_password" id="navbar_password" size="10" /></div></li>
+			<li class="rememberMe"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Save?</label></li>
+			<li class="loginButton"><input type="image" src="images/styles/ShinyBlue/style/loginButton.gif" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" /></li>
+		</ul>
+
+		<input type="hidden" name="s" value="6841feb72dda5fe2c19c17218b31ba10" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" name="do" value="login" />
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_username', "color", "#828282");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='black';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#828282';
+				}
+			}
+			</script>
+		<!-- / login form -->
+			</div>
+	
+	</div>			
+		</div>
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div class="headerBox">
+		<a name="top" href="http://www.thriveforums.org/forum/forum.php" id="logo"><img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/style/toshiba-thrive-logo.png" alt="Toshiba Thrive Forum - Powered by vBulletin" /></a> 
+<div id="navigation">
+<div id="navbar" class="navbar">
+<div class="navLeft"><div class="navRight">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		<li><a href="http://www.thriveforums.org/index.php" class="navtab">Home </a></li>
+ 
+		
+			<li class="selected"><a class="navtab" href="http://www.thriveforums.org/forum/forum.php">Forum</a>
+				<ul class="floatcontainer">
+					
+					
+						
+						<li><a href="http://www.thriveforums.org/forum/search.php?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+						
+					
+					
+					
+					
+					<li><a rel="help" href="http://www.thriveforums.org/forum/faq.php" accesskey="5">FAQ</a></li>
+					
+					
+					
+
+					
+					<li class="popupmenu">
+						<a href="javascript://" class="popupctrl" accesskey="6">Community</a>
+						<ul class="popupbody popuphover">
+							
+							
+							
+							
+							
+								<li><a href="http://www.thriveforums.org/forum/members/list/">Member List</a></li>
+							
+							
+						</ul>
+					</li>
+					
+					
+					<li class="popupmenu">
+						<a href="javascript://" class="popupctrl">Forum Actions</a>
+						<ul class="popupbody popuphover">
+							<li>
+								<a rel="nofollow" href="http://www.thriveforums.org/forum/forumdisplay.php?do=markread&amp;markreadhash=guest" onclick="return confirm('Are you sure you want to mark all forums as being read? This cannot be undone.')">Mark Forums Read</a>
+							</li>
+                                                        
+						</ul>
+					</li>
+					<li class="popupmenu">
+						<a href="javascript://" class="popupctrl" accesskey="3">Quick Links</a>
+						<ul class="popupbody popuphover">
+							
+							
+							<li><a href="http://www.thriveforums.org/forum/showgroups.php" rel="nofollow">
+		
+			View Forum Leaders
+		
+	</a></li>
+							
+							
+							
+							
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+
+			</li>
+		
+		<li><a rel="nofollow" href="http://www.thriveforums.org/index.php?pageid=active_topics" class="navtab">Active Topics</a></li>
+ 
+		
+			<li><a class="navtab" href="http://www.thriveforums.org/forum/search.php?do=getdaily&amp;contenttype=vBForum_Post" accesskey="2">What's New?</a></li>
+		
+		
+	</ul>
+
+</div></div>
+</div>
+</div>
+		</div>
+</div>
+</div><!-- closing div for above_body -->
+
+<!-- Custom Content Wrap -->
+		<div id="contentTop">
+			<div class="contentTopLeft"><div class="contentTopRight">
+				<div class="welcomeBox">
+					<h3>Welcome to the Toshiba Thrive Forum.</h3>
+					<div class="welcomeBody">
+
+					<p>If this is your first visit, be sure to
+		check out the <a href="http://www.thriveforums.org/forum/faq.php" target="_blank"><b>FAQ</b></a> by clicking the
+		link above. You may have to <a href="http://www.thriveforums.org/forum/register.php" target="_blank"><b>register</b></a>
+
+		before you can post: click the register link above to proceed.</p>
+
+					</div>
+				</div>
+
+	
+				<div class="searchBox">
+					<h3>Search Forums</h3>
+					<!-- search form -->
+		<form action="http://www.thriveforums.org/forum/search.php?do=process" method="post">
+			
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="process" />
+					
+					<div class="searchBoxInput">
+						<input class="searchinput" type="text"  name="query" tabindex="1004" value="" />
+					</div>
+					<span class="searchButton">
+						<input type="image" src="images/styles/ShinyBlue/style/searchButton.gif" value="Search" alt="Submit" />
+					</span>
+				
+					</form>
+					<div class="searchBox_advanced_search">
+						<a href="http://www.thriveforums.org/forum/search.php" accesskey="4">Advanced Search</a>
+					</div>
+					<!-- / search form -->
+				</div>
+	
+			</div></div>
+		</div>
+
+		<div id="contentMain"><div class="contentLeft"><div class="contentRight">
+			<div class="contentTL"><div class="contentTR"><div class="contentBL"><div class="contentBR">
+				<div class="contentBody">
+<!-- Custom Content Wrap End -->
+
+
+<!--// BEGIN 728x15 //-->
+<div style="background: transparent; margin: 5px 0;"><ol style="margin: 0; padding: 0;"><li style="margin: 0; list-style: none; background-image: none; background: #FFEFB6 none; border: 1px solid #E6B868; color: #3C3A22; line-height: 16px; padding: 8px 10px 8px 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 12px; text-align: left; clear: both;">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7140863250046446";
+/* Transformer-728x15-link */
+google_ad_slot = "0977894270";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script><script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></li>
+</ol></div>
+<!--// END 728x15 //-->
+
+
+
+<div id="breadcrumb" class="breadcrumb">
+<div class="bcLeft"><div class="bcRight">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="http://www.thriveforums.org/forum/forum.php" accesskey="1"><img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/navbit-home.png" alt="Home" /></a></li>
+
+		
+	<li class="navbit"><a href="http://www.thriveforums.org/forum/forum.php">Forum</a></li>
+ 
+	<li class="navbit"><a href="http://www.thriveforums.org/forum/toshiba-thrive-hacks/">Toshiba Thrive Hacks</a></li>
+ 
+	<li class="navbit"><a href="http://www.thriveforums.org/forum/toshiba-thrive-development/">Toshiba Thrive Development</a></li>
+ 
+	<li class="navbit"><a href="http://www.thriveforums.org/forum/tybar-development/">tybar Development</a></li>
+ 
+		
+	<li class="navbit lastnavbit"><span> [HOW-TO] Set up a build environment for CM10</span></li>
+ 
+	</ul>
+	<hr />
+</div></div>
+</div>
+
+<div class="body_wrapper">
+
+
+ 
+<div id="ad_global_below_navbar"><center>
+
+<div style="clear:both; width:950px; height:260px; border:0; ">
+
+<div style="float:left; width:300px;">
+<!-- thrive-300l -->
+<script type='text/javascript'>
+GA_googleFillSlot("thrive-300l");
+</script>
+</div>
+
+
+<div style="float:left; width:250px; padding-left: 15px;"><a href="http://www.thriveforums.org/forum/register.php"><img src="http://www.thriveforums.org/img/thrive_forum_reg_button.png" border="0" title="Register @ Toshiba Thrive Forum" /></a></div>
+
+
+<div style="float:left; width:300px; padding-left: 15px;">
+<!-- thrive-300R -->
+<script type='text/javascript'>
+GA_googleFillSlot("thrive-300R");
+</script>
+</div>
+
+</div>
+</center></div> 
+
+
+	<form action="http://www.thriveforums.org/forum/profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="s=6841feb72dda5fe2c19c17218b31ba10&amp;" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<div id="vbseo_vhtml_0"></div>
+	</form>
+ 
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+			<a rel="nofollow" href="http://www.thriveforums.org/forum/newreply.php?p=132155&amp;noquote=1" 
+class="newcontent_textcontrol" id="newreplylink_top"><span>+</span> Reply to Thread</a>
+			<img style="display:none" id="progress_newreplylink_top" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif"  alt="" />
+		
+
+		<div id="pagination_top" class="pagination_top">
+		
+			<form action="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-3.html" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="14517" /><input type="hidden" name="s" value="6841feb72dda5fe2c19c17218b31ba10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 7</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 65">1</a></span> <span><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-2.html" title="Show results 11 to 20 of 65">2</a></span> <span><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-3.html" title="Show results 21 to 30 of 65">3</a></span> 
+		
+		<span class="separator">...</span>
+		
+		
+		<span class="prev_next"><a rel="next" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-2.html" title="Next Page - Results 11 to 20 of 65"><img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/pagination/next-right.png" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-7.html" title="Last Page - Results 61 to 65 of 65">Last<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/pagination/last-right.png" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form> 
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 65
+			</div>
+		</div>
+	</div>
+<div id="pagetitle" class="pagetitle"><div id="vbseo-likes">
+      <span class="vbseo-likes-count" onclick="vbseoui.tree_dropdown()"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/vbseo_likes_heart.png" class="vbseo-likes-count-image" alt="Like Tree" />27<em>Likes</em></span>
+      
+      <div id="liketree_1.14517" class="vbseo-likes-container">
+
+		<ul class="vbseo-likes-tabs">
+			<li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#" onclick="return vbseoui.treetab_click(0)">Top</a></li>
+			<li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#" onclick="return vbseoui.treetab_click(1)">All</a></li>
+			
+			<li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#" onclick="return vbseoui.treetab_click(2)">This Page</a></li>
+			
+			<li class="vbseo-likes-fusion"></li>
+		</ul>
+
+		<ul class="vbseo-likes-list">
+		
+		</ul>
+	
+	
+	  </div>
+</div>
+
+<script type="text/javascript">
+var vbseoui_pageids = "131749,131900,131908,131920,132049,132067,132091,132139,132142,132155";
+</script>
+  
+	<h1>
+		Thread: <span class="threadtitle"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html" title="Reload this Page">[HOW-TO] Set up a build environment for CM10</a></span>
+		
+	</h1>
+</div>
+
+
+<!-- Start Forum tcat Heading ForumThemes -->
+<div class="tcatBar">
+	<div class="tcatLeft"><div class="tcatRight foruminfo L1 collapse">
+	<div id="thread_controls" class="tcat_threadlist_controls ">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			
+			<li class="popupmenu" id="linkbacktools">
+				<h6><a class="popupctrl" href="javascript://">LinkBack</a><a name="goto_linkback"></a></h6>
+				<ul class="popupbody popuphover">
+                                             
+					<li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html" onclick="prompt('Use the following URL when referencing this thread from another forum or blog.','http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html');return false;"><img class="inlineimg" src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/linkback_url.gif" alt="LinkBack URL" /> LinkBack URL</a></li>
+					<li><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=linkbacks"><img class="inlineimg" src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/linkback_about.gif" alt="About LinkBacks" /> About LinkBacks</a></li>
+					
+						<li>&nbsp;</li>
+                                                <li>Bookmark &amp; Share</li>
+                                                <li><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10" target="_blank">Digg this Thread!</a></li><li><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html" target="_blank">Tweet this thread</a></li><li><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html" target="_blank">Share on Facebook</a></li><li><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10" target="_blank">Reddit!</a></li>
+					
+				</ul>
+			</li>
+ <li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-print.html" accesskey="3" 
+						rel="nofollow">Show Printable Version</a></li>
+					<li><a href="http://www.thriveforums.org/forum/sendmessage.php?do=sendtofriend&amp;t=14517"
+						rel="nofollow">Email this Page&hellip;</a></li>
+					<li>
+						
+							<a href="http://www.thriveforums.org/forum/subscription.php?do=addsubscription&amp;t=14517" 
+								rel="nofollow">Subscribe to this Thread&hellip;</a>
+											
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread menusearch" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="http://www.thriveforums.org/forum/search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div class="submitoptions">&nbsp;</div>
+								<div class="advancedsearchlink"><a rel="nofollow" href="http://www.thriveforums.org/forum/search.php?search_type=1&amp;searchthreadid=14517&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="6841feb72dda5fe2c19c17218b31ba10" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="14517" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Linear Mode</label></li>
+						<li><a rel="nofollow" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html?mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><a rel="nofollow" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html?mode=threaded#post131749"> Switch to Threaded Mode</a></li>
+					</ul>
+				</li>
+			
+
+			
+		</ul>
+		</div>
+	</div>
+
+	</div></div>
+</div>
+<!-- End Forum tcat Heading ForumThemes -->
+<div id="postlist" class="postlist restrain">
+	
+
+	
+<div class="forumbitBody">
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer" id="post_131749">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-29-2012&nbsp;<span class="time">10:31 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post131749" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post131749" class="postcounter">#1</a><a id="postcount131749" name="1"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/3341.html" title="tybar is offline"><strong><span style="color: #779f00; font-weight: bold;">tybar</span>&nbsp;<img src="/icons/dev.png" border="0" alt="Developer" /></a>&nbsp;<a name="asdasd" style="color:red; cursor: default; text-decoration: none" title="Original Thread Poster">[OP]</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="tybar is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				<span style="color: #779f00; font-weight: bold;">Developer</span>
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/3341.html" title="tybar is offline">
+				<img src="http://www.thriveforums.org/forum/images/misc/default-avatar.png" alt="tybar's Avatar" title="tybar's Avatar" />
+			</a>
+</div>
+			 
+			<div class="badge" style="text-align: center"><a href="http://www.thriveforums.org/forum/payments.php"><img src="http://www.thriveforums.org/img/thrivedev.png" border="0" /></a></div>
+
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>3341</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>Sep 2011</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>262</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>142 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<h2 class="title icon">
+					[GUIDE] Build and Debug CM10 for THRiVE
+				</h2>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_131749">
+						<blockquote class="postcontent restore ">
+							In the interest of getting more people involved in this project, I'm going to write up a basic how-to for setting up a build environment to compile CM10 for the THRiVE and give some tips for debugging issues. I will assume a basic knowledge of the linux shell prompt, but don't let that scare you away. I'm going to be providing a few scripts that I use to make some common tasks easier.<br />
+<br />
+<br />
+<font size="3"><b>I. Requirements</b><br />
+</font><ul><li><b>Ubuntu 12.04 x64</b></li>
+</ul>This tutorial is going to be based on Ubuntu 12.04, which is the current LTS (Long-term Support) version of Ubuntu. You must also have a 64 bit system to build the source code. If you are currently running Windows, you have a couple of options:<br />
+<br />
+<i>Dual Booting</i><br />
+<br />
+I recommend this method, as it gives the Ubuntu OS full access to your system resources, which results in faster build times. There's a couple ways to do this. You can install Ubuntu as a Windows program, which is the easiest way and allows for easy removal of Ubuntu should you no longer need it. Otherwise, you can partition your hard drive and run Ubuntu on a separate partition. Either way, it can be downloaded from <a href="http://www.ubuntu.com/download/desktop" target="_blank">this</a> page. The big &quot;Start Download&quot; button will download a disc image of Ubuntu which can be burned to a DVD. Once you boot into this live installation, you can use the installation wizard to partition your hard drive and install Ubuntu. Otherwise, you can click &quot;Windows Installer&quot; to install it as a Windows program. This is the easiest way to install it<br />
+<br />
+<i>Virtual Machine</i><br />
+<br />
+If you don't want to dual-boot Ubuntu alongside Windows, you can use it inside a virtual machine. My favorite virtualization program is VMware Player, which can be downloaded <a href="http://www.vmware.com/products/player/" target="_blank">here</a>. Once you download and install it, you'll want to download the disc image of Ubuntu from the link above. Create a new virtual machine, then boot from the disc image you just downloaded. Then proceed to install Ubuntu using the wizard from the live installation.<ul><li><b>Required Packages &amp; Programs</b></li>
+</ul>In order to build Android, your system needs a bunch of packages. I got this list from <a rel="nofollow" href="http://forum.xda-developers.com/showthread.php?t=1813924" target="_blank">this guide</a>. Run the following commands in a shell prompt:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:60px;">sudo apt-get install git-core gnupg flex bison python rar original-awk gawk p7zip-full gperf libsdl1.2-dev libesd0-dev libwxgtk2.6-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev pngcrush schedtool
+sudo apt-get install libc6-dev x11proto-core-dev libx11-dev libgl1-mesa-dev mingw32 tofrodos python-markdown libxml2-utils
+sudo apt-get install g++-multilib lib32z1-dev ia32-libs lib32ncurses5-dev lib32readline-gplv2-dev gcc-multilib g++-multilib</pre>
+</div> <i>ADB, fastboot, and repo</i><br />
+<br />
+I have, so far, not needed to install the android SDK. Instead I have just copied the <i>adb</i> and <i>fastboot</i> executables to /bin. <a href="http://dl.dropbox.com/u/11103217/adb_fastboot.zip" target="_blank">Here</a> is an archive with both the tools. You'll also need repo to download the CM10 source code. To install these files, download the archive, extract it, and then run the following code:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:96px;">sudo cp <i>&lt;path_to_extracted_archive&gt;</i>/adb /bin
+sudo chmod 0755 /bin/adb
+sudo cp <i>&lt;path_to_extracted_archive&gt;</i>/fastboot /bin
+sudo chmod 0755 /bin/fastboot
+sudo curl <a href="https://dl-ssl.google.com/dl/googlesource/git-repo/repo" target="_blank">https://dl-ssl.google.com/dl/googlesource/git-repo/repo</a> &gt; /bin/repo
+sudo chmod 0755 /bin/repo</pre>
+</div> <ul><li><b>CyanogenMod 10 Source Code</b></li>
+</ul>Now that we have all the needed packages and tools, we can download the CM10 source code. This part will take a while-- the source is ~ 10gb. Pick a folder to house all of your THRiVE development files, then make a folder inside that for the CM10 source code. For example, my development folder is <i>/media/Storage/dev</i>, and my source code folder is <i>/media/Storage/dev/CM10_SOURCE</i>. I'll use these in my examples. So the code to make the folders and set up the source code repository would be the following:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:72px;">mkdir /media/Storage/dev
+mkdir /media/Storage/dev/CM10_SOURCE
+cd /media/Storage/dev/CM10_SOURCE
+repo init -u git://github.com/CyanogenMod/android.git -b jellybean</pre>
+</div> Then, you're ready to download the source code:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">repo sync -j16</pre>
+</div> If you have trouble downloading the source code, you can change -j16 to a lower number or get rid of it altogether (e.g. <i>repo sync -j5</i> or simply <i>repo sync</i>). This will use fewer threads when downloading, which means your download speed will be a little slower.<br />
+<br />
+<br />
+<font size="3"><b>II. The first build<br />
+<br />
+</b><font size="2">From here on, <i>&lt;dev&gt;</i> will refer to your development folder and <i>&lt;src&gt;</i> will refer to your CM10 source code folder. (In my example above, <i>&lt;dev&gt;</i> would be <i>/media/Storage/dev</i> and <i>&lt;src&gt;</i> would be <i>/media/Storage/dev/CM10_SOURCE</i>.)</font><b><br />
+<font size="2"><ul><li>Downloading the <i>device</i> and <i>vendor</i> trees for the THRiVE</li>
+</ul></font></b><font size="2">The next thing you're going to want to do is to download the device and vendor trees from my github. I keep a separate directory called <i>github</i> that I use to stage my device and vendor trees when I want to sync them. I'll show you how to do the same (though you won't be able to sync the changes up to github).<br />
+<br />
+The following code will set up these directories and download the device and vendor trees.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:48px;">mkdir <i>&lt;dev&gt;</i>/github
+cd</pre>
+</div> </font></font><div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:60px;"> <i>&lt;dev&gt;</i>/github
+git clone git://github.com/nothingisdead/tostab03_device_cm10.git
+git clone git://github.com/nothingisdead/tostab03_vendor_cm10.git</pre>
+</div> You should now have the folders <i>&lt;dev&gt;/github/tostab03_device_cm10</i> and <i>&lt;dev&gt;/github/tostab03_vendor_cm10</i> with the device and vendor trees inside. You will now copy these trees to your CM10 source code folder. Create the following folders inside your source code directory: <i>device/toshiba/tostab03</i> and <i>vendor/toshiba/tostab03</i>. Then copy the files inside <i>&lt;dev&gt;/github/tostab03_device_cm10</i> to <i>&lt;src&gt;/device/toshiba/tostab03</i> and the files inside <i>&lt;dev&gt;/github/tostab03_vendor_cm10</i> to <i>&lt;src&gt;/vendor/toshiba/tostab03</i>. If you want to do it programmatically, execute the following code (you should be in <i>&lt;dev&gt;/github</i>):<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:96px;">mkdir ../CM10_SOURCE/device/toshiba
+mkdir ../CM10_SOURCE/device/toshiba/tostab03
+cp -r tostab03_device_cm10/* ../CM10_SOURCE/device/toshiba/tostab03
+mkdir ../CM10_SOURCE/vendor/toshiba
+mkdir ../CM10_SOURCE/vendor/toshiba/tostab03
+cp -r tostab03_vendor_cm10/* ../CM10_SOURCE/vendor/toshiba/tostab03</pre>
+</div> You also need to run a script to download some prebuilt CyanogenMod vendor files. Run the following code:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:48px;">cd &lt;src&gt;/vendor/cm
+./get-prebuilts</pre>
+</div> <ul><li><b>Downloading my build scripts</b></li>
+</ul>I've made a few scripts to make my life easier and save myself a few keystrokes. You can download them <a href="http://dl.dropbox.com/u/11103217/build_scripts.zip" target="_blank">here</a>. Extract these files to your <i>&lt;src&gt;</i> folder. Here's what they do:<br />
+<br />
+<i>rebuild.sh<br />
+</i><br />
+First, this script creates a list of &quot;proprietary&quot; files to be copied to the device after the build. I don't really use this setup correctly, which I should probably fix in the future. Right now, I'm running a script to tell the build system to copy <b>all</b> the files in <i>&lt;src&gt;/vendor/toshiba/tostab03/proprietary</i> to the system directory after building. This is a convenient way for me to add prebuilt binaries just by dropping them in that folder, however, it's not really what the vendor folder was designed for. I may change this in the future, but it's not a high priority for me.<br />
+<br />
+Then, it sets up the build environment and starts the build. This is a handy script to run anytime you want to test a change you've made in the device and/or vendor trees.<br />
+<br />
+<i>flashboot.sh<br />
+</i><br />
+This script uses <i>fastboot</i> to flash the compiled boot image to the device. It's handy to use when you've made changes to the boot image but don't want to re-flash the entire ROM.<br />
+<br />
+<i>install_update.sh<br />
+</i><br />
+This script uses <i>adb</i> to delete the update archive from the external sd, copy the new one over, and reboot into recovery mode so you can install the ROM.<br />
+<br />
+<br />
+Note: You may have to set permissions on the scripts to allow them to be executed after extracting them. To do this, right-click the script file and click &quot;Properties.&quot; On the &quot;Permissions&quot; tab, check the box that says &quot;Allow executing file as program.&quot;<ul><li><b>Building the ROM</b></li>
+</ul>You're finally ready to build the ROM. This should be self-explanatory after the last step, but to build the ROM, just run <i>rebuild.sh</i> from the <i>&lt;src&gt;</i> folder. This step will take the longest. I have a Core i5-2400 with 16gb of RAM and an SSD, and it still takes me more than an hour to do a clean build. Don't worry, the consecutive builds should only take a couple minutes. However, I recommend running a clean build every few days (or whenever you run into major issues). Sometimes the build system doesn't pick up changes you've made, and a clean build is the best way to make sure your ROM is up to date with your code. You can run a clean build by running <i>make clean</i> from the <i>&lt;src&gt;</i> folder, then running the <i>rebuild.sh</i> script again.<br />
+<br />
+Note: The <i>rebuild.sh</i> script contains the following command: <i>brunch cm_tostab03-userdebug -j8</i>. Just like the command for downloading the source, the &quot;-j8&quot; argument defines the number of threads that are used. You can change this to optimize the script for your system. A guideline that I use (can't remember where I read it) is to use twice the number of cores in your CPU. <ul><li><b>Testing the ROM</b></li>
+</ul>Now that you've (hopefully) successfully built the ROM, it's time to test it out. The ROM is located at <i>&lt;src&gt;/out/target/product/tostab03/cm_tostab03-ota-eng.gandhi.zip</i> and there is an optimized version at <i>&lt;src&gt;/out/target/product/tostab03/cm-10-&lt;date&gt;-UNOFFICIAL-tostab03.zip</i>. If you're familiar with flashing ROMs already, which hopefully you are, you can copy these to your SD card and flash them in ClockworkMod Recovery. You can also use the <i>install_update.sh</i> script to copy it over.<br />
+<br />
+<font size="3"><b>III. Debugging<br />
+<br />
+</b><font size="2">This section is going to be fairly short, but hopefully it will be helpful as a starting point for debugging issues in the ROM.<br />
+<br />
+</font></font><ul><li><b><font size="3"><font size="2">logcat</font></font></b></li>
+</ul><i><font size="3"><font size="2">logcat</font></font></i><font size="3"><font size="2"> is the single most useful utility in debugging issues. It outputs the contents of the Android system log. To use it, just run <i>adb shell logcat</i> or <i>adb shell logcat &gt; &lt;dev&gt;/logs/logcat.log</i> to record the log to a file that you can search with a text editor.<ul><li><b>dmesg</b></li>
+</ul>The <i>dmesg</i> command outputs the content of the kernel message buffer. These messages are slightly more cryptic than <i>logcat</i>, but can be helpful in figuring out driver and module issues.<ul><li><b>logwrapper</b></li>
+</ul></font></font>The <i>logwrapper</i> command is useful when debugging services and libraries. If you add <i>/system/bin/logwrapper</i> to the beginning of a service definition in the init.antares.rc file, it will log more messages and output to the system log, which can then be read with <i>logcat</i>.<ul><li><b>strace</b></li>
+</ul><i>strace</i> is similar to <i>logwrapper</i>, but it outputs the messages to a file. The syntax goes like this:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Code:</div>
+	<pre class="bbcode_code"style="height:36px;">/system/xbin/strace -tt -o/data/local/tmp/&lt;service&gt;.log /system/bin/&lt;service&gt; arg1 arg2</pre>
+</div> Then the log can be read by viewing <i>/data/local/tmp/&lt;service&gt;.log</i>. <i>strace</i> is also very cryptic, but it has helped me to find missing libraries and other things.<br />
+<br />
+<br />
+-------------------------------------------------------------------------------------------------------------------------------------<br />
+<br />
+<br />
+Thanks for reading, and I hope this guide has been enlightening in your journey into ROM development! If you find any mistakes or confusing sections, feel free to reply with your suggestions for changes!
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+<!--					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/edit_40b.png" class="inlineimg" alt="" /> -->
+					
+						Last edited by tybar; 09-12-2012 at <span class="time">11:08 AM</span>.
+					
+					
+						<span class="reason">Reason:</span> added suggestions from HeWhoWas
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.131749">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131749&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131749">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131749">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131749&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked"><a href="http://www.thriveforums.org/forum/members/4.html">batfish</a>, <a href="http://www.thriveforums.org/forum/members/1561.html">t1nk</a>, <a href="http://www.thriveforums.org/forum/members/3387.html">dandroid7</a> and <a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#" onclick="return vbseoui.others_click(this)">4 others</a> like this.</div>
+
+
+</div>
+ 
+                                 
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_131749" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_131749" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=131749" rel="nofollow"><img id="quoteimg_131749" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+	
+	<li class="postbitlegacy postbitim postcontainer" id="post_131749">
+	<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+		<div class="posthead">
+			
+				<span class="postdate old">
+					
+						<span class="date">08-29-2012&nbsp;<span class="time">10:31 AM</span></span>
+					
+				</span>
+				<span class="nodecontrols">
+					
+						<span class="postcounter">  </span>
+					
+				</span>
+			
+		</div>
+		<div class="postdetails">
+			<div class="userinfo">
+				<div class="username_container">
+					<span class="username guest"><b><a>Sponsors</a></b></span>
+				</div>
+				<span class="usertitle">
+					
+				</span>
+				
+				<img src="http://www.thriveforums.org/forum/images/misc/unknown.gif" />
+				
+					<hr />
+					<dl class="userinfo_extra">
+					
+					</dl>
+
+					
+
+				
+			</div>
+			<div class="postbody">
+				<div class="postrow">
+					
+		
+					<div class="content">
+						<div id="post_message_131749">
+							<blockquote class="postcontent restore ">
+								<div align="left">
+									<!-- thrive-728n -->
+<script type='text/javascript'>
+GA_googleFillSlot("thrive-728n");
+</script>
+								</div>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+				<div class="cleardiv"></div>
+			</div>
+		</div>
+			<div class="postfoot">
+			</div>
+		<hr />
+	</li>
+	
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_131900">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-29-2012&nbsp;<span class="time">10:41 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post131900" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post131900" class="postcounter">#2</a><a id="postcount131900" name="2"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/3341.html" title="tybar is offline"><strong><span style="color: #779f00; font-weight: bold;">tybar</span>&nbsp;<img src="/icons/dev.png" border="0" alt="Developer" /></a>&nbsp;<a name="asdasd" style="color:red; cursor: default; text-decoration: none" title="Original Thread Poster">[OP]</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="tybar is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				<span style="color: #779f00; font-weight: bold;">Developer</span>
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/3341.html" title="tybar is offline">
+				<img src="http://www.thriveforums.org/forum/images/misc/default-avatar.png" alt="tybar's Avatar" title="tybar's Avatar" />
+			</a>
+</div>
+			 
+			<div class="badge" style="text-align: center"><a href="http://www.thriveforums.org/forum/payments.php"><img src="http://www.thriveforums.org/img/thrivedev.png" border="0" /></a></div>
+
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>3341</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>Sep 2011</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>262</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>142 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_131900">
+						<blockquote class="postcontent restore ">
+							Okay, I'm done. Please let me know if this guide helps you!
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.131900">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131900&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131900">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131900">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131900&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_131900" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_131900" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=131900" rel="nofollow"><img id="quoteimg_131900" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_131908">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-29-2012&nbsp;<span class="time">11:29 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post131908" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post131908" class="postcounter">#3</a><a id="postcount131908" name="3"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/3387.html" title="dandroid7 is offline"><strong>dandroid7</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="dandroid7 is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				Thrive Conveyor
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/3387.html" title="dandroid7 is offline">
+				<img src="http://www.thriveforums.org/forum/image.php?u=3387&amp;dateline=1317363968" alt="dandroid7's Avatar" title="dandroid7's Avatar" />
+			</a>
+</div>
+			 
+			
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>3387</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>Sep 2011</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>383</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>34 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_131908">
+						<blockquote class="postcontent restore ">
+							This sounds like fun, but I find it easy to imagine that my old 32bit windows xp home edition, DELL 4600 Pentium 4, 3.02 hyperthreading Northwood Processor with 4gb of  PC2700 RAM is not the workhorse needed to do a project like this, huh? <br />
+<br />
+I have done much to keep my 10 year old computer running and it works great for simple tasks, but I have been too cheap to invest in a modern computer since I have found a way to get mine to do all the basic tasks I use it for.<br />
+<br />
+I have the ability to dualboot and plenty of hard drive space. Just for the heck of it I have tried about 8 different versions of linux distro's including ubuntu 12.04, but I never had any real use for it outside of just learning and experimenting with a new technology. I have had success at dual booting stuff...<br />
+<br />
+So I have to ask, if my only real experience is messing with my personal pc (as described above), rooting a few android devices, flashing some roms... is this a project I'm likely to have any success with? Besides my own personal knowledge limitations, is my pc even capable of doing these tasks with some assurance of success?<br />
+<br />
+Regardless of me and my own little world, Thank You for taking the time to do this and trying to teach us how to do this type of work...<br />
+<br />
+&quot;feed a man a fish, he eats for a day. teach a man to fish, he eats for life.&quot;  I like your style for putting this out there. Since android is open source, you truly never know when the next eager beaver is going to come up with something great to add to the collective knowledge for the system..<br />
+<br />
+I would love to pull this stuff off with some level of success.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+<!--					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/edit_40b.png" class="inlineimg" alt="" /> -->
+					
+						Last edited by dandroid7; 08-29-2012 at <span class="time">11:42 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.131908">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131908&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131908">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131908">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131908&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+		        		<blockquote class="signature restore"><div class="signaturecontainer">THRiVE 16gb <br />
+CM10 Jellybean 4.1.2 <br />
+TWRP Recovery<br />
+PimpMyRom<br />
+Vgeezy FlashModICS<br />
+TobAcer Hack<br />
+GL2SD <br />
+128gb Lexar 400x UHS-i Class 10 SDXC Card<br />
+<img src="http://www.thriveforums.org/forum/images/blue-smilies/in love.png" border="0" alt="" title="In Love" class="inlineimg" /></div></blockquote>
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_131908" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_131908" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=131908" rel="nofollow"><img id="quoteimg_131908" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_131920">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-30-2012&nbsp;<span class="time">01:14 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post131920" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post131920" class="postcounter">#4</a><a id="postcount131920" name="4"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/5165.html" title="wadeheisen is offline"><strong>wadeheisen</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="wadeheisen is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				Thrive Informant
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/5165.html" title="wadeheisen is offline">
+				<img src="http://www.thriveforums.org/forum/images/misc/default-avatar.png" alt="wadeheisen's Avatar" title="wadeheisen's Avatar" />
+			</a>
+</div>
+			 
+			
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>5165</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>Nov 2011</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>47</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>7 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_131920">
+						<blockquote class="postcontent restore ">
+							Looks like a good guide.  I have done everything up to building without a problem.  I will probably run a build this weekend and see if it works for me (Linux Mint 13).  Mine isn't exactly a robust computer, spent more money on everyone else's machines than my own, but it will get the job done.<br />
+<br />
+I'll let you know how it goes.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.131920">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131920&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131920">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131920">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post131920&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_131920" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_131920" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=131920" rel="nofollow"><img id="quoteimg_131920" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_132049">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-30-2012&nbsp;<span class="time">05:06 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post132049" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132049" class="postcounter">#5</a><a id="postcount132049" name="5"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/3387.html" title="dandroid7 is offline"><strong>dandroid7</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="dandroid7 is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				Thrive Conveyor
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/3387.html" title="dandroid7 is offline">
+				<img src="http://www.thriveforums.org/forum/image.php?u=3387&amp;dateline=1317363968" alt="dandroid7's Avatar" title="dandroid7's Avatar" />
+			</a>
+</div>
+			 
+			
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>3387</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>Sep 2011</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>383</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>34 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_132049">
+						<blockquote class="postcontent restore ">
+							so, to keep things simple I did the windows installer for ubuntu 12.04 rather than doing the live cd as i have done in the past...I now have ubuntu 12.04 running on my system as dual boot again.<br />
+<br />
+do you know if the WUBI (windows ubuntu installer) installs the 32 bit version by default? <br />
+<br />
+I noticed you reference using 64bit stuff in your instructions in Section 1 - ADB, FASTBOOT,  AND REPO section above. What needs to be done differently if one is running 32bit and not 64bit ubuntu 12.04?
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+<!--					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/edit_40b.png" class="inlineimg" alt="" /> -->
+					
+						Last edited by dandroid7; 08-30-2012 at <span class="time">05:09 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.132049">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132049&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132049">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132049">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132049&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+		        		<blockquote class="signature restore"><div class="signaturecontainer">THRiVE 16gb <br />
+CM10 Jellybean 4.1.2 <br />
+TWRP Recovery<br />
+PimpMyRom<br />
+Vgeezy FlashModICS<br />
+TobAcer Hack<br />
+GL2SD <br />
+128gb Lexar 400x UHS-i Class 10 SDXC Card<br />
+<img src="http://www.thriveforums.org/forum/images/blue-smilies/in love.png" border="0" alt="" title="In Love" class="inlineimg" /></div></blockquote>
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_132049" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_132049" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=132049" rel="nofollow"><img id="quoteimg_132049" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_132067">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-30-2012&nbsp;<span class="time">06:56 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post132067" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132067" class="postcounter">#6</a><a id="postcount132067" name="6"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/3341.html" title="tybar is offline"><strong><span style="color: #779f00; font-weight: bold;">tybar</span>&nbsp;<img src="/icons/dev.png" border="0" alt="Developer" /></a>&nbsp;<a name="asdasd" style="color:red; cursor: default; text-decoration: none" title="Original Thread Poster">[OP]</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="tybar is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				<span style="color: #779f00; font-weight: bold;">Developer</span>
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/3341.html" title="tybar is offline">
+				<img src="http://www.thriveforums.org/forum/images/misc/default-avatar.png" alt="tybar's Avatar" title="tybar's Avatar" />
+			</a>
+</div>
+			 
+			<div class="badge" style="text-align: center"><a href="http://www.thriveforums.org/forum/payments.php"><img src="http://www.thriveforums.org/img/thrivedev.png" border="0" /></a></div>
+
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>3341</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>Sep 2011</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>262</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>142 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_132067">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>dandroid7</strong>
+					<a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post131908" rel="nofollow"><img class="inlineimg" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/viewpost-right.png" alt="View Post" /></a>
+				</div>
+				<div class="message">So I have to ask, if my only real experience is messing with my personal pc (as described above), rooting a few android devices, flashing some roms... is this a project I'm likely to have any success with? Besides my own personal knowledge limitations, is my pc even capable of doing these tasks with some assurance of success?</div>
+			
+		</div>
+	</div>
+</div> I wouldn't let that stop you. Basically you're going to have to be very patient with the first build. Just let it run overnight or something. Your computer can do it, it will just take a while. If you have the patience, go for it! Also, that was my only experience before I began, well, developing. It helped me a little knowing a few computer languages, but honestly it's more about problem-solving skills and enjoying a good challenge.<br />
+ <br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>dandroid7</strong>
+					<a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132049" rel="nofollow"><img class="inlineimg" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/viewpost-right.png" alt="View Post" /></a>
+				</div>
+				<div class="message">so, to keep things simple I did the windows installer for ubuntu 12.04 rather than doing the live cd as i have done in the past...I now have ubuntu 12.04 running on my system as dual boot again.<br />
+<br />
+do you know if the WUBI (windows ubuntu installer) installs the 32 bit version by default? <br />
+<br />
+I noticed you reference using 64bit stuff in your instructions in Section 1 - ADB, FASTBOOT,  AND REPO section above. What needs to be done differently if one is running 32bit and not 64bit ubuntu 12.04?</div>
+			
+		</div>
+	</div>
+</div> I actually think those are 32-bit binaries. Truth is, I can't remember where I got them and I don't have a 32-bit machine to test them on. They should work. If not, let me know and I'll find the right tools. I think the WUBI defaults to 64-bit if your processor supports it. I'm basing that on the screenshots <a href="http://www.ubuntu.com/download/help/install-ubuntu-with-windows" target="_blank">here</a>.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.132067">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132067&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132067">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132067">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132067&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_132067" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_132067" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=132067" rel="nofollow"><img id="quoteimg_132067" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_132091">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-30-2012&nbsp;<span class="time">08:11 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post132091" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132091" class="postcounter">#7</a><a id="postcount132091" name="7"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/14664.html" title="HeWhoWas is offline"><strong>HeWhoWas</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="HeWhoWas is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				Thrive Informant
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/14664.html" title="HeWhoWas is offline">
+				<img src="http://www.thriveforums.org/forum/images/misc/default-avatar.png" alt="HeWhoWas's Avatar" title="HeWhoWas's Avatar" />
+			</a>
+</div>
+			 
+			
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>14664</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>May 2012</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>34</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>1 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_132091">
+						<blockquote class="postcontent restore ">
+							Note to everyone: Do not try and symlink the device and vendor files like I did. It does not work and will produce non-obvious errors that lead you to run around in circles until you try it without the links.<br />
+<br />
+Tybar - You also need to run /vendor/cm/get-prebuilts.sh prior to running your rebuild.sh script, otherwise you get errors relating to ROMManager.apk
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+<!--					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/edit_40b.png" class="inlineimg" alt="" /> -->
+					
+						Last edited by HeWhoWas; 08-30-2012 at <span class="time">08:24 PM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.132091">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132091&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132091">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132091">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132091&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_132091" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_132091" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=132091" rel="nofollow"><img id="quoteimg_132091" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_132139">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-30-2012&nbsp;<span class="time">11:38 PM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post132139" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132139" class="postcounter">#8</a><a id="postcount132139" name="8"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/14664.html" title="HeWhoWas is offline"><strong>HeWhoWas</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="HeWhoWas is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				Thrive Informant
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/14664.html" title="HeWhoWas is offline">
+				<img src="http://www.thriveforums.org/forum/images/misc/default-avatar.png" alt="HeWhoWas's Avatar" title="HeWhoWas's Avatar" />
+			</a>
+</div>
+			 
+			
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>14664</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>May 2012</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>34</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>1 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_132139">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>dandroid7</strong>
+					<a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132049" rel="nofollow"><img class="inlineimg" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/viewpost-right.png" alt="View Post" /></a>
+				</div>
+				<div class="message">so, to keep things simple I did the windows installer for ubuntu 12.04 rather than doing the live cd as i have done in the past...I now have ubuntu 12.04 running on my system as dual boot again.<br />
+<br />
+do you know if the WUBI (windows ubuntu installer) installs the 32 bit version by default? <br />
+<br />
+I noticed you reference using 64bit stuff in your instructions in Section 1 - ADB, FASTBOOT,  AND REPO section above. What needs to be done differently if one is running 32bit and not 64bit ubuntu 12.04?</div>
+			
+		</div>
+	</div>
+</div> You cannot build JellyBean with Ubuntu x86. You must have the x64 edition. Also make sure that you have at least 30-40GB free on your build partition.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.132139">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132139&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132139">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132139">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132139&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_132139" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_132139" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=132139" rel="nofollow"><img id="quoteimg_132139" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_132142">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-31-2012&nbsp;<span class="time">12:00 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post132142" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132142" class="postcounter">#9</a><a id="postcount132142" name="9"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/3387.html" title="dandroid7 is offline"><strong>dandroid7</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="dandroid7 is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				Thrive Conveyor
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/3387.html" title="dandroid7 is offline">
+				<img src="http://www.thriveforums.org/forum/image.php?u=3387&amp;dateline=1317363968" alt="dandroid7's Avatar" title="dandroid7's Avatar" />
+			</a>
+</div>
+			 
+			
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>3387</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>Sep 2011</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>383</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>34 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_132142">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>HeWhoWas</strong>
+					<a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132139" rel="nofollow"><img class="inlineimg" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/viewpost-right.png" alt="View Post" /></a>
+				</div>
+				<div class="message">You cannot build JellyBean with Ubuntu x86. You must have the x64 edition. Also make sure that you have at least 30-40GB free on your build partition.</div>
+			
+		</div>
+	</div>
+</div> So it seems as if my antiquated computer will not work for this. If i understand the technology correctly, my pentium 4 processor is x86 based and therefore not capable of running the 64 bit version of ubuntu?<br />
+<br />
+In terminal, i have run &quot;cat /proc/cpuinfo&quot; and also &quot;grep flags /proc/cpuinfo&quot; and both seem to confirm i am running a 32 bit processor. In neither instance do I see an &quot;lm&quot; in the &quot;flags&quot; section which apparently indicates &quot;long mode&quot; which refers to 64bit processors.<br />
+<br />
+I guess the world will never know of the genius i was to become... i will now be forced to give up my  career in developing due to this setback with my computer hardware. ;-) My dreams of changing the world one android device at a time has apparently been dashed on the rocky shores of reality. Maybe someday in the future i will step into the new milenium and get a better computer?
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+<!--					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/edit_40b.png" class="inlineimg" alt="" /> -->
+					
+						Last edited by dandroid7; 08-31-2012 at <span class="time">12:26 AM</span>.
+					
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.132142">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132142&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132142">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132142">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132142&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked"><a href="http://www.thriveforums.org/forum/members/1959.html">jorge505</a> and <a href="http://www.thriveforums.org/forum/members/14664.html">HeWhoWas</a> like this.</div>
+
+
+</div>
+ 
+                                 
+				
+		        		<blockquote class="signature restore"><div class="signaturecontainer">THRiVE 16gb <br />
+CM10 Jellybean 4.1.2 <br />
+TWRP Recovery<br />
+PimpMyRom<br />
+Vgeezy FlashModICS<br />
+TobAcer Hack<br />
+GL2SD <br />
+128gb Lexar 400x UHS-i Class 10 SDXC Card<br />
+<img src="http://www.thriveforums.org/forum/images/blue-smilies/in love.png" border="0" alt="" title="In Love" class="inlineimg" /></div></blockquote>
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_132142" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_132142" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=132142" rel="nofollow"><img id="quoteimg_132142" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   
+<li class="postbitlegacy postbitim postcontainer" id="post_132155">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+	<div class="posthead">
+		
+			<span class="postdate old">
+				
+					<span class="date">08-31-2012&nbsp;<span class="time">02:33 AM</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post132155" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132155" class="postcounter">#10</a><a id="postcount132155" name="10"></a>
+				
+				
+				
+			</span>
+		
+	</div>
+	<div class="postdetails">
+		<div class="userinfo">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a rel="nofollow" class="username offline " href="http://www.thriveforums.org/forum/members/14664.html" title="HeWhoWas is offline"><strong>HeWhoWas</strong></a>
+	
+</div>
+  <img class="inlineimg onlinestatus" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/statusicon/user-offline.png" alt="HeWhoWas is offline" border="0" />
+
+ 
+			
+			</div>
+			<span class="usertitle">
+				Thrive Informant
+			</span>
+			
+			
+			
+<div class="usercenter">
+			<a rel="nofollow" class="postuseravatar_custom" href="http://www.thriveforums.org/forum/members/14664.html" title="HeWhoWas is offline">
+				<img src="http://www.thriveforums.org/forum/images/misc/default-avatar.png" alt="HeWhoWas's Avatar" title="HeWhoWas's Avatar" />
+			</a>
+</div>
+			 
+			
+			
+				<hr />
+				<dl class="userinfo_extra">
+
+<div class="post_field"><dt>Member #</dt> <dd>14664</dd></div>
+
+					<div class="post_field"><dt>Join Date</dt> <dd>May 2012</dd></div>
+					
+					
+					<div class="post_field"><dt>Posts</dt> <dd>34</dd></div>
+
+<div class="post_field"><dt>Liked</dt> <dd>1 times</dd></div>
+
+
+					
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_132155">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>dandroid7</strong>
+					<a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#post132142" rel="nofollow"><img class="inlineimg" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/viewpost-right.png" alt="View Post" /></a>
+				</div>
+				<div class="message">So it seems as if my antiquated computer will not work for this. If i understand the technology correctly, my pentium 4 processor is x86 based and therefore not capable of running the 64 bit version of ubuntu?<br />
+<br />
+In terminal, i have run &quot;cat /proc/cpuinfo&quot; and also &quot;grep flags /proc/cpuinfo&quot; and both seem to confirm i am running a 32 bit processor. In neither instance do I see an &quot;lm&quot; in the &quot;flags&quot; section which apparently indicates &quot;long mode&quot; which refers to 64bit processors.<br />
+<br />
+I guess the world will never know of the genius i was to become... i will now be forced to give up my  career in developing due to this setback with my computer hardware. ;-) My dreams of changing the world one android device at a time has apparently been dashed on the rocky shores of reality. Maybe someday in the future i will step into the new milenium and get a better computer?</div>
+			
+		</div>
+	</div>
+</div> Unfortunately yes :-( You can pick up an uber cheap rig for around $100-$150 if you have the monitor/hdd/odd, etc that would handle it though. On the other hand, you appear to have a flair for the dramatic description so perhaps fiction novels would be worth a shot as well :-P
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				<!-- edit note -->
+				<blockquote class="postcontent lastedited">
+<!--					<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/edit_40b.png" class="inlineimg" alt="" /> -->
+					
+						Last edited by HeWhoWas; 08-31-2012 at <span class="time">02:34 AM</span>.
+					
+					
+						<span class="reason">Reason:</span> Dolla Dolla.
+					
+				</blockquote>
+				<!-- / edit note -->
+				
+                                       <div class="vbseo_buttons" id="lkbtn_1.14517.132155">
+    <ul class="vbseo_links">
+    
+    <li class="vbseo_share"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#">Share</a>
+    <ul class="vbseo_share_body">
+	<li class="header">Share this post on</li>
+	
+    	<li class="right"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/digg.gif" width="18px" height="18px" /><a rel="nofollow" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132155&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Digg</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/vbseo/resources/images/forum/twitter.png" width="18px" height="18px" /><a rel="nofollow" href="http://twitter.com/home?status=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10 http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132155">Twitter</a></li>
+    
+    	<li class="right"><img src="http://www.thriveforums.org/forum/images/vbseo/facebook.gif" width="18px" height="18px" /><a rel="nofollow" href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132155">Share on Facebook</a></li>
+    
+    	<li class="left"><img src="http://www.thriveforums.org/forum/images/vbseo/reddit.gif" width="18px" height="18px" /><a rel="nofollow" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.thriveforums.org%2Fforum%2Ftybar-development%2F14517-how-set-up-build-environment-cm10.html%23post132155&amp;title=%5BHOW-TO%5D+Set+up+a+build+environment+for+CM10">Reddit!</a></li>
+    
+    </ul>
+    </li>
+    
+    
+    
+    </ul>
+    <div class="vbseo_liked" style="display:none"></div>
+
+
+</div>
+ 
+                                 
+				
+                                        
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_132155" src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_132155" class="newreply" href="http://www.thriveforums.org/forum/newreply.php?do=newreply&amp;p=132155" rel="nofollow"><img id="quoteimg_132155" src="http://www.thriveforums.org/forum/clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+					
+					
+					
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+		
+   <li class="postbitlegacy postbitim postcontainer" style="background: #04569a; background-image: none;">
+<div style="margin: 8px; text-align: center;">
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-7140863250046446";
+/* thrive-728x15-link */
+google_ad_slot = "8374836758";
+google_ad_width = 728;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</li>
+ 
+		</ol>
+</div>
+		<br />&nbsp;
+                <div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+		<a rel="nofollow" href="http://www.thriveforums.org/forum/newreply.php?p=132155&amp;noquote=1" 
+			class="newcontent_textcontrol" id="newreplylink_bottom"
+			><span>+</span> Reply to Thread</a>
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<form action="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-3.html" method="get" class="pagination popupmenu nohovermenu">
+<input type="hidden" name="t" value="14517" /><input type="hidden" name="s" value="6841feb72dda5fe2c19c17218b31ba10" />
+	
+		<span><a href="javascript://" class="popupctrl">Page 1 of 7</a></span>
+		
+		
+		
+		<span class="selected"><a href="javascript://" title="Results 1 to 10 of 65">1</a></span> <span><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-2.html" title="Show results 11 to 20 of 65">2</a></span> <span><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-3.html" title="Show results 21 to 30 of 65">3</a></span> 
+		
+		<span class="separator">...</span>
+		
+		
+		<span class="prev_next"><a rel="next" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-2.html" title="Next Page - Results 11 to 20 of 65"><img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/pagination/next-right.png" alt="Next" /></a></span>
+		
+		
+		<span class="first_last"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-7.html" title="Last Page - Results 61 to 65 of 65">Last<img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/pagination/last-right.png" alt="Last" /></a></span>
+		
+	
+	<ul class="popupbody popuphover">
+		<li class="formsubmit jumptopage"><label>Jump to page: <input type="text" name="page" size="4" /></label> <input type="submit" class="button" value="Go" /></li>
+	</ul>
+</form> 
+	
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<br style="clear: both;" />
+
+<div style="text-align:center; padding: 8px">
+<!-- thrive-468 -->
+<script type='text/javascript'>
+GA_googleFillSlot("thrive-468");
+</script>
+</div>
+
+<br style="clear: both;" />
+
+
+
+<!-- next / previous links -->
+<div class="navlinks">
+	
+	<strong>&laquo;</strong>
+	<a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-prev-thread.html" rel="nofollow">Previous Thread</a>
+	|
+	<a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10-next-thread.html" rel="nofollow">Next Thread</a>
+
+	<strong>&raquo;</strong>
+	
+</div>
+<!-- / next / previous links -->
+
+
+<div class="thread_info block">
+	<div class="options_block_container">
+ 	        <div class="options_block2">
+ 	            <h4 class="blockhead">Sponsors</h4>
+ 	            <div class="thread_info_block blockbody formcontrols floatcontainer">
+<div style="padding: 7px">
+<!-- thrive-300f -->
+<script type='text/javascript'>
+GA_googleFillSlot("thrive-300f");
+</script>
+</div>
+ 	            </div>
+ 	        </div>
+ 	        <div class="options_block">
+	            <h4 class="collapse blockhead">
+ 	                <a class="collapse" id="collapse_posting_rules" href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#top"><img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/buttons/collapse_40b.png" alt="" /></a>
+ 	                Posting Permissions
+ 	            </h4>
+ 	            <div id="posting_rules" class="thread_info_block blockbody formcontrols floatcontainer">
+ 	                
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+<li><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=linkbacks#trackbacks" target="_blank">Trackbacks</a> are <strong>On</strong></li>
+<li><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=linkbacks#pingbacks" target="_blank">Pingbacks</a> are <strong>On</strong></li>
+<li><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=linkbacks#refbacks" target="_blank">Refbacks</a> are <strong>On</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a rel="nofollow" href="http://www.thriveforums.org/forum/misc.php?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+ 
+ 	            </div>
+ 	        </div>
+	</div>
+</div>
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	<style type="text/css">
+#fffm_keywords_block h1, #fffm_keywords_block h2, #fffm_keywords_block h3, #fffm_keywords_block h4, #fffm_keywords_block h5, #fffm_keywords_block h6 { box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; -khtml-box-shadow: none; border: 0; background: transparent; color: #333; display:inline; margin: 0; padding: 0; }
+#fffm_keywords_block h1 { font-size: 16pt; font-weight: bold; }
+#fffm_keywords_block h2 { font-size: 14pt; font-weight: bold; }
+#fffm_keywords_block h3 { font-size: 12pt; font-weight: bold; }
+#fffm_keywords_block h4 { font-size: 10pt; font-weight: bold; }
+#fffm_keywords_block h5 { font-size: 9pt; font-weight: bold; } 
+#fffm_keywords_block h6 { font-size: 8pt; font-weight: bold; }
+#fffm_keywords_block a { text-decoration: underline; }
+#fffm_keywords_block a:hover { text-decoration: none; }
+#fffm_keywords_block.inner { padding: 10px 15px; }
+#fffm-cse-notice { padding: 5px 10px; padding-left: 25px; font-size: 8pt; border: 1px solid #ccc; background: #faffed url(http://www.thriveforums.org/forum/plugins/forumfoundry/findme/templates/root/img/exclamation.png) no-repeat 4px center; margin: 0 5px; margin-top: 15px; }
+#fffm-cse-notice.inner { margin: 0 15px; margin-bottom: 10px; }
+</style>
+         
+			<h4 class="threadinfohead blockhead"><span class="optiontitle">Search tags for this page</span></h4>
+			<div class="thread_info_block">
+			  <div id="fffm_keywords_block" class="thread_info_block blockbody formcontrols inner_block">
+			      <h1>build cm10</h1>, <h2>build cm10 from source</h2>, <h5>building cm10 from source</h5>, <h5>cm10 build environment</h5>, <h4>cm10 git</h4>, <h5>cm10 source code</h5>, <h5>compile cm10</h5>, <h5>compile cm10 from source</h5>, <h5>cyanogenmod 10 build environment</h5>, <h5>cyanogenmod10 build ubuntu 12.04 64 package</h5>, <h3>how to build cm10</h3>, <h1>how to build cm10 from source</h1>, <h3>how to compile cm10</h3>, <h4>how to compile cm10 in ubuntu 12.04</h4>, <h5>setup a standard cyanogenmod 10 build environment</h5>
+			  
+			          <div id="fffm-cse-notice">
+			  Click on a term to search our site for related topics.
+			          </div>
+			  
+			  </div>
+			</div>
+         
+	
+
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+(function($){
+
+    $(document).ready(function(){
+
+    var spinner = $("#footlinks-spinner").html();
+    $("#footlinks-spinner").remove();
+
+    $("#footlinks-content").html(
+        $("#footlinks ul.tabs li.active ul li").html()
+    );
+
+    $("#footlinks ul li a").click(function(event){
+        event.preventDefault();
+        $("#footlinks ul li a").removeClass("active");
+        $(this).addClass("active");
+
+        var cid = $(this).attr("id").replace(/fffl-category-/, "");
+
+        $("#footlinks-content").html($("#fffl-category-content-"+cid+" li").html());
+
+    });
+
+    }); // document ready
+})(jQuery);
+
+
+</script>
+         
+<style type="text/css">
+#footlinks {
+    font-family: tahoma, geneva, sans-serif;
+    font-size: 10pt;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#footlinks-container {
+    width: 100%;
+}
+
+#footlinks-content {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    clear: both;
+    font-size: 8pt;
+    padding: 15px 20px;
+
+    -khtml-box-shadow: #ddd 2px 2px 3px;
+    -moz-box-shadow: #ddd 2px 2px 3px;
+    -webkit-box-shadow: #ddd 2px 2px 3px;
+}
+
+#footlinks-content a {
+    color: #333;
+    text-decoration: underline;
+}
+
+#footlinks-content a:hover {
+    color: #e85700;
+    text-decoration: none;
+}
+
+#footlinks-content .column {
+    float: left;
+    width: 25%;
+}
+
+#footlinks-content .column .p5w10 {
+    padding: 5px 10px;
+}
+
+#footlinks-logo {
+    float: right;
+    line-height: 24px;
+    max-height: 24px;
+    overflow: hidden;
+}
+
+#footlinks-logo .image {
+    background: transparent url(http://www.thriveforums.org/forum/plugins/forumfoundry/footlinks/upload/branding-image.png) no-repeat;
+    width: 103px;
+    height: 24px;
+}
+
+#footlinks-logo .image a {
+    display: block;
+    line-height: 24px;
+    width: 103px;
+    height: 24px;
+}
+
+#footlinks-spinner {
+    width: 100%;
+}
+
+#footlinks-spinner .spinner-container {
+    line-height: 80px;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#footlinks-spinner .spinner {
+    background: transparent url(http://www.thriveforums.org/forum/plugins/forumfoundry/footlinks/img/indicator-small.gif) no-repeat center;
+    width: 32px;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+}
+
+#footlinks ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+#footlinks ul li {
+    float: left;
+}
+
+#footlinks ul li a {
+    background: #f0f0f0;
+    border: 1px solid #cccccc;
+    border-bottom: none;
+    color: #555555;
+    display: block;
+    font-size: 8pt;
+    font-weight: bold;
+    line-height: 24px;
+    margin-bottom: -1px;
+    margin-right: 2px;
+
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+#footlinks ul li a:hover {
+    background: #fafafa;
+    color: #{var:var vboptions.fffl_style_inactive_tab_font_hover_color};
+}
+
+#footlinks ul li a.active {
+    background: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    color: #333333;
+}
+
+#footlinks ul li a.active:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+#footlinks ul li ul {
+    display: none;
+}
+
+#footlinks .clear { clear: both; }
+
+</style>
+         
+
+<div style="clear:both;"></div>
+<div id="footlinks-container">
+
+<!--[if IE 7]>
+<style type="text/css">
+#footlinks ul.tabs { position: relative; bottom: -1px; margin-bottom: -2px; padding-bottom: -2px; }
+</style>
+<![endif]-->
+<!--[if IE 6]>
+<style type="text/css">
+#footlinks-content { margin-top: -1px; }
+</style>
+<![endif]-->
+<div id="footlinks">
+  <ul class="tabs">
+    
+      <li class="active"><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#" id="fffl-category-73" class="active" target="_blank">Android Related</a><ul id="fffl-category-content-73"><li><div class="column"><div class="p5w10"><div class="link"><a href="http://www.acertabletforum.com" id="fffl-link-1159" target="_blank">Acer Tablet Forum</a></div>
+<div class="link"><a href="http://www.android.net" id="fffl-link-1134" target="_blank">Android Forum</a></div>
+<div class="link"><a href="http://www.androidtablets.net" id="fffl-link-1137" target="_blank">Android Tablet Forum</a></div>
+<div class="link"><a rel="nofollow" href="http://www.tabletroms.com" id="fffl-link-1164" target="_blank">Android Tablet ROMs</a></div>
+<div class="link"><a href="http://www.transformerforums.com" id="fffl-link-1158" target="_blank">Asus Transformer Forum</a></div>
+<div class="link"><a href="http://www.atrixforums.com" id="fffl-link-1138" target="_blank">Atrix Forum</a></div>
+<div class="link"><a href="http://www.chargeforums.com" id="fffl-link-1157" target="_blank">Droid Charge Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"><div class="link"><a href="http://www.droiddnaforum.com" id="fffl-link-1171" target="_blank">Droid DNA Forum</a></div>
+<div class="link"><a href="http://www.droidforums.net" id="fffl-link-1135" target="_blank">Droid Forum</a></div>
+<div class="link"><a href="http://www.incredibleforum.com" id="fffl-link-1142" target="_blank">Droid Incredible Forum</a></div>
+<div class="link"><a href="http://www.razrforums.com" id="fffl-link-1165" target="_blank">Droid RAZR Forum</a></div>
+<div class="link"><a href="http://www.droidxforums.com" id="fffl-link-1136" target="_blank">Droid X Forum</a></div>
+<div class="link"><a href="http://www.galaxyforums.net" id="fffl-link-1141" target="_blank">Galaxy Forums</a></div>
+<div class="link"><a href="http://www.galaxynexusforum.com" id="fffl-link-1163" target="_blank">Galaxy Nexus Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"><div class="link"><a href="http://www.s3forums.com" id="fffl-link-1139" target="_blank">Galaxy S3 Forum</a></div>
+<div class="link"><a href="http://www.galaxytabforums.net" id="fffl-link-1160" target="_blank">Galaxy Tab Forum</a></div>
+<div class="link"><a href="http://www.htconeforum.com" id="fffl-link-1166" target="_blank">HTC One Forum</a></div>
+<div class="link"><a href="http://www.thunderboltforums.com" id="fffl-link-1146" target="_blank">HTC Thunderbolt Forum</a></div>
+<div class="link"><a href="http://www.kindle-fireforum.com" id="fffl-link-1143" target="_blank">Kindle Fire Forum</a></div>
+<div class="link"><a href="http://www.nexus7nexus10.com/forum/nexus-10-forum/" id="fffl-link-1145" target="_blank">Nexus 10 Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"><div class="link"><a href="http://www.nexus4forum.com" id="fffl-link-1170" target="_blank">Nexus 4 Forum</a></div>
+<div class="link"><a href="http://www.nexus7nexus10.com/forum/nexus-7-forum/" id="fffl-link-1144" target="_blank">Nexus 7 Forum</a></div>
+<div class="link"><a href="http://www.note2forum.com" id="fffl-link-1168" target="_blank">Note2 Forum</a></div>
+<div class="link"><a href="http://www.ouyaforums.com" id="fffl-link-1169" target="_blank">Ouya Forum</a></div>
+<div class="link"><a href="http://www.thriveforums.org" id="fffl-link-1161" target="_blank">Toshiba Thrive Forum</a></div>
+<div class="link"><a href="http://www.xoomforums.com" id="fffl-link-1147" target="_blank">Xoom Forum</a></div>
+</div></div>
+<div class="clear"></div></li></ul></li>
+    
+      <li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#" id="fffl-category-75" target="_blank">Other</a><ul id="fffl-category-content-75"><li><div class="column"><div class="p5w10"><div class="link"><a href="http://www.coffeeforums.com" id="fffl-link-1149" target="_blank">Coffee Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"><div class="link"><a href="http://www.treasurenet.com" id="fffl-link-1167" target="_blank">Treasure & Metal Detecting Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"></div></div>
+<div class="column"><div class="p5w10"></div></div>
+<div class="clear"></div></li></ul></li>
+    
+      <li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#" id="fffl-category-74" target="_blank">Technology Related</a><ul id="fffl-category-content-74"><li><div class="column"><div class="p5w10"><div class="link"><a href="http://www.appleforums.net" id="fffl-link-1148" target="_blank">Apple Forum</a></div>
+<div class="link"><a href="http://www.chromeoslounge.com" id="fffl-link-1162" target="_blank">Chrome OS Forums</a></div>
+<div class="link"><a href="http://www.photoforum.com" id="fffl-link-1154" target="_blank">Digital Photography Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"><div class="link"><a href="http://www.ipadforums.net" id="fffl-link-1153" target="_blank">iPad Forum</a></div>
+<div class="link"><a href="http://www.iphoneforums.net" id="fffl-link-1152" target="_blank">iPhone Forum</a></div>
+<div class="link"><a href="http://www.surfaceforums.net" id="fffl-link-1151" target="_blank">Microsoft Surface Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"><div class="link"><a href="http://www.pureoverclock.com" id="fffl-link-1140" target="_blank">Overclocking Forum</a></div>
+<div class="link"><a href="http://www.thephotoforum.com" id="fffl-link-1155" target="_blank">Photography Forum</a></div>
+</div></div>
+<div class="column"><div class="p5w10"><div class="link"><a href="http://www.wiichat.com" id="fffl-link-1150" target="_blank">Wii Forum</a></div>
+<div class="link"><a href="http://www.windowsphoneforum.net" id="fffl-link-1156" target="_blank">Windows Phone Forum</a></div>
+</div></div>
+<div class="clear"></div></li></ul></li>
+    
+  </ul>
+
+  <div id="footlinks-logo">
+  
+  <div class="image" title="Android Forum">
+    <a href="http://www.android.net" target="_blank"></a>
+  </div>
+  
+  </div>
+
+  <div id="footlinks-content">
+    <div id="footlinks-spinner"><div class="spinner-container"><div class="spinner"></div><div class="spinner-text">Loading links...</div></div></div>
+  
+  </div>
+</div>
+
+</div>
+
+         
+ 
+<div id="ad_global_above_footer"><!-- Kontera ContentLink(TM);-->
+<script type='text/javascript'>
+var dc_AdLinkColor = 'blue' ;
+var dc_PublisherID = 189494 ;
+</script>
+<script type='text/javascript' src='http://kona.kontera.com/javascript/lib/KonaLibInline.js'>
+</script>
+<!-- Kontera ContentLink(TM) --></div> 
+<div id="footer" class="floatcontainer footer">
+<div class="skinSelect">
+	<form action="http://www.thriveforums.org/forum/forum.php" method="get" id="footer_select" class="footer_select">
+
+			
+		
+		
+		
+	</form>
+</div>
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+<div class="below_body">
+
+</div>
+
+
+<!-- Custom Content Wrap -->
+				</div>
+			</div></div></div></div>
+		</div></div></div>
+
+		<div id="footerMain">
+			<div class="footerLeft"><div class="footerRight">
+				<div id="footerNav" class="clearfix">
+	<ul>
+		<li><a href="http://www.thriveforums.org/forum/sendmessage.php" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="http://www.thriveforums.org">Toshiba Thrive Forums</a></li>
+		
+		
+		<li><a href="http://www.thriveforums.org/forum/archive/index.php/">Archive</a></li>
+		
+		<li><a href="http://www.forumfoundry.com/privacy-policy/">Privacy Statement</a></li>
+		
+		<li><a href="http://www.thriveforums.org/forum/tybar-development/14517-how-set-up-build-environment-cm10.html#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+				</div>
+				<div class="copyright">
+					All times are GMT -6. The time now is <span class="time">05:47 PM</span>. 
+	<!-- Do not remove this copyright notice -->
+	Powered by <a href="http://www.vbulletin.com" id="vbulletinlink">vBulletin&reg;</a> Version 4.1.4 <br />Copyright &copy; 2013 vBulletin Solutions, Inc. All rights reserved. 
+	
+<br />Search Engine Optimization by <a rel="nofollow" href="http://www.crawlability.com/vbseo/">vBSEO</a> 3.6.0 PL2<!-- Do not remove this copyright notice -->	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	 
+				</div>					
+				<a href="http://www.thriveforums.org/forum/forum.php" id="footerLogo"><img src="http://www.thriveforums.org/forum/images/styles/ShinyBlue/style/thrive-footer.png" alt="Toshiba Thrive Forums Logo" /></a>
+			</div></div>
+		</div>
+</div>
+<!-- Custom Content Wrap End -->
+
+
+
+<script language="JavaScript" type="text/javascript"> var DR_id = "1282";</script>
+ 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23672339-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-87jx2bHn_Mkko"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-87jx2bHn_Mkko.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+ <script type="text/javascript">
+
+		var noskimlinks = false,
+			noskimwords = false,
+			skimlinks_product = 'vbulletin';
+
+		vBulletin.events.SkimlinksActivate.fire();
+
+	</script>
+	<script type="text/javascript" src="http://s.skimresources.com/js/1629X829049.skimlinks.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var vbseo_jshtml = new Array();
+vbseo_jshtml[0] = "<ol>			<li class=\"restore\" id=\"navbar_notice_1\">		If this is your first visit, be sure to		check out the <a href=\"http://www.thriveforums.org/forum/faq.php\" target=\"_blank\"><b>FAQ</b></a> by clicking the		link above. You may have to <a href=\"http://www.thriveforums.org/forum/register.php\" target=\"_blank\"><b>register</b></a>		before you can post: click the register link above to proceed. To start viewing messages,		select the forum that you want to visit from the selection below.</li> 		</ol>";
+
+for(var vi=0;vi<vbseo_jshtml.length;vi++)
+if(fetch_object("vbseo_vhtml_"+vi))fetch_object("vbseo_vhtml_"+vi).innerHTML = vbseo_jshtml[vi];
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('http://www.thriveforums.org/forum/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+</body>
+</html> 
